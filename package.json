@@ -1,0 +1,11 @@
+{
+  "name": "gastronomie",
+  "version": "1.0.0",
+  "description": "projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css"
+  },
+  "author": "Davy",
+  "license": "ISC"
+}
