@@ -1,0 +1,89 @@
+main {
+    margin-top: 50px;
+    height: 1200px;
+    background-color: rgb(241, 239, 239) ;
+}
+
+.main-title {
+    margin-left: 20px;
+    padding-top: 50px;
+}
+/*caractéristiques des images*/
+main img {
+    width: 85vw;
+    height: 180px;
+    margin-left: -18px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.main-home-menu2__img {
+    object-fit: cover;
+}
+
+/* dimensions du cadre descriptif contenant les deux titres sans le mot Nouveau*/
+.main-home-menu1__description--legend,
+.main-home-menu2__description--legend,
+.main-home-menu3__description--legend,
+.main-home-menu4__description--legend {
+    position: relative;
+}
+/* dimensions du cadre descriptif contenant les deux titres + le mot Nouveau*/
+.main-home-menu1__description,
+.main-home-menu2__description,
+.main-home-menu3__description,
+.main-home-menu4__description {
+    border: 1px rgb(238, 236, 236) solid;
+    box-shadow: 2px 2px 8px rgb(212, 211, 211);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: white;
+    width: 84.99vw;
+    margin-left: -19px;
+    margin-top: -5px;
+}
+
+/* Caractéristiques des titres de la description*/
+main h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding-left: 16px;
+}
+
+main h4 {
+    margin-top: -17px;
+    padding-left: 16px;
+    font-weight: normal;
+    font-size: .9rem;
+}
+
+/*Placement du coeur*/
+.main-home-menu1__heart,
+.main-home-menu2__heart,
+.main-home-menu3__heart,
+.main-home-menu4__heart {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 20px;
+    top: 4px;
+}
+
+/*mise en place du signal "Nouveau"*/
+.main-home-menu1,
+.main-home-menu2 {
+    position: relative;
+}
+
+main h6 {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    background-color: $Color-Tertiary;
+    color: rgb(78, 124, 78);
+    width: 70px;
+    height: 19px;
+    font-size: .9rem;
+    text-align: center;
+    padding-top: 3px;
+}
+

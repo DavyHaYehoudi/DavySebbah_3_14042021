@@ -1,0 +1,45 @@
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Shrikhand', cursive;
+}
+
+.container {
+    font-family: 'Roboto';
+}
+
+.menu-page1__title, .menu-page2__title, .menu-page3__title, .menu-page4__title {
+    font-family: 'Shrikhand';
+}
+
+.heading-home-description__title1, .heading-home-description__title2 {
+    text-align: center;
+}
+
+.heading-home-description__title1 {
+    padding-top: 40px;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.heading-home-description__title2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+
+
+ 
+
+
+
+
+
+
+img  {
+    width: 20px;
+    height: 10px;
+}

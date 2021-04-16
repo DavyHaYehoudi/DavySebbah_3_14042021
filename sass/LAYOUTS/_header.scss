@@ -1,0 +1,41 @@
+.heading-home-logo {
+    text-align: center;
+    height: 30px;
+    padding: 15px 0 30px 0;
+    border-bottom: 3px rgb(214, 212, 212) solid; 
+}
+
+.heading-home-logo__img {
+    height: 6vh;
+    width: 50vw;
+}
+
+.heading-home-search {
+    text-align: center;
+    height: 5vh;
+    padding-top: 10px;
+    background-color: rgb(226, 223, 223);
+}
+
+.heading-home-search__map {
+    margin-right: 10px;
+}
+
+.heading-home-field {
+    outline: none;
+    border: hidden;
+    background-color: rgb(226, 223, 223)
+}
+
+input::placeholder {
+    color: black;
+    background-color: rgb(226, 223, 223);
+}
+
+.heading-home-description {
+    background-color: $Color-Bkg;
+    height: 300px;
+}
+
+
+// <span><input class="heading-home-field" type="text" placeholder=" Paris, Belleville"></span>
