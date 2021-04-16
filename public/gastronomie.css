@@ -1,19 +1,18 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Roboto", sans-serif;
-}
-@font-face {
-  font-family: "Shrikhand", cursive;
-}
 .container {
   font-family: "Roboto";
 }
 
-.menu-page1__title, .menu-page2__title, .menu-page3__title, .menu-page4__title {
+.menu-page1__title,
+.menu-page2__title,
+.menu-page3__title,
+.menu-page4__title {
   font-family: "Shrikhand";
+  font-size: 1.7rem;
 }
 
-.heading-home-description__title1, .heading-home-description__title2 {
+.heading-home-description__title1,
+.heading-home-description__title2 {
   text-align: center;
 }
 
@@ -28,19 +27,6 @@
   font-weight: normal;
 }
 
-img {
-  width: 20px;
-  height: 10px;
-}
-
-.heading-home-description__btn {
-  background-color: #FF79DA;
-}
-
-.heading-home-description__btn :visited {
-  color: white;
-}
-
 .heading-home-description__btn {
   border: 1px #FF79DA solid;
   background-color: #FF79DA;
@@ -52,6 +38,9 @@ img {
   width: 48vw;
   padding: 7px;
   margin: 30px auto;
+}
+.heading-home-description__btn :visited {
+  color: white;
 }
 
 .container a, a:link, a:visited {
@@ -69,10 +58,9 @@ body {
   padding: 15px 0 30px 0;
   border-bottom: 3px #d6d4d4 solid;
 }
-
 .heading-home-logo__img {
   height: 6vh;
-  width: 50vw;
+  width: 200px;
 }
 
 .heading-home-search {
@@ -81,7 +69,6 @@ body {
   padding-top: 10px;
   background-color: #e2dfdf;
 }
-
 .heading-home-search__map {
   margin-right: 10px;
 }
@@ -102,32 +89,67 @@ input::placeholder {
   height: 300px;
 }
 
+header {
+  position: relative;
+}
+
+.heading-page1,
+.heading-page2,
+.heading-page3,
+.heading-page4 {
+  text-align: center;
+  padding: 15px 0 20px 0;
+}
+.heading-page1__return,
+.heading-page2__return,
+.heading-page3__return,
+.heading-page4__return {
+  font-size: 1.4rem;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+.heading-page1__logo,
+.heading-page2__logo,
+.heading-page3__logo,
+.heading-page4__logo {
+  width: 200px;
+  height: 40px;
+}
+
+.heading-page1__img {
+  width: 100vw;
+  object-fit: cover;
+}
+
 .nav-home-title {
-  margin: 50px 0 30px 22px;
+  margin: 50px 0 30px 30px;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0 0 20px 25px;
+  margin: 0 0 20px 30px;
   padding: 25px 0 0 0px;
   height: 2.9rem;
   background-color: #f1efef;
   box-shadow: 6px 6px 4px #dfdede;
 }
-
 nav li {
   margin: 0 20px 0 -7px;
   padding-left: 10px;
 }
 
-.nav-home-choose, .nav-home-compose, .nav-home-taste {
+.nav-home-choose, .nav-home-compose,
+.nav-home-taste {
   display: flex;
   border: 1px #f1efef solid;
   border-radius: 1.5rem;
   width: 310px;
 }
 
-.nav-home-choose__number1, .nav-home-compose__number2, .nav-home-taste__number3 {
+.nav-home-choose__number1,
+.nav-home-compose__number2,
+.nav-home-taste__number3 {
   border: 1px #9356DC solid;
   border-radius: 50%;
   padding: 1px 4px 2px 4px;
@@ -137,27 +159,32 @@ nav li {
   font-size: 0.9rem;
 }
 
-main {
+/*Généralité sur la page d'accueil*/
+#menu-home-page {
   margin-top: 50px;
   height: 1200px;
   background-color: #f1efef;
 }
 
 .main-title {
-  margin-left: 20px;
+  margin-left: 30px;
   padding-top: 50px;
 }
 
-/*caractéristiques des images*/
-main img {
+/*caractéristiques des images de la page d'accueil*/
+#menu-home-page img {
   width: 85vw;
   height: 180px;
-  margin-left: -18px;
+  margin-left: -12px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
-.main-home-menu2__img {
+/*Mise en forme des images de la page d'accueil*/
+.main-home-menu1__img,
+.main-home-menu2__img,
+.main-home-menu3__img,
+.main-home-menu4__img {
   object-fit: cover;
 }
 
@@ -180,25 +207,25 @@ main img {
   border-bottom-right-radius: 1rem;
   background-color: white;
   width: 84.99vw;
-  margin-left: -19px;
+  margin-left: -12px;
   margin-top: -5px;
 }
 
-/* Caractéristiques des titres de la description*/
-main h3 {
+/* Caractéristiques des titres de la description sur la page d'accueil*/
+#menu-home-page h3 {
   margin-top: 10px;
   font-size: 1.1rem;
   padding-left: 16px;
 }
 
-main h4 {
+#menu-home-page h4 {
   margin-top: -17px;
   padding-left: 16px;
   font-weight: normal;
   font-size: 0.9rem;
 }
 
-/*Placement du coeur*/
+/*Placement du coeur dans la page d'accueil*/
 .main-home-menu1__heart,
 .main-home-menu2__heart,
 .main-home-menu3__heart,
@@ -209,7 +236,7 @@ main h4 {
   top: 4px;
 }
 
-/*mise en place du signal "Nouveau"*/
+/*Mise en place du signal "Nouveau"*/
 .main-home-menu1,
 .main-home-menu2 {
   position: relative;
@@ -228,10 +255,49 @@ main h6 {
   padding-top: 3px;
 }
 
+/*Placement du coeur dans les pages menu*/
+.menu-page1__description {
+  position: relative;
+}
+
+.menu-page1__heart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.4rem;
+}
+
+/*Disposition de l'accompagnement des plats*/
+#menu-page1 h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-top: -15px;
+}
+
+.menu-page1__starters--mainNames1,
+.menu-page1__starters--mainNames2,
+.menu-page1__starters--mainNames3 {
+  position: relative;
+  margin-left: 20px;
+}
+
+.menu-page1__starters--price {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+}
+
 footer {
   color: white;
   background-color: #333232;
   height: 250px;
+}
+footer p {
+  margin-left: 40px;
+}
+footer ul {
+  list-style-type: none;
+  display: flex;
 }
 
 .footer-logo {
@@ -241,21 +307,11 @@ footer {
   margin: 20px 0 0 40px;
 }
 
-footer ul {
-  list-style-type: none;
-  display: flex;
-}
-
 .footer-menu__propose--ustensils {
   margin-right: 15px;
 }
-
-.footer-menu__propose--partner {
+.footer-menu__partner--hands {
   margin-right: 7px;
-}
-
-footer p {
-  margin-left: 40px;
 }
 
 .footer-menu__contact a:link, :visited {

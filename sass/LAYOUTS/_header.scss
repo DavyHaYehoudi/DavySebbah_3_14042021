@@ -1,13 +1,15 @@
+// PAGE D'ACCUEIL
+
 .heading-home-logo {
     text-align: center;
     height: 30px;
     padding: 15px 0 30px 0;
     border-bottom: 3px rgb(214, 212, 212) solid; 
-}
 
-.heading-home-logo__img {
-    height: 6vh;
-    width: 50vw;
+        &__img {
+            height: 6vh;
+            width: 200px;
+        }
 }
 
 .heading-home-search {
@@ -15,10 +17,10 @@
     height: 5vh;
     padding-top: 10px;
     background-color: rgb(226, 223, 223);
-}
 
-.heading-home-search__map {
-    margin-right: 10px;
+        &__map {
+            margin-right: 10px;
+        }
 }
 
 .heading-home-field {
@@ -37,5 +39,32 @@ input::placeholder {
     height: 300px;
 }
 
+// PAGE1
 
-// <span><input class="heading-home-field" type="text" placeholder=" Paris, Belleville"></span>
+header {
+    position: relative;
+}
+// HEADER 'LOGO + RETURN' DE TOUTES LES PAGES
+.heading-page1,
+.heading-page2,
+.heading-page3,
+.heading-page4 {
+    text-align: center;
+    padding: 15px 0 20px 0;
+    &__return {
+        font-size: 1.4rem;
+        position: absolute;
+        left: 20px;
+        top: 25px
+    }
+    &__logo {
+        width: 200px;
+        height: 40px;
+    }
+}
+
+.heading-page1__img {
+    width: 100vw;
+    object-fit: cover;
+}
+

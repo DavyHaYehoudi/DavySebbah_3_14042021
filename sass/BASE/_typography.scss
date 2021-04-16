@@ -1,21 +1,28 @@
 
-@font-face {
-    font-family: 'Roboto', sans-serif;
-}
+// @font-face {
+//     font-family: '$Police-Texte', sans-serif;
+// }
 
-@font-face {
-    font-family: 'Shrikhand', cursive;
-}
+// @font-face {
+//     font-family: '$Police-Logo-Titres', cursive;
+// }
+
 
 .container {
     font-family: 'Roboto';
 }
 
-.menu-page1__title, .menu-page2__title, .menu-page3__title, .menu-page4__title {
-    font-family: 'Shrikhand';
+.menu-page1__title,
+.menu-page2__title,
+.menu-page3__title,
+.menu-page4__title {
+    font-family: 'Shrikhand';  
+    font-size: $Fontsize-TitleMenu;
 }
 
-.heading-home-description__title1, .heading-home-description__title2 {
+
+.heading-home-description__title1,
+.heading-home-description__title2 {
     text-align: center;
 }
 
@@ -30,16 +37,3 @@
     font-weight: normal;
 }
 
-
-
- 
-
-
-
-
-
-
-img  {
-    width: 20px;
-    height: 10px;
-}

@@ -1,10 +1,3 @@
-.heading-home-description__btn {
-    background-color: $Color-Secondary;
-}
-
-.heading-home-description__btn :visited {
-    color: white;
-}
 
 .heading-home-description__btn {
     border: 1px $Color-Secondary solid;
@@ -17,4 +10,8 @@
     width: 48vw;
     padding: 7px;
     margin: 30px auto;
+
+        & :visited{
+            color: white;
+        }
 }

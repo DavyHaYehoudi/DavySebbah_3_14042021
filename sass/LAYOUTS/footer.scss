@@ -2,6 +2,15 @@ footer {
     color: white;
     background-color: rgb(51, 50, 50);
     height: 250px;
+
+        & p {
+            margin-left: 40px;
+        }
+
+        & ul {
+            list-style-type: none;
+            display: flex;
+        }
 }
 
 .footer-logo {
@@ -11,21 +20,14 @@ footer {
     margin: 20px 0 0 40px;
 }
 
-footer ul {
-    list-style-type: none;
-    display: flex;
-}
 
-.footer-menu__propose--ustensils {
-    margin-right: 15px;
-}
-
-.footer-menu__propose--partner {
-    margin-right: 7px;
-}
-
-footer p {
-    margin-left: 40px;
+.footer-menu {
+        &__propose--ustensils {
+            margin-right: 15px;
+        }
+        &__partner--hands {
+            margin-right: 7px;
+        }
 }
 
 .footer-menu__contact a:link, :visited{

@@ -1,29 +1,33 @@
 .nav-home-title {
-    margin: 50px 0 30px 22px;   
+    margin: 50px 0 30px 30px;   
 }
 
-nav ul {
-    list-style-type: none;
-    margin:0 0 20px 25px;
-    padding: 25px 0 0 0px;
-    height: 2.9rem;
-    background-color: $Color-Bkg;
-    box-shadow: 6px 6px 4px rgb(223, 222, 222);
+nav {
+    ul {
+        list-style-type: none;
+        margin:0 0 20px 30px;
+        padding: 25px 0 0 0px;
+        height: 2.9rem;
+        background-color: $Color-Bkg;
+        box-shadow: 6px 6px 4px rgb(223, 222, 222);
+    }
+    li {
+        margin: 0 20px 0 -7px;
+        padding-left: 10px;
+    }
 }
 
-nav li {
-    margin: 0 20px 0 -7px;
-    padding-left: 10px;
-}
-
-.nav-home-choose,.nav-home-compose,.nav-home-taste {
+.nav-home-choose,.nav-home-compose,
+.nav-home-taste {
     display: flex;
     border: 1px $Color-Bkg solid;
     border-radius: 1.5rem;
     width: 310px;
 }
 
-.nav-home-choose__number1, .nav-home-compose__number2, .nav-home-taste__number3 {
+.nav-home-choose__number1,
+.nav-home-compose__number2,
+.nav-home-taste__number3 {
     border: 1px $Color-Primary solid ;
     border-radius: 50%;
     padding: 1px 4px 2px 4px;

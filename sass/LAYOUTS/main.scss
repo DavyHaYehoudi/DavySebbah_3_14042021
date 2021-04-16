@@ -1,23 +1,28 @@
-main {
+
+/*Généralité sur la page d'accueil*/
+#menu-home-page {
     margin-top: 50px;
     height: 1200px;
     background-color: rgb(241, 239, 239) ;
 }
 
 .main-title {
-    margin-left: 20px;
+    margin-left: 30px;
     padding-top: 50px;
 }
-/*caractéristiques des images*/
-main img {
+/*caractéristiques des images de la page d'accueil*/
+#menu-home-page img {
     width: 85vw;
     height: 180px;
-    margin-left: -18px;
+    margin-left: -12px;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
-
-.main-home-menu2__img {
+/*Mise en forme des images de la page d'accueil*/
+.main-home-menu1__img,
+.main-home-menu2__img,
+.main-home-menu3__img,
+.main-home-menu4__img {
     object-fit: cover;
 }
 
@@ -39,36 +44,36 @@ main img {
     border-bottom-right-radius: 1rem;
     background-color: white;
     width: 84.99vw;
-    margin-left: -19px;
+    margin-left: -12px;
     margin-top: -5px;
 }
 
-/* Caractéristiques des titres de la description*/
-main h3 {
+/* Caractéristiques des titres de la description sur la page d'accueil*/
+#menu-home-page h3 {
     margin-top: 10px;
     font-size: 1.1rem;
     padding-left: 16px;
 }
 
-main h4 {
+#menu-home-page h4 {
     margin-top: -17px;
     padding-left: 16px;
     font-weight: normal;
     font-size: .9rem;
 }
 
-/*Placement du coeur*/
+/*Placement du coeur dans la page d'accueil*/
 .main-home-menu1__heart,
 .main-home-menu2__heart,
 .main-home-menu3__heart,
 .main-home-menu4__heart {
-    font-size: 1.4rem;
+    font-size: $Fontsize-Heart;
     position: absolute;
     right: 20px;
     top: 4px;
 }
 
-/*mise en place du signal "Nouveau"*/
+/*Mise en place du signal "Nouveau"*/
 .main-home-menu1,
 .main-home-menu2 {
     position: relative;
@@ -86,4 +91,45 @@ main h6 {
     text-align: center;
     padding-top: 3px;
 }
+
+/*Placement du coeur dans les pages menu*/
+.menu-page1__description {
+    position: relative;
+}
+
+.menu-page1__heart {
+    position: absolute;
+    right: 0;
+    top:0;
+    font-size: $Fontsize-Heart;
+}
+
+/*Disposition de l'accompagnement des plats*/
+
+#menu-page1 h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-top: -15px;
+}
+
+.menu-page1__starters--mainNames1,
+.menu-page1__starters--mainNames2,
+.menu-page1__starters--mainNames3 {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu-page1__starters--price {
+    position: absolute;
+    top: 11px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
 

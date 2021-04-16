@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="public/gastronomie.css">
     <script src="https://kit.fontawesome.com/8870a3e68e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <title>ohmyfood</title>
 </head>
 
 <body>
-
+    <div class="container">
     <header>
        <div class="heading-page3">
         <span class="heading-page1__return"><a href="index.html"><i class="fas fa-arrow-left"></i></a></span>
@@ -25,39 +25,32 @@
        </div><!--fin de heading-page3__photo-->
     </header>
 
-    <main>
-        <h1 class="menu-page3__title">La palette du goût</h1>
-        <span class="menu-page3__heart"><i class="far fa-heart"></i></span>
+    <main id="menu-page3">
+        <div class="menu-page3__description">
+            <h1 class="menu-page3__title">La palette du goût</h1>
+            <span class="menu-page3__heart"><i class="far fa-heart"></i></span>
+        </div>
 
         <section class="menu-page3__starters">
 
             <h2 class="menu-page3__starters--title">ENTRÉES</h2>
 
-            <div class="menu-page3__starters--main.names">
-                <h3 class="menu-page3__starters--dish.names">Fricassée d'escargot</h3>
+            <div class="menu-page3__starters--mainNames1">
+                <h3 class="menu-page3__starters--dishnames">Fricassée d'escargot</h3>
+                <h4 class="menu-page3__starters--accompaniment">Au piment d'Espelette</h4>
+                <p class="menu-page3__starters--price">25€</p>
             </div>
 
-            <div class="menu-page3__starters--details">
-                <h4 class="menu-page3__starters--details.accompaniment">Au piment d'Espelette</h4>
-                <p class="menu-page3__starters--details.price">25€</p>
+            <div class="menu-page3__starters--mainNames2">
+                <h3 class="menu-page3__starters--dishnames">Foie gras de canard mi-cuit</h3>
+                <h4 class="menu-page3__starters--accompaniment">Et ses copeaux de truffe noire</h4>
+                <p class="menu-page3__starters--price">35€</p>
             </div>
 
-            <div class="menu-page3__starters--main.names">
-                <h3 class="menu-page3__starters--dish.names">Foie gras de canard mi-cuit</h3>
-            </div>
-
-            <div class="menu-page3__starters--details">
-                <h4 class="menu-page3__starters--details.accompaniment">Et ses copeaux de truffe noire</h4>
-                <p class="menu-page3__starters--details.price">35€</p>
-            </div>
-
-            <div class="menu-page3__starters--main.names">
-                <h3 class="menu-page3__starters--dish.names">Oeuf au plat</h3>
-            </div>
-
-            <div class="menu-page3__starters--details">
-                <h4 class="menu-page3__starters--details.accompaniment">Assaisonné à la truffe sur lit de caviar</h4>
-                <p class="menu-page3__starters--details.price">20€</p>
+            <div class="menu-page3__starters--mainNames3">
+                <h3 class="menu-page3__starters--dishnames">Oeuf au plat</h3>
+                <h4 class="menu-page3__starters--accompaniment">Assaisonné à la truffe sur lit de caviar</h4>
+                <p class="menu-page3__starters--price">20€</p>
             </div>
 
         </section><!--fin de menu-page3__starters-->
@@ -66,31 +59,22 @@
 
             <h2 class="menu-page3__main--title">PLATS</h2>
 
-            <div class="menu-page3__main--main.names">
-                <h3 class="menu-page3__main--dish.names">Filet de boeuf aux herbes</h3>
+            <div class="menu-page3__main--mainNames1">
+                <h3 class="menu-page3__main--dishnames">Filet de boeuf aux herbes</h3>
+                <h4 class="menu-page3__main--accompaniment">Accompagné de sa ribambelle de légumes</h4>
+                <p class="menu-page3__main--price">40€</p>
             </div>
 
-            <div class="menu-page3__main--details">
-                <h4 class="menu-page3__main--details.accompaniment">Accompagné de sa ribambelle de légumes</h4>
-                <p class="menu-page3__main--details.price">40€</p>
+            <div class="menu-page3__main--mainNames2">
+                <h3 class="menu-page3__main--dishnames">Parmentier de queue de boeuf</h3>
+                <h4 class="menu-page3__main--accompaniment">À la truffe noire sur sa purée de panais</h4>
+                <p class="menu-page3__main--price">35€</p>
             </div>
 
-            <div class="menu-page3__main--main.names">
-                <h3 class="menu-page3__main--dish.names">Parmentier de queue de boeuf</h3>
-            </div>
-
-            <div class="menu-page3__main--details">
-                <h4 class="menu-page3__main--details.accompaniment">À la truffe noire sur sa purée de panais</h4>
-                <p class="menu-page3__main--details.price">35€</p>
-            </div>
-
-            <div class="menu-page3__main--main.names">
-                <h3 class="menu-page3__main--dish.names">Filet de turbot</h3>
-            </div>
-
-            <div class="menu-page3__main--details">
-                <h4 class="menu-page3__main--details.accompaniment">Aux agrumes</h4>
-                <p class="menu-page3__main--details.price">44€</p>
+            <div class="menu-page3__main--mainNames3">
+                <h3 class="menu-page3__main--dishnames">Filet de turbot</h3>
+                <h4 class="menu-page3__main--accompaniment">Aux agrumes</h4>
+                <p class="menu-page3__main--price">44€</p>
             </div>
 
         </section><!--fin de menu-page3__main-->
@@ -99,31 +83,22 @@
 
             <h2 class="menu-page3__desserts--title">DESSERTS</h2>
 
-            <div class="menu-page3__desserts--main.names">
+            <div class="menu-page3__desserts--mainNames1">
                 <h3 class="menu-page3__desserts--dish.names">Paris-Brest</h3>
+                <h4 class="menu-page3__desserts--accompaniment">Revisité</h4>
+                <p class="menu-page3__desserts--price">18€</p>
             </div>
 
-            <div class="menu-page3__desserts--details">
-                <h4 class="menu-page3__desserts--details.accompaniment">Revisité</h4>
-                <p class="menu-page3__desserts--details.price">18€</p>
+            <div class="menu-page3__desserts--mainNames2">
+                <h3 class="menu-page3__desserts--dishnames">Macaron au chocolat d'exception</h3>
+                <h4 class="menu-page3__desserts--accompaniment">Et glace à la vanille de Madagascar</h4>
+                <p class="menu-page3__desserts--price">22€</p>
             </div>
 
-            <div class="menu-page3__desserts--main.names">
-                <h3 class="menu-page3__desserts--dish.names">Macaron au chocolat d'exception</h3>
-            </div>
-
-            <div class="menu-page3__desserts--details">
-                <h4 class="menu-page3__desserts--details.accompaniment">Et glace à la vanille de Madagascar</h4>
-                <p class="menu-page3__desserts--details.price">22€</p>
-            </div>
-
-            <div class="menu-page3__desserts--main.names">
-                <h3 class="menu-page3__desserts--dish.names">Mousse au chocolat</h3>
-            </div>
-
-            <div class="menu-page3__desserts--details">
-                <h4 class="menu-page3__desserts--details.accompaniment">Au piment d'Espelette et à la truffe noire</h4>
-                <p class="menu-page3__desserts--details.price">23€</p>
+            <div class="menu-page3__desserts--mainNames3">
+                <h3 class="menu-page3__desserts--dishnames">Mousse au chocolat</h3>
+                <h4 class="menu-page3__desserts--accompaniment">Au piment d'Espelette et à la truffe noire</h4>
+                <p class="menu-page3__desserts--price">23€</p>
             </div>
 
         </section><!--fin de menu-page3__desserts-->
@@ -133,16 +108,25 @@
 
     <footer>
         <img class="footer-logo" src="images/logo/ohmyfood.png" alt="logo">
-        <ul class="footer-menu">
-            <li class="footer-menu__propose"><span class="footer-menu__propose--ustensils"><i class="fas fa-utensils"></i></span>Proposer un restaurant</li>
-            <li class="footer-menu__partner"><span class="footer-menu__partner--partner"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</li>
-            <li class="footer-menu__mentions">Mentions légales</li>
-            <li class="footer-menu__contact"><a href="email.html">Contact</a></li>
-        </ul>
+
+            <ul class="footer-menu__propose">
+                <li><span class="footer-menu__propose--ustensils"><i class="fas fa-utensils"></i></span></li>
+                <li>Proposer un restaurant</li>
+            </ul>
+
+            <ul class="footer-menu__partner">
+                <li><span class="footer-menu__partner--hands"><i class="fas fa-hands-helping"></i></span></li>
+                <li>Devenir partenaire</li>
+            </ul>
+
+            <p>Mentions légales</p>
+            <p class="footer-menu__contact"><a href="email.html">Contact</a></p>
+            
 
     </footer>
-
+    </div>
 </body>
+</html>
 
 
 
