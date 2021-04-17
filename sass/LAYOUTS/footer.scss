@@ -1,32 +1,68 @@
-footer {
+/*Footer pour la page d'accueil car ensuite dans les autres pages on doit utiliser le positionnement relatif*/
+.container0 footer {
     color: white;
     background-color: rgb(51, 50, 50);
     height: 250px;
-
         & p {
-            margin-left: 40px;
+            margin-left: 20px;
         }
-
+        & ul {
+            list-style-type: none;
+            display: flex;
+        }
+}
+/*Footer pour les page1 page2 page3 et page4 uniquement du fait du positionnement relatif par-dessus l'image*/
+.container1 footer,
+// .container2 footer,
+.container3 footer,
+.container4 footer {
+    color: white;
+    background-color: rgb(51, 50, 50);
+    height: 250px;
+    position: absolute;
+    top: 1420px;
+    width: 100%;   
+        & p {
+            margin-left: 20px;
+        }
         & ul {
             list-style-type: none;
             display: flex;
         }
 }
 
+// ---------------------Particularité de la page 2  et son main plus long------------
+.container2 footer {
+    color: white;
+    background-color: rgb(51, 50, 50);
+    height: 250px;
+    position: absolute;
+    top: 1620px;
+    width: 100%;   
+        & p {
+            margin-left: 20px;
+        }
+        & ul {
+            list-style-type: none;
+            display: flex;
+        }
+}
+
+
+
 .footer-logo {
     width: 25vw;
     height: 4vh;
     filter: invert(1);
-    margin: 20px 0 0 40px;
+    margin: 20px 0 0 20px;
 }
-
 
 .footer-menu {
         &__propose--ustensils {
-            margin-right: 15px;
+            margin: 0 15px 0 -20px;
         }
         &__partner--hands {
-            margin-right: 7px;
+            margin: 0 7px 0 -20px;
         }
 }
 

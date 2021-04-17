@@ -36,10 +36,10 @@ input::placeholder {
 
 .heading-home-description {
     background-color: $Color-Bkg;
-    height: 300px;
+    height: 270px;
 }
 
-// PAGE1
+//------------------ PAGE1 PAGE2 PAGE3 PAGE4--------------------------
 
 header {
     position: relative;
@@ -50,12 +50,12 @@ header {
 .heading-page3,
 .heading-page4 {
     text-align: center;
-    padding: 15px 0 20px 0;
+    padding: 15px 0 10px 0;
     &__return {
         font-size: 1.4rem;
         position: absolute;
         left: 20px;
-        top: 25px
+        top: 25px;
     }
     &__logo {
         width: 200px;
@@ -63,8 +63,12 @@ header {
     }
 }
 
-.heading-page1__img {
+.heading-page1__img,
+.heading-page2__img,
+.heading-page3__img,
+.heading-page4__img {
     width: 100vw;
     object-fit: cover;
 }
+
 

@@ -1,5 +1,7 @@
+// ----------------------------PAGE D'ACCUEIL----------------------
 
-/*Généralité sur la page d'accueil*/
+
+/*GénéralitéS sur la page d'accueil*/
 #menu-home-page {
     margin-top: 50px;
     height: 1200px;
@@ -92,38 +94,86 @@ main h6 {
     padding-top: 3px;
 }
 
-/*Placement du coeur dans les pages menu*/
-.menu-page1__description {
+// -----------------------PAGE1 PAGE2 PAGE3 PAGE4------------------------
+
+/*Généralités sur tout le main et mise en position relative du header pour que le main chevauche l'image*/
+header {
+    z-index: 1;
     position: relative;
 }
 
-.menu-page1__heart {
+#menu-page1,
+#menu-page2,
+#menu-page3,
+#menu-page4 {
+    background-color: $Color-Bkg ;
+    margin-top: -55px;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    z-index: 2;
     position: absolute;
-    right: 0;
-    top:0;
-    font-size: $Fontsize-Heart;
+    width: 100%;
+    height: 1155px;
+}
+// ---------------------Particularité de la page 2  et son main plus long------------
+#menu-page2 {
+    background-color: $Color-Bkg ;
+    margin-top: -155px;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 1240px;
 }
 
-/*Disposition de l'accompagnement des plats*/
+/* Agencement des légendes des plats */
 
-#menu-page1 h4 {
-    font-size: 0.9rem;
-    font-weight: normal;
-    margin-top: -15px;
-}
+.menu-page1__starters--mainNames1,.menu-page1__starters--mainNames2,.menu-page1__starters--mainNames3,
+.menu-page1__main--mainNames1,.menu-page1__main--mainNames2,.menu-page1__main--mainNames3,
+.menu-page1__desserts--mainNames1,.menu-page1__desserts--mainNames2,.menu-page1__desserts--mainNames3,
 
-.menu-page1__starters--mainNames1,
-.menu-page1__starters--mainNames2,
-.menu-page1__starters--mainNames3 {
+.menu-page2__starters--mainNames1,.menu-page2__starters--mainNames2,.menu-page2__starters--mainNames3,
+.menu-page2__starters--mainNames4,
+
+.menu-page2__main--mainNames1,.menu-page2__main--mainNames2,.menu-page2__main--mainNames3,
+.menu-page2__desserts--mainNames1,.menu-page2__desserts--mainNames2,.menu-page2__desserts--mainNames3,
+
+.menu-page3__starters--mainNames1,.menu-page3__starters--mainNames2,.menu-page3__starters--mainNames3,
+.menu-page3__main--mainNames1,.menu-page3__main--mainNames2,.menu-page3__main--mainNames3,
+.menu-page3__desserts--mainNames1,.menu-page3__desserts--mainNames2,.menu-page3__desserts--mainNames3,
+
+.menu-page4__starters--mainNames1,.menu-page4__starters--mainNames2,.menu-page4__starters--mainNames3,
+.menu-page4__main--mainNames1,.menu-page4__main--mainNames2,.menu-page4__main--mainNames3,
+.menu-page4__desserts--mainNames1,.menu-page4__desserts--mainNames2,.menu-page4__desserts--mainNames3 {
     position: relative;
-    margin-left: 20px;
+    border: 1px rgb(243, 242, 242) solid;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 4px rgb(223, 222, 222);
+    background-color: white;
+    margin: 20px auto;
+    width: 90vw;
+    height: 60px;
+    /*Installation des points de suspensions en cas de rétrécissement du bloc*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.menu-page1__starters--price {
+/*Affichage des prix*/
+.menu-page1__starters--price,.menu-page1__main--price,.menu-page1__desserts--price,
+.menu-page2__starters--price,.menu-page2__main--price,.menu-page2__desserts--price,
+.menu-page3__starters--price,.menu-page3__main--price,.menu-page3__desserts--price,
+.menu-page4__starters--price,.menu-page4__main--price,.menu-page4__desserts--price {
     position: absolute;
-    top: 11px;
+    top: 19px;
     right: 20px;
+    font-weight: 600;
 }
+
+
+
+
 
 
 

@@ -12,28 +12,82 @@
     font-family: 'Roboto';
 }
 
-.menu-page1__title,
-.menu-page2__title,
-.menu-page3__title,
-.menu-page4__title {
-    font-family: 'Shrikhand';  
-    font-size: $Fontsize-TitleMenu;
-}
-
-
+/*Agencement des titres de la page d'accueil*/
 .heading-home-description__title1,
 .heading-home-description__title2 {
     text-align: center;
 }
 
 .heading-home-description__title1 {
-    padding-top: 40px;
+    padding-top: 30px;
     font-weight: bolder;
-    margin-top: 0;
+    margin: 0 60px;
+    font-size: 1.5rem;
 }
 
 .heading-home-description__title2 {
     font-size: 1.1rem;
     font-weight: normal;
+    margin: 20px 15px;
 }
+
+
+/*Gros titre de la carte de chaque menu*/
+#menu-page1 h1,
+#menu-page2 h1,
+#menu-page3 h1,
+#menu-page4 h1 {
+    font-family: 'Shrikhand';  
+    font-size: $Fontsize-TitleMenu;
+    margin-left: 20px;
+}
+
+/*Entrées, Plat et Desserts de la carte de chaque menu*/
+#menu-page1 h2,
+#menu-page2 h2,
+#menu-page3 h2,
+#menu-page4 h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 40px 0 0 20px;
+}
+
+#menu-page1 h3,
+#menu-page2 h3,
+#menu-page3 h3,
+#menu-page4 h3 {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1.1rem ;
+}
+
+#menu-page1 h4,
+#menu-page2 h4,
+#menu-page3 h4,
+#menu-page4 h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: -15px 0 0 15px;
+}
+/* Soulignement partiel des titres Entrées Plats Desserts*/
+#menu-page1 h2,
+#menu-page2 h2,
+#menu-page3 h2,
+#menu-page4 h2 {
+    position: relative;
+}
+
+#menu-page1 h2::before,
+#menu-page2 h2::before,
+#menu-page3 h2::before,
+#menu-page4 h2::before {
+  content : "";
+  position: absolute;
+  left    : 0;
+  bottom  : 0;
+  width   : 12%;  
+  border-bottom:3px solid $Color-Tertiary;
+  margin-bottom: -8px;
+}
+
 

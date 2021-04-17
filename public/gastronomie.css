@@ -3,44 +3,200 @@
   font-family: "Roboto";
 }
 
-.menu-page1__title,
-.menu-page2__title,
-.menu-page3__title,
-.menu-page4__title {
-  font-family: "Shrikhand";
-  font-size: 1.7rem;
-}
-
+/*Agencement des titres de la page d'accueil*/
 .heading-home-description__title1,
 .heading-home-description__title2 {
   text-align: center;
 }
 
 .heading-home-description__title1 {
-  padding-top: 40px;
+  padding-top: 30px;
   font-weight: bolder;
-  margin-top: 0;
+  margin: 0 60px;
+  font-size: 1.5rem;
 }
 
 .heading-home-description__title2 {
   font-size: 1.1rem;
   font-weight: normal;
+  margin: 20px 15px;
 }
 
+/*Gros titre de la carte de chaque menu*/
+#menu-page1 h1,
+#menu-page2 h1,
+#menu-page3 h1,
+#menu-page4 h1 {
+  font-family: "Shrikhand";
+  font-size: 1.7rem;
+  margin-left: 20px;
+}
+
+/*Entrées, Plat et Desserts de la carte de chaque menu*/
+#menu-page1 h2,
+#menu-page2 h2,
+#menu-page3 h2,
+#menu-page4 h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 40px 0 0 20px;
+}
+
+#menu-page1 h3,
+#menu-page2 h3,
+#menu-page3 h3,
+#menu-page4 h3 {
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+#menu-page1 h4,
+#menu-page2 h4,
+#menu-page3 h4,
+#menu-page4 h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: -15px 0 0 15px;
+}
+
+/* Soulignement partiel des titres Entrées Plats Desserts*/
+#menu-page1 h2,
+#menu-page2 h2,
+#menu-page3 h2,
+#menu-page4 h2 {
+  position: relative;
+}
+
+#menu-page1 h2::before,
+#menu-page2 h2::before,
+#menu-page3 h2::before,
+#menu-page4 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 12%;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: -8px;
+}
+
+/*Bouton de 'Explorer nos restaurants'*/
 .heading-home-description__btn {
-  border: 1px #FF79DA solid;
-  background-color: #FF79DA;
+  border: 0px #FF79DA solid;
   border-radius: 5rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 3px 3px 3px #9356DC;
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
   height: 20px;
-  width: 48vw;
-  padding: 7px;
+  width: 43vw;
+  padding: 9px;
   margin: 30px auto;
+  transition: transform 400ms;
 }
 .heading-home-description__btn :visited {
   color: white;
+}
+.heading-home-description__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
+  box-shadow: 8px 8px 8px #9356DC;
+}
+
+/*Bouton 'Commander' en fin de présentation du menu*/
+.btn-order {
+  border: 0px #FF79DA solid;
+  border-radius: 2rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 3px 3px 3px #9356DC;
+  margin: 50px auto 0px auto;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  width: 35vw;
+  height: 20px;
+  transition: transform 400ms;
+}
+.btn-order :visited {
+  color: white;
+}
+.btn-order:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
+  box-shadow: 8px 8px 8px #9356DC;
+}
+
+/*Placement du coeur vide près du gros titre de la carte*/
+.menu-page1__description,
+.menu-page2__description,
+.menu-page3__description,
+.menu-page4__description {
+  position: relative;
+}
+
+/*Remplissage du coeur sur les Pages1 Pages2 Pages 3 et Pages4*/
+.menu-page1__heart,
+.menu-page2__heart,
+.menu-page3__heart,
+.menu-page4__heart {
+  position: absolute;
+  right: 35px;
+  top: 6px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.menu-page1__heartfull,
+.menu-page2__heartfull,
+.menu-page3__heartfull,
+.menu-page4__heartfull {
+  color: #9356DC;
+  position: absolute;
+  right: 35px;
+  top: 6px;
+  font-size: 1.4rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 100ms;
+  transition-timing-function: ease-out;
+  transform-origin: bottom 50%;
+}
+.menu-page1__heartfull:active,
+.menu-page2__heartfull:active,
+.menu-page3__heartfull:active,
+.menu-page4__heartfull:active {
+  opacity: 1;
+  transform: scale(1.12);
+  animation: progress-heart 400ms;
+}
+
+@keyframes progress-heart {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/*Remplissage du coeur uniquement sur la page d'accueil*/
+.menu-page1__heartfullhome {
+  color: #9356DC;
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  font-size: 1.4rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 100ms;
+  transition-timing-function: ease-out;
+  transform-origin: bottom 50%;
+}
+.menu-page1__heartfullhome:active {
+  opacity: 1;
+  transform: scale(1.12);
+  animation: progress-heart 400ms;
 }
 
 .container a, a:link, a:visited {
@@ -86,7 +242,7 @@ input::placeholder {
 
 .heading-home-description {
   background-color: #f1efef;
-  height: 300px;
+  height: 270px;
 }
 
 header {
@@ -98,7 +254,7 @@ header {
 .heading-page3,
 .heading-page4 {
   text-align: center;
-  padding: 15px 0 20px 0;
+  padding: 15px 0 10px 0;
 }
 .heading-page1__return,
 .heading-page2__return,
@@ -117,7 +273,10 @@ header {
   height: 40px;
 }
 
-.heading-page1__img {
+.heading-page1__img,
+.heading-page2__img,
+.heading-page3__img,
+.heading-page4__img {
   width: 100vw;
   object-fit: cover;
 }
@@ -159,7 +318,7 @@ nav li {
   font-size: 0.9rem;
 }
 
-/*Généralité sur la page d'accueil*/
+/*GénéralitéS sur la page d'accueil*/
 #menu-home-page {
   margin-top: 50px;
   height: 1200px;
@@ -255,47 +414,125 @@ main h6 {
   padding-top: 3px;
 }
 
-/*Placement du coeur dans les pages menu*/
-.menu-page1__description {
+/*Généralités sur tout le main et mise en position relative du header pour que le main chevauche l'image*/
+header {
+  z-index: 1;
   position: relative;
 }
 
-.menu-page1__heart {
+#menu-page1,
+#menu-page2,
+#menu-page3,
+#menu-page4 {
+  background-color: #f1efef;
+  margin-top: -55px;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  z-index: 2;
   position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 1.4rem;
+  width: 100%;
+  height: 1155px;
 }
 
-/*Disposition de l'accompagnement des plats*/
-#menu-page1 h4 {
-  font-size: 0.9rem;
-  font-weight: normal;
-  margin-top: -15px;
+#menu-page2 {
+  background-color: #f1efef;
+  margin-top: -155px;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 1240px;
 }
 
-.menu-page1__starters--mainNames1,
-.menu-page1__starters--mainNames2,
-.menu-page1__starters--mainNames3 {
+/* Agencement des légendes des plats */
+.menu-page1__starters--mainNames1, .menu-page1__starters--mainNames2, .menu-page1__starters--mainNames3,
+.menu-page1__main--mainNames1, .menu-page1__main--mainNames2, .menu-page1__main--mainNames3,
+.menu-page1__desserts--mainNames1, .menu-page1__desserts--mainNames2, .menu-page1__desserts--mainNames3,
+.menu-page2__starters--mainNames1, .menu-page2__starters--mainNames2, .menu-page2__starters--mainNames3,
+.menu-page2__starters--mainNames4,
+.menu-page2__main--mainNames1, .menu-page2__main--mainNames2, .menu-page2__main--mainNames3,
+.menu-page2__desserts--mainNames1, .menu-page2__desserts--mainNames2, .menu-page2__desserts--mainNames3,
+.menu-page3__starters--mainNames1, .menu-page3__starters--mainNames2, .menu-page3__starters--mainNames3,
+.menu-page3__main--mainNames1, .menu-page3__main--mainNames2, .menu-page3__main--mainNames3,
+.menu-page3__desserts--mainNames1, .menu-page3__desserts--mainNames2, .menu-page3__desserts--mainNames3,
+.menu-page4__starters--mainNames1, .menu-page4__starters--mainNames2, .menu-page4__starters--mainNames3,
+.menu-page4__main--mainNames1, .menu-page4__main--mainNames2, .menu-page4__main--mainNames3,
+.menu-page4__desserts--mainNames1, .menu-page4__desserts--mainNames2, .menu-page4__desserts--mainNames3 {
   position: relative;
-  margin-left: 20px;
+  border: 1px #f3f2f2 solid;
+  border-radius: 1rem;
+  box-shadow: 6px 6px 4px #dfdede;
+  background-color: white;
+  margin: 20px auto;
+  width: 90vw;
+  height: 60px;
+  /*Installation des points de suspensions en cas de rétrécissement du bloc*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.menu-page1__starters--price {
+/*Affichage des prix*/
+.menu-page1__starters--price, .menu-page1__main--price, .menu-page1__desserts--price,
+.menu-page2__starters--price, .menu-page2__main--price, .menu-page2__desserts--price,
+.menu-page3__starters--price, .menu-page3__main--price, .menu-page3__desserts--price,
+.menu-page4__starters--price, .menu-page4__main--price, .menu-page4__desserts--price {
   position: absolute;
-  top: 11px;
+  top: 19px;
   right: 20px;
+  font-weight: 600;
 }
 
-footer {
+/*Footer pour la page d'accueil car ensuite dans les autres pages on doit utiliser le positionnement relatif*/
+.container0 footer {
   color: white;
   background-color: #333232;
   height: 250px;
 }
-footer p {
-  margin-left: 40px;
+.container0 footer p {
+  margin-left: 20px;
 }
-footer ul {
+.container0 footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+/*Footer pour les page1 page2 page3 et page4 uniquement du fait du positionnement relatif par-dessus l'image*/
+.container1 footer,
+.container3 footer,
+.container4 footer {
+  color: white;
+  background-color: #333232;
+  height: 250px;
+  position: absolute;
+  top: 1420px;
+  width: 100%;
+}
+.container1 footer p,
+.container3 footer p,
+.container4 footer p {
+  margin-left: 20px;
+}
+.container1 footer ul,
+.container3 footer ul,
+.container4 footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.container2 footer {
+  color: white;
+  background-color: #333232;
+  height: 250px;
+  position: absolute;
+  top: 1620px;
+  width: 100%;
+}
+.container2 footer p {
+  margin-left: 20px;
+}
+.container2 footer ul {
   list-style-type: none;
   display: flex;
 }
@@ -304,14 +541,14 @@ footer ul {
   width: 25vw;
   height: 4vh;
   filter: invert(1);
-  margin: 20px 0 0 40px;
+  margin: 20px 0 0 20px;
 }
 
 .footer-menu__propose--ustensils {
-  margin-right: 15px;
+  margin: 0 15px 0 -20px;
 }
 .footer-menu__partner--hands {
-  margin-right: 7px;
+  margin: 0 7px 0 -20px;
 }
 
 .footer-menu__contact a:link, :visited {

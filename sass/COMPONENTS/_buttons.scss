@@ -1,17 +1,126 @@
 
+/*Bouton de 'Explorer nos restaurants'*/
 .heading-home-description__btn {
-    border: 1px $Color-Secondary solid;
-    background-color: $Color-Secondary;
+    border: 0px $Color-Secondary solid;
     border-radius: 5rem;
+    background: linear-gradient($Color-Secondary,$Color-Primary);
+    box-shadow: 3px 3px 3px $Color-Primary;
     font-size: .9rem;
     font-weight:bold;
     text-align: center;
     height: 20px;
-    width: 48vw;
-    padding: 7px;
+    width: 43vw;
+    padding: 9px;
     margin: 30px auto;
-
+    transition: transform 400ms;
+    
         & :visited{
             color: white;
         }
+
+        &:hover {
+            opacity: .9;
+            transform: scale(1.15);
+            box-shadow: 8px 8px 8px $Color-Primary;
+
+        }
 }
+
+/*Bouton 'Commander' en fin de présentation du menu*/
+.btn-order {
+    border: 0px $Color-Secondary solid;
+    border-radius: 2rem;
+    background: linear-gradient($Color-Secondary,$Color-Primary);
+    box-shadow: 3px 3px 3px $Color-Primary;
+    margin: 50px auto 0px auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 35vw;
+    height: 20px;
+    transition: transform 400ms;
+
+    & :visited{
+        color: white;
+    }
+
+    &:hover {
+        opacity: .9;
+        transform: scale(1.15);
+        box-shadow: 8px 8px 8px $Color-Primary;
+    }
+}
+
+/*Placement du coeur vide près du gros titre de la carte*/
+.menu-page1__description,
+.menu-page2__description,
+.menu-page3__description,
+.menu-page4__description {
+    position: relative;
+    
+}
+/*Remplissage du coeur sur les Pages1 Pages2 Pages 3 et Pages4*/
+.menu-page1__heart,
+.menu-page2__heart,
+.menu-page3__heart,
+.menu-page4__heart{
+    position: absolute;
+    right: 35px;
+    top:6px;
+    font-size: $Fontsize-Heart;
+    cursor: pointer; 
+    }
+
+    .menu-page1__heartfull,
+    .menu-page2__heartfull,
+    .menu-page3__heartfull,
+    .menu-page4__heartfull {
+        color: $Color-Primary;
+        position: absolute;
+        right: 35px;
+        top:6px;
+        font-size: $Fontsize-Heart;
+        opacity: 0;       
+        cursor: pointer;    
+        transition: transform 100ms ;
+        transition-timing-function: ease-out;
+        transform-origin:bottom 50%;
+        
+        &:active {
+            opacity: 1;
+           transform: scale(1.12);
+            animation: progress-heart 400ms;
+        }
+    }
+
+    @keyframes progress-heart {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+/*Remplissage du coeur uniquement sur la page d'accueil*/
+    .menu-page1__heartfullhome {
+        color: $Color-Primary; 
+        position: absolute;
+        right: 20px;
+        top: 4px;
+        font-size: $Fontsize-Heart;
+        opacity: 0;       
+        cursor: pointer;    
+        transition: transform 100ms ;
+        transition-timing-function: ease-out;
+        transform-origin:bottom 50%;
+        
+        &:active {
+            opacity: 1;
+            transform: scale(1.12);
+            animation: progress-heart 400ms;
+        }
+    }
+    
+
+
