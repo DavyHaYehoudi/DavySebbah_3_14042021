@@ -57,6 +57,26 @@
     margin: 20px 0 0 20px;
 }
 
+@media screen and (max-width: 414px) {
+.container0 footer {
+    height: 220px;
+}
+
+    .container1 .footer-logo, .container3 .footer-logo {
+        margin: 50px 0 0 20px;
+    }
+
+    .container2 footer {
+        margin: 55px 0 0 0px;
+        height: 220px;
+    }
+
+    .container4 footer {
+        margin: 35px 0 0 0px;
+        height: 220px;
+    }
+}
+
 .footer-menu {
         &__propose--ustensils {
             margin: 0 15px 0 -20px;

@@ -20,6 +20,7 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
+
 /*Mise en forme des images de la page d'accueil*/
 .main-home-menu1__img,
 .main-home-menu2__img,
@@ -58,7 +59,7 @@
 }
 
 #menu-home-page h4 {
-    margin-top: -17px;
+    margin-top: -15px;
     padding-left: 16px;
     font-weight: normal;
     font-size: .9rem;
@@ -154,11 +155,25 @@ header {
     margin: 20px auto;
     width: 90vw;
     height: 60px;
-    /*Installation des points de suspensions en cas de rétrécissement du bloc*/
+}
+
+/*Installation des points de suspensions en cas de rétrécissement du bloc*/
+
+/*Entrées*/
+.menu-page1__starters--dishnames,.menu-page2__starters--dishnames,.menu-page3__starters--dishnames,.menu-page4__starters--dishnames,
+.menu-page1__starters--accompaniment,.menu-page2__starters--accompaniment,.menu-page3__starters--accompaniment,.menu-page4__starters--accompaniment,
+/*Plats*/
+.menu-page1__main--dishnames,.menu-page2__main--dishnames,.menu-page3__main--dishnames,.menu-page4__main--dishnames,
+.menu-page1__main--accompaniment,.menu-page2__main--accompaniment,.menu-page3__main--accompaniment,.menu-page4__main--accompaniment,
+/*Desserts*/
+.menu-page1__desserts--dishnames,.menu-page2__desserts--dishnames,.menu-page3__desserts--dishnames,.menu-page4__desserts--dishnames,
+.menu-page1__desserts--accompaniment,.menu-page2__desserts--accompaniment,.menu-page3__desserts--accompaniment,.menu-page4__desserts--accompaniment{
+    width: 70vw;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 
 /*Affichage des prix*/
 .menu-page1__starters--price,.menu-page1__main--price,.menu-page1__desserts--price,

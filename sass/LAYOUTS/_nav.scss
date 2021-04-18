@@ -3,28 +3,58 @@
 }
 
 nav {
+   
+    a { /*Pour ne pas que le lien prenne toute la largeur*/
+        display: inline-block;
+  
+        & :hover {         
+            background: linear-gradient($Color-Secondary ,$Color-Primary );
+            opacity: 0.8;   
+            color: white;  
+            /*Cette icône du stand ne blanchissait pas du fait que j'ai codé plus bas un adoucissment*/ 
+            .nav-home-taste__store {
+                color: white;
+            }  
+        }
+      }
+
     ul {
         list-style-type: none;
-        margin:0 0 20px 30px;
-        padding: 25px 0 0 0px;
-        height: 2.9rem;
         background-color: $Color-Bkg;
+       
+        width: 310px;
+        height: 2.3rem;
+        
+        display: flex;
+        border: 1px $Color-Bkg solid;
+        border-radius: 1.5rem;
         box-shadow: 6px 6px 4px rgb(223, 222, 222);
-    }
-    li {
-        margin: 0 20px 0 -7px;
-        padding-left: 10px;
-    }
+
+        margin:0 0 20px 30px;
+        
+        padding: 25px 0 0 0px;    
+        transform: scale(1);
+        transition: transform 400ms;
+/*Placement du transform scale ici et non dans la balise a du nav car tout les li grossissaient indépendament quand on passait dessus*/
+             &:hover{
+                transform: scale(1.1);
+             }      
+        }
+   
+        li {
+            margin: 0 20px 0 -7px;
+            padding-left: 10px;
+        } 
 }
 
-.nav-home-choose,.nav-home-compose,
-.nav-home-taste {
-    display: flex;
-    border: 1px $Color-Bkg solid;
-    border-radius: 1.5rem;
-    width: 310px;
-}
+@media  screen and (max-width: 414px) {
+    nav ul {
+         margin: 0 0 20px 52px;}
+ }
+     
+ 
 
+/*Configuration des chiffres encerclés*/
 .nav-home-choose__number1,
 .nav-home-compose__number2,
 .nav-home-taste__number3 {
@@ -35,6 +65,10 @@ nav {
     background-color: $Color-Primary;
     color: white;
     font-size: .9rem;
+}
+/*Adoucissement de la teinte noire du stand*/
+.nav-home-taste__store {
+    color: rgb(59, 54, 54);
 }
 
 

@@ -12,19 +12,26 @@
     width: 43vw;
     padding: 9px;
     margin: 30px auto;
+    cursor: pointer;
     transition: transform 400ms;
     
         & :visited{
             color: white;
         }
-
         &:hover {
-            opacity: .9;
+            opacity: .8;
             transform: scale(1.15);
             box-shadow: 8px 8px 8px $Color-Primary;
-
         }
-}
+    }
+/*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
+//         // &:hover {
+//         //     opacity: .9;
+//         //     transform: scale(1.15);
+//         //     box-shadow: 8px 8px 8px $Color-Primary;
+
+//         }
+
 
 /*Bouton 'Commander' en fin de présentation du menu*/
 .btn-order {
@@ -32,6 +39,7 @@
     border-radius: 2rem;
     background: linear-gradient($Color-Secondary,$Color-Primary);
     box-shadow: 3px 3px 3px $Color-Primary;
+    cursor: pointer;
     margin: 50px auto 0px auto;
     padding: 10px;
     text-align: center;
@@ -45,7 +53,7 @@
     }
 
     &:hover {
-        opacity: .9;
+        opacity: .8;
         transform: scale(1.15);
         box-shadow: 8px 8px 8px $Color-Primary;
     }
@@ -75,50 +83,44 @@
     .menu-page2__heartfull,
     .menu-page3__heartfull,
     .menu-page4__heartfull {
-        color: $Color-Primary;
+        // Dégradé de la couleur du coeur rempli
+        background:-webkit-linear-gradient(top, $Color-Primary 30%, $Color-Secondary 70%);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+
         position: absolute;
         right: 35px;
         top:6px;
         font-size: $Fontsize-Heart;
         opacity: 0;       
         cursor: pointer;    
-        transition: transform 100ms ;
-        transition-timing-function: ease-out;
-        transform-origin:bottom 50%;
+        transition: opacity 350ms;
         
         &:active {
             opacity: 1;
-           transform: scale(1.12);
-            animation: progress-heart 400ms;
-        }
-    }
-
-    @keyframes progress-heart {
-        0% {
-            transform: scaleY(0);
-        }
-        100% {
-            transform: scaleY(1);
         }
     }
 
 /*Remplissage du coeur uniquement sur la page d'accueil*/
+
     .menu-page1__heartfullhome {
-        color: $Color-Primary; 
+        // Dégradé de la couleur du coeur rempli
+        background:-webkit-linear-gradient(top, $Color-Primary 30%, $Color-Secondary 70%);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+
         position: absolute;
         right: 20px;
         top: 4px;
         font-size: $Fontsize-Heart;
         opacity: 0;       
         cursor: pointer;    
-        transition: transform 100ms ;
-        transition-timing-function: ease-out;
-        transform-origin:bottom 50%;
+        transition: opacity 350ms;
         
         &:active {
             opacity: 1;
-            transform: scale(1.12);
-            animation: progress-heart 400ms;
         }
     }
     

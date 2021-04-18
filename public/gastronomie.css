@@ -94,23 +94,26 @@
   width: 43vw;
   padding: 9px;
   margin: 30px auto;
+  cursor: pointer;
   transition: transform 400ms;
 }
 .heading-home-description__btn :visited {
   color: white;
 }
 .heading-home-description__btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
 }
 
+/*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
 /*Bouton 'Commander' en fin de présentation du menu*/
 .btn-order {
   border: 0px #FF79DA solid;
   border-radius: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 3px 3px 3px #9356DC;
+  cursor: pointer;
   margin: 50px auto 0px auto;
   padding: 10px;
   text-align: center;
@@ -123,7 +126,7 @@
   color: white;
 }
 .btn-order:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
 }
@@ -152,51 +155,41 @@
 .menu-page2__heartfull,
 .menu-page3__heartfull,
 .menu-page4__heartfull {
-  color: #9356DC;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   position: absolute;
   right: 35px;
   top: 6px;
   font-size: 1.4rem;
   opacity: 0;
   cursor: pointer;
-  transition: transform 100ms;
-  transition-timing-function: ease-out;
-  transform-origin: bottom 50%;
+  transition: opacity 350ms;
 }
 .menu-page1__heartfull:active,
 .menu-page2__heartfull:active,
 .menu-page3__heartfull:active,
 .menu-page4__heartfull:active {
   opacity: 1;
-  transform: scale(1.12);
-  animation: progress-heart 400ms;
 }
 
-@keyframes progress-heart {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
 /*Remplissage du coeur uniquement sur la page d'accueil*/
 .menu-page1__heartfullhome {
-  color: #9356DC;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   position: absolute;
   right: 20px;
   top: 4px;
   font-size: 1.4rem;
   opacity: 0;
   cursor: pointer;
-  transition: transform 100ms;
-  transition-timing-function: ease-out;
-  transform-origin: bottom 50%;
+  transition: opacity 350ms;
 }
 .menu-page1__heartfullhome:active {
   opacity: 1;
-  transform: scale(1.12);
-  animation: progress-heart 400ms;
 }
 
 .container a, a:link, a:visited {
@@ -220,7 +213,7 @@ body {
 }
 
 .heading-home-search {
-  text-align: center;
+  padding-left: 110px;
   height: 5vh;
   padding-top: 10px;
   background-color: #e2dfdf;
@@ -229,14 +222,21 @@ body {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 414px) {
+  .heading-home-search {
+    padding-left: 130px;
+  }
+}
 .heading-home-field {
   outline: none;
   border: hidden;
   background-color: #e2dfdf;
+  font-size: 1.1rem;
 }
 
 input::placeholder {
   color: black;
+  font-size: 1rem;
   background-color: #e2dfdf;
 }
 
@@ -285,27 +285,48 @@ header {
   margin: 50px 0 30px 30px;
 }
 
+nav a {
+  /*Pour ne pas que le lien prenne toute la largeur*/
+  display: inline-block;
+}
+nav a :hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0.8;
+  color: white;
+  /*Cette icône du stand ne blanchissait pas du fait que j'ai codé plus bas un adoucissment*/
+}
+nav a :hover .nav-home-taste__store {
+  color: white;
+}
 nav ul {
   list-style-type: none;
+  background-color: #f1efef;
+  width: 310px;
+  height: 2.3rem;
+  display: flex;
+  border: 1px #f1efef solid;
+  border-radius: 1.5rem;
+  box-shadow: 6px 6px 4px #dfdede;
   margin: 0 0 20px 30px;
   padding: 25px 0 0 0px;
-  height: 2.9rem;
-  background-color: #f1efef;
-  box-shadow: 6px 6px 4px #dfdede;
+  transform: scale(1);
+  transition: transform 400ms;
+  /*Placement du transform scale ici et non dans la balise a du nav car tout les li grossissaient indépendament quand on passait dessus*/
+}
+nav ul:hover {
+  transform: scale(1.1);
 }
 nav li {
   margin: 0 20px 0 -7px;
   padding-left: 10px;
 }
 
-.nav-home-choose, .nav-home-compose,
-.nav-home-taste {
-  display: flex;
-  border: 1px #f1efef solid;
-  border-radius: 1.5rem;
-  width: 310px;
+@media screen and (max-width: 414px) {
+  nav ul {
+    margin: 0 0 20px 52px;
+  }
 }
-
+/*Configuration des chiffres encerclés*/
 .nav-home-choose__number1,
 .nav-home-compose__number2,
 .nav-home-taste__number3 {
@@ -316,6 +337,11 @@ nav li {
   background-color: #9356DC;
   color: white;
   font-size: 0.9rem;
+}
+
+/*Adoucissement de la teinte noire du stand*/
+.nav-home-taste__store {
+  color: #3b3636;
 }
 
 /*GénéralitéS sur la page d'accueil*/
@@ -378,7 +404,7 @@ nav li {
 }
 
 #menu-home-page h4 {
-  margin-top: -17px;
+  margin-top: -15px;
   padding-left: 16px;
   font-weight: normal;
   font-size: 0.9rem;
@@ -467,7 +493,17 @@ header {
   margin: 20px auto;
   width: 90vw;
   height: 60px;
-  /*Installation des points de suspensions en cas de rétrécissement du bloc*/
+}
+
+/*Installation des points de suspensions en cas de rétrécissement du bloc*/
+/*Entrées*/
+.menu-page1__starters--dishnames, .menu-page2__starters--dishnames, .menu-page3__starters--dishnames, .menu-page4__starters--dishnames,
+.menu-page1__starters--accompaniment, .menu-page2__starters--accompaniment, .menu-page3__starters--accompaniment, .menu-page4__starters--accompaniment,
+.menu-page1__main--dishnames, .menu-page2__main--dishnames, .menu-page3__main--dishnames, .menu-page4__main--dishnames,
+.menu-page1__main--accompaniment, .menu-page2__main--accompaniment, .menu-page3__main--accompaniment, .menu-page4__main--accompaniment,
+.menu-page1__desserts--dishnames, .menu-page2__desserts--dishnames, .menu-page3__desserts--dishnames, .menu-page4__desserts--dishnames,
+.menu-page1__desserts--accompaniment, .menu-page2__desserts--accompaniment, .menu-page3__desserts--accompaniment, .menu-page4__desserts--accompaniment {
+  width: 70vw;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -544,6 +580,25 @@ header {
   margin: 20px 0 0 20px;
 }
 
+@media screen and (max-width: 414px) {
+  .container0 footer {
+    height: 220px;
+  }
+
+  .container1 .footer-logo, .container3 .footer-logo {
+    margin: 50px 0 0 20px;
+  }
+
+  .container2 footer {
+    margin: 55px 0 0 0px;
+    height: 220px;
+  }
+
+  .container4 footer {
+    margin: 35px 0 0 0px;
+    height: 220px;
+  }
+}
 .footer-menu__propose--ustensils {
   margin: 0 15px 0 -20px;
 }
