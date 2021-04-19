@@ -38,7 +38,7 @@
 #menu-page4 h1 {
     font-family: 'Shrikhand';  
     font-size: $Fontsize-TitleMenu;
-    margin-left: 20px;
+    margin-left: 5vw;
 }
 
 /*Entrées, Plat et Desserts de la carte de chaque menu*/
@@ -48,7 +48,7 @@
 #menu-page4 h2 {
     font-size: 1.1rem;
     font-weight: normal;
-    margin: 40px 0 0 20px;
+    margin: 40px 0 0 5vw;
 }
 
 #menu-page1 h3,
@@ -83,8 +83,8 @@
   content : "";
   position: absolute;
   left    : 0;
-  bottom  : 0;
-  width   : 12%;  
+  bottom  : 0; 
+  width: 45px;
   border-bottom:3px solid $Color-Tertiary;
   margin-bottom: -8px;
 }

@@ -1,11 +1,20 @@
 .nav-home-title {
-    margin: 50px 0 30px 30px;   
+    margin: 50px 0 30px -25vw;   
+}
+
+@media screen and (min-width:740px){
+    .nav-home-title {
+        text-align: center;
+        margin: 50px 0 30px 8.5vw;
+    }
 }
 
 nav {
-   
-    a { /*Pour ne pas que le lien prenne toute la largeur*/
-        display: inline-block;
+    text-align: center;
+    margin-right: 7vw;
+
+    a { 
+        display: inline-block; /*Pour ne pas que le lien prenne toute la largeur*/
   
         & :hover {         
             background: linear-gradient($Color-Secondary ,$Color-Primary );
@@ -23,15 +32,14 @@ nav {
         background-color: $Color-Bkg;
        
         width: 310px;
-        height: 2.3rem;
+        height: 2.5rem;
         
         display: flex;
         border: 1px $Color-Bkg solid;
         border-radius: 1.5rem;
         box-shadow: 6px 6px 4px rgb(223, 222, 222);
-
         margin:0 0 20px 30px;
-        
+ 
         padding: 25px 0 0 0px;    
         transform: scale(1);
         transition: transform 400ms;
@@ -46,13 +54,6 @@ nav {
             padding-left: 10px;
         } 
 }
-
-@media  screen and (max-width: 414px) {
-    nav ul {
-         margin: 0 0 20px 52px;}
- }
-     
- 
 
 /*Configuration des chiffres encerclés*/
 .nav-home-choose__number1,
@@ -70,6 +71,14 @@ nav {
 .nav-home-taste__store {
     color: rgb(59, 54, 54);
 }
+
+/*Police du nav fonctionnement*/
+.nav-home-choose__phrasing,
+.nav-home-compose__phrasing,
+.nav-home-taste__phrasing {
+    font-size: 1.1rem;
+}
+
 
 
 

@@ -2,8 +2,8 @@
 
 .heading-home-logo {
     text-align: center;
-    height: 30px;
-    padding: 15px 0 30px 0;
+    height: 3vh;
+    padding: 15px 0 3.7vh 0;
     border-bottom: 3px rgb(214, 212, 212) solid; 
 
         &__img {
@@ -13,19 +13,15 @@
 }
 
 .heading-home-search {
-    padding-left: 110px;
+    text-align: center;
+    padding-left: 65px;
     height: 5vh;
-    padding-top: 10px;
+    padding-top: 10px; 
     background-color: rgb(226, 223, 223);
 
         &__map {
             margin-right: 10px;
         }
-}
-@media  screen and (max-width: 414px){
-    .heading-home-search {
-        padding-left: 130px;
-    }
 }
 
 .heading-home-field {
@@ -33,6 +29,7 @@
     border: hidden;
     background-color: rgb(226, 223, 223);
     font-size: 1.1rem;
+    
 }
 
 input::placeholder {
@@ -71,10 +68,16 @@ header {
 }
 
 .heading-page1__img,
-.heading-page2__img,
 .heading-page3__img,
 .heading-page4__img {
     width: 100vw;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.heading-page2__img2 {
+    width: 100vw;
+    max-height: 600px;
     object-fit: cover;
 }
 

@@ -29,7 +29,7 @@
 #menu-page4 h1 {
   font-family: "Shrikhand";
   font-size: 1.7rem;
-  margin-left: 20px;
+  margin-left: 5vw;
 }
 
 /*Entrées, Plat et Desserts de la carte de chaque menu*/
@@ -39,7 +39,7 @@
 #menu-page4 h2 {
   font-size: 1.1rem;
   font-weight: normal;
-  margin: 40px 0 0 20px;
+  margin: 40px 0 0 5vw;
 }
 
 #menu-page1 h3,
@@ -76,7 +76,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 12%;
+  width: 45px;
   border-bottom: 3px solid #99E2D0;
   margin-bottom: -8px;
 }
@@ -92,6 +92,7 @@
   text-align: center;
   height: 20px;
   width: 43vw;
+  max-width: 300px;
   padding: 9px;
   margin: 30px auto;
   cursor: pointer;
@@ -119,6 +120,7 @@
   text-align: center;
   color: white;
   width: 35vw;
+  max-width: 300px;
   height: 20px;
   transition: transform 400ms;
 }
@@ -203,8 +205,8 @@ body {
 
 .heading-home-logo {
   text-align: center;
-  height: 30px;
-  padding: 15px 0 30px 0;
+  height: 3vh;
+  padding: 15px 0 3.7vh 0;
   border-bottom: 3px #d6d4d4 solid;
 }
 .heading-home-logo__img {
@@ -213,7 +215,8 @@ body {
 }
 
 .heading-home-search {
-  padding-left: 110px;
+  text-align: center;
+  padding-left: 65px;
   height: 5vh;
   padding-top: 10px;
   background-color: #e2dfdf;
@@ -222,11 +225,6 @@ body {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 414px) {
-  .heading-home-search {
-    padding-left: 130px;
-  }
-}
 .heading-home-field {
   outline: none;
   border: hidden;
@@ -274,20 +272,36 @@ header {
 }
 
 .heading-page1__img,
-.heading-page2__img,
 .heading-page3__img,
 .heading-page4__img {
   width: 100vw;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.heading-page2__img2 {
+  width: 100vw;
+  max-height: 600px;
   object-fit: cover;
 }
 
 .nav-home-title {
-  margin: 50px 0 30px 30px;
+  margin: 50px 0 30px -25vw;
 }
 
+@media screen and (min-width: 740px) {
+  .nav-home-title {
+    text-align: center;
+    margin: 50px 0 30px 8.5vw;
+  }
+}
+nav {
+  text-align: center;
+  margin-right: 7vw;
+}
 nav a {
-  /*Pour ne pas que le lien prenne toute la largeur*/
   display: inline-block;
+  /*Pour ne pas que le lien prenne toute la largeur*/
 }
 nav a :hover {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -302,7 +316,7 @@ nav ul {
   list-style-type: none;
   background-color: #f1efef;
   width: 310px;
-  height: 2.3rem;
+  height: 2.5rem;
   display: flex;
   border: 1px #f1efef solid;
   border-radius: 1.5rem;
@@ -321,11 +335,6 @@ nav li {
   padding-left: 10px;
 }
 
-@media screen and (max-width: 414px) {
-  nav ul {
-    margin: 0 0 20px 52px;
-  }
-}
 /*Configuration des chiffres encerclés*/
 .nav-home-choose__number1,
 .nav-home-compose__number2,
@@ -344,35 +353,63 @@ nav li {
   color: #3b3636;
 }
 
+/*Police du nav fonctionnement*/
+.nav-home-choose__phrasing,
+.nav-home-compose__phrasing,
+.nav-home-taste__phrasing {
+  font-size: 1.1rem;
+}
+
 /*GénéralitéS sur la page d'accueil*/
 #menu-home-page {
   margin-top: 50px;
+  margin-right: 0;
   height: 1200px;
   background-color: #f1efef;
 }
 
+@media screen and (min-width: 1024px) {
+  #menu-home-page {
+    height: 2700px;
+  }
+}
 .main-title {
-  margin-left: 30px;
+  margin-left: 12vw;
   padding-top: 50px;
 }
 
+@media screen and (min-width: 740px) {
+  .main-title {
+    text-align: center;
+    margin: 50px 0 30px 0;
+  }
+}
 /*caractéristiques des images de la page d'accueil*/
 #menu-home-page img {
-  width: 85vw;
+  width: 100%;
   height: 180px;
-  margin-left: -12px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-}
-
-/*Mise en forme des images de la page d'accueil*/
-.main-home-menu1__img,
-.main-home-menu2__img,
-.main-home-menu3__img,
-.main-home-menu4__img {
   object-fit: cover;
+  max-width: 1024px;
 }
 
+@media screen and (min-width: 1024px) {
+  .main-home-menu1, .main-home-menu2, .main-home-menu3, .main-home-menu4 {
+    height: 600px;
+    text-align: center;
+  }
+
+  #menu-home-page img {
+    height: 500px;
+  }
+
+  .main-home-menu1__description, .main-home-menu2__description, .main-home-menu3__description, .main-home-menu4__description {
+    height: 100px;
+    margin: auto;
+    text-align: start;
+  }
+}
 /* dimensions du cadre descriptif contenant les deux titres sans le mot Nouveau*/
 .main-home-menu1__description--legend,
 .main-home-menu2__description--legend,
@@ -391,8 +428,8 @@ nav li {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: white;
-  width: 84.99vw;
-  margin-left: -12px;
+  width: 100%;
+  max-width: 1024px;
   margin-top: -5px;
 }
 
@@ -452,12 +489,12 @@ header {
 #menu-page4 {
   background-color: #f1efef;
   margin-top: -55px;
+  padding-bottom: 100px;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
   z-index: 2;
   position: absolute;
   width: 100%;
-  height: 1155px;
 }
 
 #menu-page2 {
@@ -468,7 +505,6 @@ header {
   z-index: 2;
   position: absolute;
   width: 100%;
-  height: 1240px;
 }
 
 /* Agencement des légendes des plats */
@@ -520,94 +556,62 @@ header {
   font-weight: 600;
 }
 
-/*Footer pour la page d'accueil car ensuite dans les autres pages on doit utiliser le positionnement relatif*/
-.container0 footer {
-  color: white;
-  background-color: #333232;
-  height: 250px;
-}
-.container0 footer p {
-  margin-left: 20px;
-}
-.container0 footer ul {
-  list-style-type: none;
-  display: flex;
+.footer-logo {
+  height: 6vh;
+  width: 200px;
+  filter: invert(1);
+  margin: 30px 0 0 40px;
 }
 
-/*Footer pour les page1 page2 page3 et page4 uniquement du fait du positionnement relatif par-dessus l'image*/
+.container0 footer,
 .container1 footer,
+.container2 footer,
 .container3 footer,
 .container4 footer {
   color: white;
   background-color: #333232;
-  height: 250px;
-  position: absolute;
-  top: 1420px;
   width: 100%;
+  height: 290px;
 }
+.container0 footer p,
 .container1 footer p,
+.container2 footer p,
 .container3 footer p,
 .container4 footer p {
-  margin-left: 20px;
+  margin-left: 40px;
 }
+.container0 footer ul,
 .container1 footer ul,
+.container2 footer ul,
 .container3 footer ul,
 .container4 footer ul {
   list-style-type: none;
   display: flex;
 }
 
+.container1 footer,
+.container3 footer,
+.container4 footer {
+  margin-top: 1100px;
+}
+
 .container2 footer {
-  color: white;
-  background-color: #333232;
-  height: 250px;
-  position: absolute;
-  top: 1620px;
-  width: 100%;
-}
-.container2 footer p {
-  margin-left: 20px;
-}
-.container2 footer ul {
-  list-style-type: none;
-  display: flex;
+  margin-top: 1090px;
 }
 
-.footer-logo {
-  width: 25vw;
-  height: 4vh;
-  filter: invert(1);
-  margin: 20px 0 0 20px;
-}
-
-@media screen and (max-width: 414px) {
-  .container0 footer {
-    height: 220px;
-  }
-
-  .container1 .footer-logo, .container3 .footer-logo {
-    margin: 50px 0 0 20px;
-  }
-
-  .container2 footer {
-    margin: 55px 0 0 0px;
-    height: 220px;
-  }
-
-  .container4 footer {
-    margin: 35px 0 0 0px;
-    height: 220px;
-  }
-}
 .footer-menu__propose--ustensils {
-  margin: 0 15px 0 -20px;
+  margin: 0 15px 0 0px;
 }
 .footer-menu__partner--hands {
-  margin: 0 7px 0 -20px;
+  margin: 0 7px 0 0px;
 }
 
 .footer-menu__contact a:link, :visited {
   color: white;
+}
+.footer-menu__contact a:link:hover, :visited:hover {
+  color: #FF79DA;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=gastronomie.css.map */
