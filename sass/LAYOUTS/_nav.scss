@@ -1,12 +1,15 @@
 .nav-home-title {
     margin: 50px 0 30px -25vw;   
-}
 
-@media screen and (min-width:740px){
-    .nav-home-title {
+
+@media screen and (min-width:415px){
         text-align: center;
-        margin: 50px 0 30px 8.5vw;
-    }
+        margin: 50px 0 30px 8.4vw;
+        }
+
+        @media screen and (min-width:1024px){
+            font-size: 2rem;
+        }
 }
 
 nav {
@@ -30,9 +33,12 @@ nav {
     ul {
         list-style-type: none;
         background-color: $Color-Bkg;
-       
-        width: 310px;
+        width: 82vw;
+        max-width: 270px;
         height: 2.5rem;
+        @media screen and (min-width:1024px){
+            max-width: 350px;
+        }
         
         display: flex;
         border: 1px $Color-Bkg solid;
@@ -66,6 +72,9 @@ nav {
     background-color: $Color-Primary;
     color: white;
     font-size: .9rem;
+    @media screen and (min-width:1024px){
+        padding: 3px 12px 15px 12px;
+    }
 }
 /*Adoucissement de la teinte noire du stand*/
 .nav-home-taste__store {
@@ -80,5 +89,14 @@ nav {
 }
 
 
-
-
+@media screen and (min-width:1024px){
+.nav-home-choose__number1,.nav-home-compose__number2,.nav-home-taste__number3,
+.nav-home-choose__phrasing,.nav-home-compose__phrasing,.nav-home-taste__phrasing,
+.nav-home-choose__mobile,.nav-home-compose__menu,.nav-home-taste__store {
+        font-size: 1.5rem; }
+        nav ul {
+            width: auto;
+            margin-left: 100px;
+            padding: 25px 20px 20px 0px;
+        }
+    }

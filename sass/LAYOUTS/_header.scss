@@ -15,26 +15,34 @@
 .heading-home-search {
     text-align: center;
     padding-left: 65px;
-    height: 5vh;
-    padding-top: 10px; 
+    height: 45px;
+    padding-top: 15px; 
     background-color: rgb(226, 223, 223);
 
         &__map {
             margin-right: 10px;
+            @media screen and (min-width:1024px){
+            font-size: 1.7rem;
+            }
         }
-}
+    }
 
 .heading-home-field {
     outline: none;
     border: hidden;
     background-color: rgb(226, 223, 223);
     font-size: 1.1rem;
-    
+    @media screen and (min-width:1024px){
+        font-size: 1.7rem;
+    }
 }
 
 input::placeholder {
     color: black;
     font-size: 1rem;
+    @media screen and (min-width:1024px){
+        font-size: 1.7rem;
+    }
     background-color: rgb(226, 223, 223);
 }
 

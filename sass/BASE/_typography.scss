@@ -23,10 +23,17 @@
     font-weight: bolder;
     margin: 0 60px;
     font-size: 1.5rem;
+    @media  screen and (min-width: 1024px){
+        font-size: 2.5rem;
+    }
+        
 }
 
 .heading-home-description__title2 {
     font-size: 1.1rem;
+    @media  screen and (min-width: 1024px){
+        font-size: 1.6rem;
+    }
     font-weight: normal;
     margin: 20px 15px;
 }

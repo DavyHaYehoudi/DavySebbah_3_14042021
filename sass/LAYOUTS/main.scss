@@ -1,55 +1,56 @@
 // ----------------------------PAGE D'ACCUEIL----------------------
 
 
-/*GénéralitéS sur la page d'accueil*/
+/*Généralités sur la page d'accueil*/
 
 #menu-home-page {
     margin-top: 50px;
-    margin-right: 0;
     height: 1200px;
     background-color: rgb(241, 239, 239) ;
-}
+
 @media screen and (min-width:1024px){
-    #menu-home-page{
-        height: 2700px;
+        height: 2900px;
     }
 }
 
 .main-title {
-    // margin-left: 30px;
     margin-left: 12vw;
     padding-top: 50px;
-}
-@media screen and (min-width:740px){
-    .main-title  {
+
+@media screen and (min-width:415px){
         text-align: center;
         margin: 50px 0 30px 0;
     }
+    @media screen and (min-width:1024px){
+        font-size: 2rem;
+    }
 }
 /*caractéristiques des images de la page d'accueil*/
+
+
 #menu-home-page img {
-    width: 100%;
+    width: 95%;
+    max-width: 1024px;
     height: 180px;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     object-fit: cover;
-
-    max-width: 1024px;
-    
+    margin-left: 25px;
 }
 @media screen and (min-width:1024px){
     .main-home-menu1,.main-home-menu2,.main-home-menu3,.main-home-menu4{
         height: 600px;
-        text-align: center;
-        // border: 10px red solid;
+        max-width: 1024px;
+        margin: 50px auto;
     }
     #menu-home-page img {
         height: 500px;
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
     }
     .main-home-menu1__description,.main-home-menu2__description,.main-home-menu3__description,.main-home-menu4__description{
         height: 100px;
         margin: auto;
-        text-align: start;
     }
 }
 
@@ -69,8 +70,13 @@
     box-shadow: 2px 2px 8px rgb(212, 211, 211);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
+
+    @media screen and (min-width:1024px){
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
     background-color: white;
-    width: 100%;
+    width: 95%;
     max-width: 1024px;
     margin-top: -5px;
 }
@@ -78,8 +84,12 @@
 /* Caractéristiques des titres de la description sur la page d'accueil*/
 #menu-home-page h3 {
     margin-top: 10px;
-    font-size: 1.1rem;
     padding-left: 16px;
+    font-size: 1.1rem;
+    
+    @media screen and (min-width:1024px){
+        font-size: 1.6rem;
+    }
 }
 
 #menu-home-page h4 {
@@ -87,6 +97,9 @@
     padding-left: 16px;
     font-weight: normal;
     font-size: .9rem;
+    @media screen and (min-width:1024px){
+        font-size: 1.3rem;
+    }
 }
 
 /*Placement du coeur dans la page d'accueil*/
@@ -95,6 +108,11 @@
 .main-home-menu3__heart,
 .main-home-menu4__heart {
     font-size: $Fontsize-Heart;
+    @media screen and (min-width:1024px){
+        font-size: 2.5rem;
+        right: 30px;
+        top:15px
+    }
     position: absolute;
     right: 20px;
     top: 4px;
@@ -108,15 +126,19 @@
 
 main h6 {
     position: absolute;
-    right: 0;
-    top: -20px;
     background-color: $Color-Tertiary;
     color: rgb(78, 124, 78);
-    width: 70px;
-    height: 19px;
-    font-size: .9rem;
+    width: 22vw;
+    max-width: 180px;
+    top:-25px;
+    right: 5px;
+    font-size: 1rem;
     text-align: center;
-    padding-top: 3px;
+    padding: 5px;
+    @media screen and (min-width:1024px){
+        top:-15px;
+        right: 45px;
+    }
 }
 
 // -----------------------PAGE1 PAGE2 PAGE3 PAGE4------------------------
@@ -204,7 +226,7 @@ header {
 .menu-page3__starters--price,.menu-page3__main--price,.menu-page3__desserts--price,
 .menu-page4__starters--price,.menu-page4__main--price,.menu-page4__desserts--price {
     position: absolute;
-    top: 19px;
+    top: 0px;
     right: 20px;
     font-weight: 600;
 }

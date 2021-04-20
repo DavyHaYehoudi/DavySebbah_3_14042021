@@ -15,11 +15,21 @@
   margin: 0 60px;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 1024px) {
+  .heading-home-description__title1 {
+    font-size: 2.5rem;
+  }
+}
 
 .heading-home-description__title2 {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 20px 15px;
+}
+@media screen and (min-width: 1024px) {
+  .heading-home-description__title2 {
+    font-size: 1.6rem;
+  }
 }
 
 /*Gros titre de la carte de chaque menu*/
@@ -90,24 +100,37 @@
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
-  height: 20px;
   width: 43vw;
   max-width: 300px;
   padding: 9px;
   margin: 30px auto;
   cursor: pointer;
   transition: transform 400ms;
+  /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
+}
+@media screen and (min-width: 1024px) {
+  .heading-home-description__btn {
+    font-size: 1.5rem;
+    padding-top: 12px;
+    height: 30px;
+  }
 }
 .heading-home-description__btn :visited {
   color: white;
 }
-.heading-home-description__btn:hover {
-  opacity: 0.8;
+.heading-home-description__btn:active {
+  opacity: 0.9;
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
 }
+@media screen and (min-width: 1024px) {
+  .heading-home-description__btn:hover {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px #9356DC;
+  }
+}
 
-/*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
 /*Bouton 'Commander' en fin de présentation du menu*/
 .btn-order {
   border: 0px #FF79DA solid;
@@ -121,16 +144,23 @@
   color: white;
   width: 35vw;
   max-width: 300px;
-  height: 20px;
   transition: transform 400ms;
+  /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
 }
 .btn-order :visited {
   color: white;
 }
-.btn-order:hover {
-  opacity: 0.8;
+.btn-order:active {
+  opacity: 0.9;
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
+}
+@media screen and (min-width: 1024px) {
+  .btn-order:hover {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px #9356DC;
+  }
 }
 
 /*Placement du coeur vide près du gros titre de la carte*/
@@ -152,6 +182,16 @@
   font-size: 1.4rem;
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) {
+  .menu-page1__heart,
+.menu-page2__heart,
+.menu-page3__heart,
+.menu-page4__heart {
+    font-size: 2.5rem;
+    right: 100px;
+    top: 0px;
+  }
+}
 
 .menu-page1__heartfull,
 .menu-page2__heartfull,
@@ -167,17 +207,27 @@
   font-size: 1.4rem;
   opacity: 0;
   cursor: pointer;
-  transition: opacity 350ms;
+  transition: opacity 1000ms;
 }
-.menu-page1__heartfull:active,
-.menu-page2__heartfull:active,
-.menu-page3__heartfull:active,
-.menu-page4__heartfull:active {
+@media screen and (min-width: 1024px) {
+  .menu-page1__heartfull,
+.menu-page2__heartfull,
+.menu-page3__heartfull,
+.menu-page4__heartfull {
+    font-size: 2.7rem;
+    right: 98px;
+    top: -1px;
+  }
+}
+.menu-page1__heartfull:hover,
+.menu-page2__heartfull:hover,
+.menu-page3__heartfull:hover,
+.menu-page4__heartfull:hover {
   opacity: 1;
 }
 
 /*Remplissage du coeur uniquement sur la page d'accueil*/
-.menu-page1__heartfullhome {
+.menu-home__heartfullhome {
   background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -188,10 +238,20 @@
   font-size: 1.4rem;
   opacity: 0;
   cursor: pointer;
-  transition: opacity 350ms;
+  transition: opacity 1000ms;
 }
-.menu-page1__heartfullhome:active {
+.menu-home__heartfullhome:active {
   opacity: 1;
+}
+.menu-home__heartfullhome:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .menu-home__heartfullhome {
+    font-size: 2.5rem;
+    right: 30px;
+    top: 15px;
+  }
 }
 
 .container a, a:link, a:visited {
@@ -217,12 +277,17 @@ body {
 .heading-home-search {
   text-align: center;
   padding-left: 65px;
-  height: 5vh;
-  padding-top: 10px;
+  height: 45px;
+  padding-top: 15px;
   background-color: #e2dfdf;
 }
 .heading-home-search__map {
   margin-right: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .heading-home-search__map {
+    font-size: 1.7rem;
+  }
 }
 
 .heading-home-field {
@@ -231,11 +296,21 @@ body {
   background-color: #e2dfdf;
   font-size: 1.1rem;
 }
+@media screen and (min-width: 1024px) {
+  .heading-home-field {
+    font-size: 1.7rem;
+  }
+}
 
 input::placeholder {
   color: black;
   font-size: 1rem;
   background-color: #e2dfdf;
+}
+@media screen and (min-width: 1024px) {
+  input::placeholder {
+    font-size: 1.7rem;
+  }
 }
 
 .heading-home-description {
@@ -288,13 +363,18 @@ header {
 .nav-home-title {
   margin: 50px 0 30px -25vw;
 }
-
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 415px) {
   .nav-home-title {
     text-align: center;
-    margin: 50px 0 30px 8.5vw;
+    margin: 50px 0 30px 8.4vw;
   }
 }
+@media screen and (min-width: 1024px) {
+  .nav-home-title {
+    font-size: 2rem;
+  }
+}
+
 nav {
   text-align: center;
   margin-right: 7vw;
@@ -315,7 +395,8 @@ nav a :hover .nav-home-taste__store {
 nav ul {
   list-style-type: none;
   background-color: #f1efef;
-  width: 310px;
+  width: 82vw;
+  max-width: 270px;
   height: 2.5rem;
   display: flex;
   border: 1px #f1efef solid;
@@ -326,6 +407,11 @@ nav ul {
   transform: scale(1);
   transition: transform 400ms;
   /*Placement du transform scale ici et non dans la balise a du nav car tout les li grossissaient indépendament quand on passait dessus*/
+}
+@media screen and (min-width: 1024px) {
+  nav ul {
+    max-width: 350px;
+  }
 }
 nav ul:hover {
   transform: scale(1.1);
@@ -347,6 +433,13 @@ nav li {
   color: white;
   font-size: 0.9rem;
 }
+@media screen and (min-width: 1024px) {
+  .nav-home-choose__number1,
+.nav-home-compose__number2,
+.nav-home-taste__number3 {
+    padding: 3px 12px 15px 12px;
+  }
+}
 
 /*Adoucissement de la teinte noire du stand*/
 .nav-home-taste__store {
@@ -360,54 +453,74 @@ nav li {
   font-size: 1.1rem;
 }
 
-/*GénéralitéS sur la page d'accueil*/
+@media screen and (min-width: 1024px) {
+  .nav-home-choose__number1, .nav-home-compose__number2, .nav-home-taste__number3,
+.nav-home-choose__phrasing, .nav-home-compose__phrasing, .nav-home-taste__phrasing,
+.nav-home-choose__mobile, .nav-home-compose__menu, .nav-home-taste__store {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    width: auto;
+    margin-left: 100px;
+    padding: 25px 20px 20px 0px;
+  }
+}
+/*Généralités sur la page d'accueil*/
 #menu-home-page {
   margin-top: 50px;
-  margin-right: 0;
   height: 1200px;
   background-color: #f1efef;
 }
-
 @media screen and (min-width: 1024px) {
   #menu-home-page {
-    height: 2700px;
+    height: 2900px;
   }
 }
+
 .main-title {
   margin-left: 12vw;
   padding-top: 50px;
 }
-
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 415px) {
   .main-title {
     text-align: center;
     margin: 50px 0 30px 0;
   }
 }
+@media screen and (min-width: 1024px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
 /*caractéristiques des images de la page d'accueil*/
 #menu-home-page img {
-  width: 100%;
+  width: 95%;
+  max-width: 1024px;
   height: 180px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   object-fit: cover;
-  max-width: 1024px;
+  margin-left: 25px;
 }
 
 @media screen and (min-width: 1024px) {
   .main-home-menu1, .main-home-menu2, .main-home-menu3, .main-home-menu4 {
     height: 600px;
-    text-align: center;
+    max-width: 1024px;
+    margin: 50px auto;
   }
 
   #menu-home-page img {
     height: 500px;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
   }
 
   .main-home-menu1__description, .main-home-menu2__description, .main-home-menu3__description, .main-home-menu4__description {
     height: 100px;
     margin: auto;
-    text-align: start;
   }
 }
 /* dimensions du cadre descriptif contenant les deux titres sans le mot Nouveau*/
@@ -428,16 +541,30 @@ nav li {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: white;
-  width: 100%;
+  width: 95%;
   max-width: 1024px;
   margin-top: -5px;
+}
+@media screen and (min-width: 1024px) {
+  .main-home-menu1__description,
+.main-home-menu2__description,
+.main-home-menu3__description,
+.main-home-menu4__description {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
 }
 
 /* Caractéristiques des titres de la description sur la page d'accueil*/
 #menu-home-page h3 {
   margin-top: 10px;
-  font-size: 1.1rem;
   padding-left: 16px;
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 1024px) {
+  #menu-home-page h3 {
+    font-size: 1.6rem;
+  }
 }
 
 #menu-home-page h4 {
@@ -445,6 +572,11 @@ nav li {
   padding-left: 16px;
   font-weight: normal;
   font-size: 0.9rem;
+}
+@media screen and (min-width: 1024px) {
+  #menu-home-page h4 {
+    font-size: 1.3rem;
+  }
 }
 
 /*Placement du coeur dans la page d'accueil*/
@@ -457,6 +589,16 @@ nav li {
   right: 20px;
   top: 4px;
 }
+@media screen and (min-width: 1024px) {
+  .main-home-menu1__heart,
+.main-home-menu2__heart,
+.main-home-menu3__heart,
+.main-home-menu4__heart {
+    font-size: 2.5rem;
+    right: 30px;
+    top: 15px;
+  }
+}
 
 /*Mise en place du signal "Nouveau"*/
 .main-home-menu1,
@@ -466,15 +608,21 @@ nav li {
 
 main h6 {
   position: absolute;
-  right: 0;
-  top: -20px;
   background-color: #99E2D0;
   color: #4e7c4e;
-  width: 70px;
-  height: 19px;
-  font-size: 0.9rem;
+  width: 22vw;
+  max-width: 180px;
+  top: -25px;
+  right: 5px;
+  font-size: 1rem;
   text-align: center;
-  padding-top: 3px;
+  padding: 5px;
+}
+@media screen and (min-width: 1024px) {
+  main h6 {
+    top: -15px;
+    right: 45px;
+  }
 }
 
 /*Généralités sur tout le main et mise en position relative du header pour que le main chevauche l'image*/
@@ -551,7 +699,7 @@ header {
 .menu-page3__starters--price, .menu-page3__main--price, .menu-page3__desserts--price,
 .menu-page4__starters--price, .menu-page4__main--price, .menu-page4__desserts--price {
   position: absolute;
-  top: 19px;
+  top: 0px;
   right: 20px;
   font-weight: 600;
 }
@@ -571,7 +719,6 @@ header {
   color: white;
   background-color: #333232;
   width: 100%;
-  height: 290px;
 }
 .container0 footer p,
 .container1 footer p,
@@ -611,7 +758,24 @@ header {
 }
 .footer-menu__contact a:link:hover, :visited:hover {
   color: #FF79DA;
-  text-decoration: underline;
+  border-bottom: 3px #FF79DA solid;
+  padding-bottom: 5px;
+}
+
+.footer-menu__contact {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-menu__propose,
+.footer-menu__partner,
+p {
+    font-size: 1.5rem;
+  }
+
+  .container0 footer {
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=gastronomie.css.map */
