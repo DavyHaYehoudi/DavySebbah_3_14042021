@@ -29,13 +29,13 @@
 
 
 #menu-home-page img {
-    width: 95%;
+    width: 100%;
     max-width: 1024px;
     height: 180px;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     object-fit: cover;
-    margin-left: 25px;
+    
 }
 @media screen and (min-width:1024px){
     .main-home-menu1,.main-home-menu2,.main-home-menu3,.main-home-menu4{
@@ -44,9 +44,11 @@
         margin: 50px auto;
     }
     #menu-home-page img {
+        width: 95%;
         height: 500px;
         border-top-left-radius: 3rem;
         border-top-right-radius: 3rem;
+        margin-left: 25px;
     }
     .main-home-menu1__description,.main-home-menu2__description,.main-home-menu3__description,.main-home-menu4__description{
         height: 100px;
@@ -74,11 +76,11 @@
     @media screen and (min-width:1024px){
         border-bottom-left-radius: 3rem;
         border-bottom-right-radius: 3rem;
-    }
-    background-color: white;
-    width: 95%;
-    max-width: 1024px;
-    margin-top: -5px;
+        background-color: white;
+        width: 95%;
+        max-width: 1024px;
+        margin-top: -5px;
+}
 }
 
 /* Caractéristiques des titres de la description sur la page d'accueil*/
