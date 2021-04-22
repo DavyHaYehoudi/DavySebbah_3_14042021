@@ -1,10 +1,32 @@
 
 .footer-logo {
-    height: 6vh;
+
+    height: 50px;
     width: 200px;
     filter: invert(1);
-    margin: 30px 0 0 40px;
+    margin: 85px 0 0 40px;
+
+    @media screen and (max-width:414px){
+
+       height: 20px;
+       width: 110px;
+       margin-top:95px ; 
+       }
     }
+
+    @media screen and (max-width:414px) {
+        .container2 .footer-logo {
+            margin-top: 85px;
+        }
+
+        .container0 .footer-logo {
+            margin-top: 30px;
+        }
+    }
+    .container0 .footer-logo{
+        margin: 25px 0 0 40px;
+    }
+    
 
     .container0 footer,
     .container1 footer,
@@ -14,7 +36,6 @@
         color: white;
         background-color: rgb(51, 50, 50);
         width: 100%; 
-        // height: 290px;
         & p {
             margin-left: 40px;
         }
@@ -23,6 +44,8 @@
             display: flex;
         }
     }
+
+  
 
     .container1 footer,
     .container3 footer,
@@ -47,7 +70,6 @@
     color: white;
     &:hover {
         color:$Color-Secondary ;
-        // text-decoration: underline;
         border-bottom: 3px $Color-Secondary solid;
         padding-bottom: 5px;
     }
@@ -58,13 +80,51 @@
 }
 
 
+
+
+
+
 @media screen and (min-width:1024px){
-.footer-menu__propose,
-.footer-menu__partner,
-p {
-    font-size: 1.5rem;
+
+    .container0 footer {
+        padding-top: 10px;
+    }
+
+    .container1 footer,
+    .container3 footer,
+    .container4 footer {
+    margin-top: 1040px;
 }
-.container0 footer {
-    height: auto;
+
+    .container2 footer {
+        padding-top:1870px ;
+    }
+    footer {
+      
+        padding-top: 1780px;
+     
+    .footer-logo{
+        margin-top:60px;
+    }
+
+       & .footer-menu__propose,
+       & .footer-menu__partner,
+       & p {
+    font-size: 3rem;
+    margin-right: 20px;
+    }
+ }
 }
+
+@media screen and (min-width:1900px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    } 
+
+    .footer-menu__contact {
+        margin-top: 90px;
+    }
 }

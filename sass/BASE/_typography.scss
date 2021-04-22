@@ -24,7 +24,7 @@
     margin: 0 60px;
     font-size: 1.5rem;
     @media  screen and (min-width: 1024px){
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
         
 }
@@ -32,7 +32,7 @@
 .heading-home-description__title2 {
     font-size: 1.1rem;
     @media  screen and (min-width: 1024px){
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
     font-weight: normal;
     margin: 20px 15px;
@@ -46,6 +46,7 @@
     font-family: 'Shrikhand';  
     font-size: $Fontsize-TitleMenu;
     margin-left: 5vw;
+    font-size: 1.4rem;
 }
 
 /*Entrées, Plat et Desserts de la carte de chaque menu*/
@@ -75,6 +76,40 @@
     font-weight: normal;
     margin: -15px 0 0 15px;
 }
+
+@media screen and (min-width:1024px){     
+
+ #menu-page1 h1,
+ #menu-page2 h1,
+ #menu-page3 h1,
+ #menu-page4 h1 {
+     font-size: 3.5rem;
+ }
+
+ #menu-page1 h2,
+ #menu-page2 h2,
+ #menu-page3 h2,
+ #menu-page4 h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    }
+
+#menu-page1 h3,
+#menu-page2 h3,
+#menu-page3 h3,
+#menu-page4 h3 {
+        font-size: 3rem;
+        margin-left: 50px;
+    }
+ #menu-page1 h4,
+#menu-page2 h4,
+#menu-page3 h4,
+#menu-page4 h4 {
+    font-size: 2.5rem;
+    margin-left: 50px;
+  }
+}
 /* Soulignement partiel des titres Entrées Plats Desserts*/
 #menu-page1 h2,
 #menu-page2 h2,
@@ -94,6 +129,10 @@
   width: 45px;
   border-bottom:3px solid $Color-Tertiary;
   margin-bottom: -8px;
+
+  @media  screen and (min-width: 1024px) {
+      width: 70px;
+  }
 }
 
 

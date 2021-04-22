@@ -41,16 +41,18 @@
 
 /*Bouton 'Commander' en fin de présentation du menu*/
 .btn-order {
+
     border: 0px $Color-Secondary solid;
     border-radius: 2rem;
     background: linear-gradient($Color-Secondary,$Color-Primary);
     box-shadow: 3px 3px 3px $Color-Primary;
     cursor: pointer;
+    font-size: 1.4rem;
     margin: 50px auto 0px auto;
     padding: 10px;
     text-align: center;
     color: white;
-    width: 35vw;
+    width: 37vw;
     max-width: 300px;
     transition: transform 400ms;
 
@@ -65,10 +67,13 @@
     }
     /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
     @media screen and (min-width:1024px){
+
+        font-size: 2.5rem;
         &:hover{
             opacity: .9;
         transform: scale(1.15);
         box-shadow: 8px 8px 8px $Color-Primary;
+        
         }
     }
 }
@@ -91,7 +96,7 @@
     top:6px;
     font-size: $Fontsize-Heart;
     @media screen and (min-width:1024px){
-        font-size: 2.5rem;
+        font-size: 5rem;
         right: 100px;
         top:0px;
     }
@@ -113,13 +118,13 @@
         top:6px;
         font-size: $Fontsize-Heart;
         @media screen and (min-width:1024px){
-            font-size: 2.7rem;
-            right: 98px;
-            top:-1px;
+            font-size: 5.5rem;
+            right: 97px;
+            top:-4px;
         }
         opacity: 0;       
         cursor: pointer;    
-        transition: opacity 1000ms;
+        transition: opacity 1200ms;
         
         &:hover {
             opacity: 1;
@@ -139,24 +144,28 @@
         right: 20px;
         top: 4px;
         font-size: $Fontsize-Heart;
-        opacity: 0;       
+        opacity: 0;  
+
         cursor: pointer;    
-        transition: opacity 1000ms;
-        
-        &:active {
+        transition: opacity 600ms;
+
+        &:active {                  
             opacity: 1;
-        }
-        &:hover {
-            opacity: 1;
-        }
+        } 
+      
         @media screen and (min-width:1024px){
-        font-size: 2.5rem;
-        right: 30px;
-        top:15px;  
+        font-size: 2.7rem;
+        right: 28px;
+        top:14px;  
+        transition: opacity 1000ms;
+
+           &:hover {
+               opacity: 1;
+           }
+        }    
     }
-    }
+
+
+   
 
     
-    
-
-
