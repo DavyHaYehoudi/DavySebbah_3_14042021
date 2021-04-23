@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.container a, a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
 .container {
   font-family: "Roboto";
 }
@@ -68,7 +77,7 @@
 #menu-page4 h4 {
   font-size: 0.9rem;
   font-weight: normal;
-  margin: -15px 0 0 15px;
+  margin: -10px 0 0 15px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -135,7 +144,6 @@
 
 /*Bouton de 'Explorer nos restaurants'*/
 .heading-home-description__btn {
-  border: 0px #FF79DA solid;
   border-radius: 5rem;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 3px 3px 3px #9356DC;
@@ -150,12 +158,8 @@
   transition: transform 400ms;
   /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
 }
-@media screen and (min-width: 1024px) {
-  .heading-home-description__btn {
-    font-size: 1.5rem;
-    padding-top: 12px;
-    height: 30px;
-  }
+.heading-home-description__btn a {
+  color: white;
 }
 .heading-home-description__btn :visited {
   color: white;
@@ -165,11 +169,27 @@
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
 }
+.heading-home-description__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
+  box-shadow: 8px 8px 8px #9356DC;
+}
+.heading-home-description__btn:hover a {
+  color: white;
+}
 @media screen and (min-width: 1024px) {
+  .heading-home-description__btn {
+    font-size: 1.5rem;
+    padding-top: 12px;
+    height: 30px;
+  }
   .heading-home-description__btn:hover {
     opacity: 0.9;
     transform: scale(1.15);
     box-shadow: 8px 8px 8px #9356DC;
+  }
+  .heading-home-description__btn:hover a {
+    color: white;
   }
 }
 
@@ -184,11 +204,13 @@
   margin: 50px auto 0px auto;
   padding: 10px;
   text-align: center;
-  color: white;
   width: 37vw;
   max-width: 300px;
   transition: transform 400ms;
   /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
+}
+.btn-order a:link {
+  color: white;
 }
 .btn-order :visited {
   color: white;
@@ -198,6 +220,14 @@
   transform: scale(1.15);
   box-shadow: 8px 8px 8px #9356DC;
 }
+.btn-order:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
+  box-shadow: 8px 8px 8px #9356DC;
+}
+.btn-order:hover a {
+  color: white;
+}
 @media screen and (min-width: 1024px) {
   .btn-order {
     font-size: 2.5rem;
@@ -206,6 +236,9 @@
     opacity: 0.9;
     transform: scale(1.15);
     box-shadow: 8px 8px 8px #9356DC;
+  }
+  .btn-order:hover a {
+    color: white;
   }
 }
 
@@ -248,9 +281,9 @@
   -webkit-background-clip: text;
   color: transparent;
   position: absolute;
-  right: 35px;
-  top: 6px;
-  font-size: 1.4rem;
+  right: 34px;
+  top: 4px;
+  font-size: 1.6rem;
   opacity: 0;
   cursor: pointer;
   transition: opacity 1200ms;
@@ -261,7 +294,7 @@
 .menu-page3__heartfull,
 .menu-page4__heartfull {
     font-size: 5.5rem;
-    right: 97px;
+    right: 96px;
     top: -4px;
   }
 }
@@ -299,15 +332,6 @@
   .menu-home__heartfullhome:hover {
     opacity: 1;
   }
-}
-
-.container a, a:link, a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-body {
-  margin: 0;
 }
 
 .heading-home-logo {
@@ -457,7 +481,7 @@ nav ul {
   transition: transform 400ms;
 }
 nav ul:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 nav ul li {
   margin: 0 20px 0 -7px;
@@ -657,6 +681,15 @@ main h6 {
     margin-top: -5px;
   }
 }
+/*Effet Zoom sur les photos*/
+.main-home-menu1, .main-home-menu2, .main-home-menu3, .main-home-menu4 {
+  transform: scale(1);
+  transition: transform 500ms;
+}
+.main-home-menu1:hover, .main-home-menu2:hover, .main-home-menu3:hover, .main-home-menu4:hover {
+  transform: scale(1.1);
+}
+
 /*Généralités sur tout le main et mise en position relative du header pour que le main chevauche l'image*/
 header {
   z-index: 1;
@@ -700,6 +733,8 @@ header {
   box-shadow: 6px 6px 4px #dfdede;
   background-color: white;
   margin: 20px 15px;
+  cursor: pointer;
+  height: 60px;
 }
 
 /*Installation des points de suspensions en cas de rétrécissement du bloc*/
@@ -737,16 +772,17 @@ header {
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
+  line-height: 0.7rem;
 }
 
-#menu-page1, #menu-page2, #menu-page3, #menu-page4 {
-  /*Apparition progressive des menus*/
+#menu-page1 h3, #menu-page2 h3, #menu-page3 h3, #menu-page4 h3 {
+  width: auto;
 }
 #menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
   width: 100%;
 }
 #menu-page1 p, #menu-page2 p, #menu-page3 p, #menu-page4 p {
-  margin-top: -15px;
+  margin-top: -10px;
   margin-left: 10px;
   margin-right: 10px;
   width: auto;
@@ -757,8 +793,10 @@ header {
     margin-right: 50px;
   }
 }
-#menu-page1 .spiner, #menu-page2 .spiner, #menu-page3 .spiner, #menu-page4 .spiner {
+
+.spiner {
   width: 0;
+  height: 63px;
   font-size: 0vh;
   padding: 0px;
   color: white;
@@ -768,263 +806,79 @@ header {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: #99E2D0;
-  margin-top: -48px;
+  margin-top: -50px;
   transition: width 800ms;
 }
-#menu-page1 .menu-page1__starters--mainNames1:active .spiner, #menu-page1 .menu-page1__starters--mainNames2:active .spiner, #menu-page1 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page1__main--mainNames1:active .spiner, #menu-page1 .menu-page1__main--mainNames2:active .spiner, #menu-page1 .menu-page1__main--mainNames3:active .spiner,
-#menu-page1 .menu-page1__desserts--mainNames1:active .spiner, #menu-page1 .menu-page1__desserts--mainNames2:active .spiner, #menu-page1 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page2__starters--mainNames1:active .spiner, #menu-page1 .menu-page2__starters--mainNames2:active .spiner, #menu-page1 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page1 .menu-page2__main--mainNames1:active .spiner, #menu-page1 .menu-page2__main--mainNames2:active .spiner, #menu-page1 .menu-page2__main--mainNames3:active .spiner,
-#menu-page1 .menu-page2__desserts--mainNames1:active .spiner, #menu-page1 .menu-page2__desserts--mainNames2:active .spiner, #menu-page1 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page3__starters--mainNames1:active .spiner, #menu-page1 .menu-page3__starters--mainNames2:active .spiner, #menu-page1 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page3__main--mainNames1:active .spiner, #menu-page1 .menu-page3__main--mainNames2:active .spiner, #menu-page1 .menu-page3__main--mainNames3:active .spiner,
-#menu-page1 .menu-page3__desserts--mainNames1:active .spiner, #menu-page1 .menu-page3__desserts--mainNames2:active .spiner, #menu-page1 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page4__starters--mainNames1:active .spiner, #menu-page1 .menu-page4__starters--mainNames2:active .spiner, #menu-page1 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page4__main--mainNames1:active .spiner, #menu-page1 .menu-page4__main--mainNames2:active .spiner, #menu-page1 .menu-page4__main--mainNames3:active .spiner,
-#menu-page1 .menu-page4__desserts--mainNames1:active .spiner, #menu-page1 .menu-page4__desserts--mainNames2:active .spiner, #menu-page1 .menu-page4__desserts--mainNames3:active .spiner, #menu-page2 .menu-page1__starters--mainNames1:active .spiner, #menu-page2 .menu-page1__starters--mainNames2:active .spiner, #menu-page2 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page1__main--mainNames1:active .spiner, #menu-page2 .menu-page1__main--mainNames2:active .spiner, #menu-page2 .menu-page1__main--mainNames3:active .spiner,
-#menu-page2 .menu-page1__desserts--mainNames1:active .spiner, #menu-page2 .menu-page1__desserts--mainNames2:active .spiner, #menu-page2 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page2__starters--mainNames1:active .spiner, #menu-page2 .menu-page2__starters--mainNames2:active .spiner, #menu-page2 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page2 .menu-page2__main--mainNames1:active .spiner, #menu-page2 .menu-page2__main--mainNames2:active .spiner, #menu-page2 .menu-page2__main--mainNames3:active .spiner,
-#menu-page2 .menu-page2__desserts--mainNames1:active .spiner, #menu-page2 .menu-page2__desserts--mainNames2:active .spiner, #menu-page2 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page3__starters--mainNames1:active .spiner, #menu-page2 .menu-page3__starters--mainNames2:active .spiner, #menu-page2 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page3__main--mainNames1:active .spiner, #menu-page2 .menu-page3__main--mainNames2:active .spiner, #menu-page2 .menu-page3__main--mainNames3:active .spiner,
-#menu-page2 .menu-page3__desserts--mainNames1:active .spiner, #menu-page2 .menu-page3__desserts--mainNames2:active .spiner, #menu-page2 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page4__starters--mainNames1:active .spiner, #menu-page2 .menu-page4__starters--mainNames2:active .spiner, #menu-page2 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page4__main--mainNames1:active .spiner, #menu-page2 .menu-page4__main--mainNames2:active .spiner, #menu-page2 .menu-page4__main--mainNames3:active .spiner,
-#menu-page2 .menu-page4__desserts--mainNames1:active .spiner, #menu-page2 .menu-page4__desserts--mainNames2:active .spiner, #menu-page2 .menu-page4__desserts--mainNames3:active .spiner, #menu-page3 .menu-page1__starters--mainNames1:active .spiner, #menu-page3 .menu-page1__starters--mainNames2:active .spiner, #menu-page3 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page1__main--mainNames1:active .spiner, #menu-page3 .menu-page1__main--mainNames2:active .spiner, #menu-page3 .menu-page1__main--mainNames3:active .spiner,
-#menu-page3 .menu-page1__desserts--mainNames1:active .spiner, #menu-page3 .menu-page1__desserts--mainNames2:active .spiner, #menu-page3 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page2__starters--mainNames1:active .spiner, #menu-page3 .menu-page2__starters--mainNames2:active .spiner, #menu-page3 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page3 .menu-page2__main--mainNames1:active .spiner, #menu-page3 .menu-page2__main--mainNames2:active .spiner, #menu-page3 .menu-page2__main--mainNames3:active .spiner,
-#menu-page3 .menu-page2__desserts--mainNames1:active .spiner, #menu-page3 .menu-page2__desserts--mainNames2:active .spiner, #menu-page3 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page3__starters--mainNames1:active .spiner, #menu-page3 .menu-page3__starters--mainNames2:active .spiner, #menu-page3 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page3__main--mainNames1:active .spiner, #menu-page3 .menu-page3__main--mainNames2:active .spiner, #menu-page3 .menu-page3__main--mainNames3:active .spiner,
-#menu-page3 .menu-page3__desserts--mainNames1:active .spiner, #menu-page3 .menu-page3__desserts--mainNames2:active .spiner, #menu-page3 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page4__starters--mainNames1:active .spiner, #menu-page3 .menu-page4__starters--mainNames2:active .spiner, #menu-page3 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page4__main--mainNames1:active .spiner, #menu-page3 .menu-page4__main--mainNames2:active .spiner, #menu-page3 .menu-page4__main--mainNames3:active .spiner,
-#menu-page3 .menu-page4__desserts--mainNames1:active .spiner, #menu-page3 .menu-page4__desserts--mainNames2:active .spiner, #menu-page3 .menu-page4__desserts--mainNames3:active .spiner, #menu-page4 .menu-page1__starters--mainNames1:active .spiner, #menu-page4 .menu-page1__starters--mainNames2:active .spiner, #menu-page4 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page1__main--mainNames1:active .spiner, #menu-page4 .menu-page1__main--mainNames2:active .spiner, #menu-page4 .menu-page1__main--mainNames3:active .spiner,
-#menu-page4 .menu-page1__desserts--mainNames1:active .spiner, #menu-page4 .menu-page1__desserts--mainNames2:active .spiner, #menu-page4 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page2__starters--mainNames1:active .spiner, #menu-page4 .menu-page2__starters--mainNames2:active .spiner, #menu-page4 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page4 .menu-page2__main--mainNames1:active .spiner, #menu-page4 .menu-page2__main--mainNames2:active .spiner, #menu-page4 .menu-page2__main--mainNames3:active .spiner,
-#menu-page4 .menu-page2__desserts--mainNames1:active .spiner, #menu-page4 .menu-page2__desserts--mainNames2:active .spiner, #menu-page4 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page3__starters--mainNames1:active .spiner, #menu-page4 .menu-page3__starters--mainNames2:active .spiner, #menu-page4 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page3__main--mainNames1:active .spiner, #menu-page4 .menu-page3__main--mainNames2:active .spiner, #menu-page4 .menu-page3__main--mainNames3:active .spiner,
-#menu-page4 .menu-page3__desserts--mainNames1:active .spiner, #menu-page4 .menu-page3__desserts--mainNames2:active .spiner, #menu-page4 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page4__starters--mainNames1:active .spiner, #menu-page4 .menu-page4__starters--mainNames2:active .spiner, #menu-page4 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page4__main--mainNames1:active .spiner, #menu-page4 .menu-page4__main--mainNames2:active .spiner, #menu-page4 .menu-page4__main--mainNames3:active .spiner,
-#menu-page4 .menu-page4__desserts--mainNames1:active .spiner, #menu-page4 .menu-page4__desserts--mainNames2:active .spiner, #menu-page4 .menu-page4__desserts--mainNames3:active .spiner {
+
+.menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
+.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
+.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames4:hover .spiner,
+.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
+.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
+.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
+.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
+.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
+.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
+.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
+.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
   width: 40%;
   max-width: 200px;
-  height: 43.5px;
-  font-size: 3.2vh;
-  padding-top: 16px;
-  margin-right: -2px;
+  font-size: 1rem;
+  padding-top: 25px;
+  height: 36px;
   border: 1px #f3f2f2 solid;
 }
 @media screen and (min-width: 415px) {
-  #menu-page1 .menu-page1__starters--mainNames1:active .spiner, #menu-page1 .menu-page1__starters--mainNames2:active .spiner, #menu-page1 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page1__main--mainNames1:active .spiner, #menu-page1 .menu-page1__main--mainNames2:active .spiner, #menu-page1 .menu-page1__main--mainNames3:active .spiner,
-#menu-page1 .menu-page1__desserts--mainNames1:active .spiner, #menu-page1 .menu-page1__desserts--mainNames2:active .spiner, #menu-page1 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page2__starters--mainNames1:active .spiner, #menu-page1 .menu-page2__starters--mainNames2:active .spiner, #menu-page1 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page1 .menu-page2__main--mainNames1:active .spiner, #menu-page1 .menu-page2__main--mainNames2:active .spiner, #menu-page1 .menu-page2__main--mainNames3:active .spiner,
-#menu-page1 .menu-page2__desserts--mainNames1:active .spiner, #menu-page1 .menu-page2__desserts--mainNames2:active .spiner, #menu-page1 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page3__starters--mainNames1:active .spiner, #menu-page1 .menu-page3__starters--mainNames2:active .spiner, #menu-page1 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page3__main--mainNames1:active .spiner, #menu-page1 .menu-page3__main--mainNames2:active .spiner, #menu-page1 .menu-page3__main--mainNames3:active .spiner,
-#menu-page1 .menu-page3__desserts--mainNames1:active .spiner, #menu-page1 .menu-page3__desserts--mainNames2:active .spiner, #menu-page1 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page1 .menu-page4__starters--mainNames1:active .spiner, #menu-page1 .menu-page4__starters--mainNames2:active .spiner, #menu-page1 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page1 .menu-page4__main--mainNames1:active .spiner, #menu-page1 .menu-page4__main--mainNames2:active .spiner, #menu-page1 .menu-page4__main--mainNames3:active .spiner,
-#menu-page1 .menu-page4__desserts--mainNames1:active .spiner, #menu-page1 .menu-page4__desserts--mainNames2:active .spiner, #menu-page1 .menu-page4__desserts--mainNames3:active .spiner, #menu-page2 .menu-page1__starters--mainNames1:active .spiner, #menu-page2 .menu-page1__starters--mainNames2:active .spiner, #menu-page2 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page1__main--mainNames1:active .spiner, #menu-page2 .menu-page1__main--mainNames2:active .spiner, #menu-page2 .menu-page1__main--mainNames3:active .spiner,
-#menu-page2 .menu-page1__desserts--mainNames1:active .spiner, #menu-page2 .menu-page1__desserts--mainNames2:active .spiner, #menu-page2 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page2__starters--mainNames1:active .spiner, #menu-page2 .menu-page2__starters--mainNames2:active .spiner, #menu-page2 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page2 .menu-page2__main--mainNames1:active .spiner, #menu-page2 .menu-page2__main--mainNames2:active .spiner, #menu-page2 .menu-page2__main--mainNames3:active .spiner,
-#menu-page2 .menu-page2__desserts--mainNames1:active .spiner, #menu-page2 .menu-page2__desserts--mainNames2:active .spiner, #menu-page2 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page3__starters--mainNames1:active .spiner, #menu-page2 .menu-page3__starters--mainNames2:active .spiner, #menu-page2 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page3__main--mainNames1:active .spiner, #menu-page2 .menu-page3__main--mainNames2:active .spiner, #menu-page2 .menu-page3__main--mainNames3:active .spiner,
-#menu-page2 .menu-page3__desserts--mainNames1:active .spiner, #menu-page2 .menu-page3__desserts--mainNames2:active .spiner, #menu-page2 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page2 .menu-page4__starters--mainNames1:active .spiner, #menu-page2 .menu-page4__starters--mainNames2:active .spiner, #menu-page2 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page2 .menu-page4__main--mainNames1:active .spiner, #menu-page2 .menu-page4__main--mainNames2:active .spiner, #menu-page2 .menu-page4__main--mainNames3:active .spiner,
-#menu-page2 .menu-page4__desserts--mainNames1:active .spiner, #menu-page2 .menu-page4__desserts--mainNames2:active .spiner, #menu-page2 .menu-page4__desserts--mainNames3:active .spiner, #menu-page3 .menu-page1__starters--mainNames1:active .spiner, #menu-page3 .menu-page1__starters--mainNames2:active .spiner, #menu-page3 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page1__main--mainNames1:active .spiner, #menu-page3 .menu-page1__main--mainNames2:active .spiner, #menu-page3 .menu-page1__main--mainNames3:active .spiner,
-#menu-page3 .menu-page1__desserts--mainNames1:active .spiner, #menu-page3 .menu-page1__desserts--mainNames2:active .spiner, #menu-page3 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page2__starters--mainNames1:active .spiner, #menu-page3 .menu-page2__starters--mainNames2:active .spiner, #menu-page3 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page3 .menu-page2__main--mainNames1:active .spiner, #menu-page3 .menu-page2__main--mainNames2:active .spiner, #menu-page3 .menu-page2__main--mainNames3:active .spiner,
-#menu-page3 .menu-page2__desserts--mainNames1:active .spiner, #menu-page3 .menu-page2__desserts--mainNames2:active .spiner, #menu-page3 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page3__starters--mainNames1:active .spiner, #menu-page3 .menu-page3__starters--mainNames2:active .spiner, #menu-page3 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page3__main--mainNames1:active .spiner, #menu-page3 .menu-page3__main--mainNames2:active .spiner, #menu-page3 .menu-page3__main--mainNames3:active .spiner,
-#menu-page3 .menu-page3__desserts--mainNames1:active .spiner, #menu-page3 .menu-page3__desserts--mainNames2:active .spiner, #menu-page3 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page3 .menu-page4__starters--mainNames1:active .spiner, #menu-page3 .menu-page4__starters--mainNames2:active .spiner, #menu-page3 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page3 .menu-page4__main--mainNames1:active .spiner, #menu-page3 .menu-page4__main--mainNames2:active .spiner, #menu-page3 .menu-page4__main--mainNames3:active .spiner,
-#menu-page3 .menu-page4__desserts--mainNames1:active .spiner, #menu-page3 .menu-page4__desserts--mainNames2:active .spiner, #menu-page3 .menu-page4__desserts--mainNames3:active .spiner, #menu-page4 .menu-page1__starters--mainNames1:active .spiner, #menu-page4 .menu-page1__starters--mainNames2:active .spiner, #menu-page4 .menu-page1__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page1__main--mainNames1:active .spiner, #menu-page4 .menu-page1__main--mainNames2:active .spiner, #menu-page4 .menu-page1__main--mainNames3:active .spiner,
-#menu-page4 .menu-page1__desserts--mainNames1:active .spiner, #menu-page4 .menu-page1__desserts--mainNames2:active .spiner, #menu-page4 .menu-page1__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page2__starters--mainNames1:active .spiner, #menu-page4 .menu-page2__starters--mainNames2:active .spiner, #menu-page4 .menu-page2__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page2__starters--mainNames4:active .spiner,
-#menu-page4 .menu-page2__main--mainNames1:active .spiner, #menu-page4 .menu-page2__main--mainNames2:active .spiner, #menu-page4 .menu-page2__main--mainNames3:active .spiner,
-#menu-page4 .menu-page2__desserts--mainNames1:active .spiner, #menu-page4 .menu-page2__desserts--mainNames2:active .spiner, #menu-page4 .menu-page2__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page3__starters--mainNames1:active .spiner, #menu-page4 .menu-page3__starters--mainNames2:active .spiner, #menu-page4 .menu-page3__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page3__main--mainNames1:active .spiner, #menu-page4 .menu-page3__main--mainNames2:active .spiner, #menu-page4 .menu-page3__main--mainNames3:active .spiner,
-#menu-page4 .menu-page3__desserts--mainNames1:active .spiner, #menu-page4 .menu-page3__desserts--mainNames2:active .spiner, #menu-page4 .menu-page3__desserts--mainNames3:active .spiner,
-#menu-page4 .menu-page4__starters--mainNames1:active .spiner, #menu-page4 .menu-page4__starters--mainNames2:active .spiner, #menu-page4 .menu-page4__starters--mainNames3:active .spiner,
-#menu-page4 .menu-page4__main--mainNames1:active .spiner, #menu-page4 .menu-page4__main--mainNames2:active .spiner, #menu-page4 .menu-page4__main--mainNames3:active .spiner,
-#menu-page4 .menu-page4__desserts--mainNames1:active .spiner, #menu-page4 .menu-page4__desserts--mainNames2:active .spiner, #menu-page4 .menu-page4__desserts--mainNames3:active .spiner {
+  .menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
+.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
+.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames4:hover .spiner,
+.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
+.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
+.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
+.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
+.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
+.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
+.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
+.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
     padding-top: 10px 0 5px 0;
   }
 }
-#menu-page1 .menu-page1__starters--mainNames1:active .spiner p h4, #menu-page1 .menu-page1__starters--mainNames2:active .spiner p h4, #menu-page1 .menu-page1__starters--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page1__main--mainNames1:active .spiner p h4, #menu-page1 .menu-page1__main--mainNames2:active .spiner p h4, #menu-page1 .menu-page1__main--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page1__desserts--mainNames1:active .spiner p h4, #menu-page1 .menu-page1__desserts--mainNames2:active .spiner p h4, #menu-page1 .menu-page1__desserts--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page2__starters--mainNames1:active .spiner p h4, #menu-page1 .menu-page2__starters--mainNames2:active .spiner p h4, #menu-page1 .menu-page2__starters--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page2__starters--mainNames4:active .spiner p h4,
-#menu-page1 .menu-page2__main--mainNames1:active .spiner p h4, #menu-page1 .menu-page2__main--mainNames2:active .spiner p h4, #menu-page1 .menu-page2__main--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page2__desserts--mainNames1:active .spiner p h4, #menu-page1 .menu-page2__desserts--mainNames2:active .spiner p h4, #menu-page1 .menu-page2__desserts--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page3__starters--mainNames1:active .spiner p h4, #menu-page1 .menu-page3__starters--mainNames2:active .spiner p h4, #menu-page1 .menu-page3__starters--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page3__main--mainNames1:active .spiner p h4, #menu-page1 .menu-page3__main--mainNames2:active .spiner p h4, #menu-page1 .menu-page3__main--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page3__desserts--mainNames1:active .spiner p h4, #menu-page1 .menu-page3__desserts--mainNames2:active .spiner p h4, #menu-page1 .menu-page3__desserts--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page4__starters--mainNames1:active .spiner p h4, #menu-page1 .menu-page4__starters--mainNames2:active .spiner p h4, #menu-page1 .menu-page4__starters--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page4__main--mainNames1:active .spiner p h4, #menu-page1 .menu-page4__main--mainNames2:active .spiner p h4, #menu-page1 .menu-page4__main--mainNames3:active .spiner p h4,
-#menu-page1 .menu-page4__desserts--mainNames1:active .spiner p h4, #menu-page1 .menu-page4__desserts--mainNames2:active .spiner p h4, #menu-page1 .menu-page4__desserts--mainNames3:active .spiner p h4, #menu-page2 .menu-page1__starters--mainNames1:active .spiner p h4, #menu-page2 .menu-page1__starters--mainNames2:active .spiner p h4, #menu-page2 .menu-page1__starters--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page1__main--mainNames1:active .spiner p h4, #menu-page2 .menu-page1__main--mainNames2:active .spiner p h4, #menu-page2 .menu-page1__main--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page1__desserts--mainNames1:active .spiner p h4, #menu-page2 .menu-page1__desserts--mainNames2:active .spiner p h4, #menu-page2 .menu-page1__desserts--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page2__starters--mainNames1:active .spiner p h4, #menu-page2 .menu-page2__starters--mainNames2:active .spiner p h4, #menu-page2 .menu-page2__starters--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page2__starters--mainNames4:active .spiner p h4,
-#menu-page2 .menu-page2__main--mainNames1:active .spiner p h4, #menu-page2 .menu-page2__main--mainNames2:active .spiner p h4, #menu-page2 .menu-page2__main--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page2__desserts--mainNames1:active .spiner p h4, #menu-page2 .menu-page2__desserts--mainNames2:active .spiner p h4, #menu-page2 .menu-page2__desserts--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page3__starters--mainNames1:active .spiner p h4, #menu-page2 .menu-page3__starters--mainNames2:active .spiner p h4, #menu-page2 .menu-page3__starters--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page3__main--mainNames1:active .spiner p h4, #menu-page2 .menu-page3__main--mainNames2:active .spiner p h4, #menu-page2 .menu-page3__main--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page3__desserts--mainNames1:active .spiner p h4, #menu-page2 .menu-page3__desserts--mainNames2:active .spiner p h4, #menu-page2 .menu-page3__desserts--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page4__starters--mainNames1:active .spiner p h4, #menu-page2 .menu-page4__starters--mainNames2:active .spiner p h4, #menu-page2 .menu-page4__starters--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page4__main--mainNames1:active .spiner p h4, #menu-page2 .menu-page4__main--mainNames2:active .spiner p h4, #menu-page2 .menu-page4__main--mainNames3:active .spiner p h4,
-#menu-page2 .menu-page4__desserts--mainNames1:active .spiner p h4, #menu-page2 .menu-page4__desserts--mainNames2:active .spiner p h4, #menu-page2 .menu-page4__desserts--mainNames3:active .spiner p h4, #menu-page3 .menu-page1__starters--mainNames1:active .spiner p h4, #menu-page3 .menu-page1__starters--mainNames2:active .spiner p h4, #menu-page3 .menu-page1__starters--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page1__main--mainNames1:active .spiner p h4, #menu-page3 .menu-page1__main--mainNames2:active .spiner p h4, #menu-page3 .menu-page1__main--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page1__desserts--mainNames1:active .spiner p h4, #menu-page3 .menu-page1__desserts--mainNames2:active .spiner p h4, #menu-page3 .menu-page1__desserts--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page2__starters--mainNames1:active .spiner p h4, #menu-page3 .menu-page2__starters--mainNames2:active .spiner p h4, #menu-page3 .menu-page2__starters--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page2__starters--mainNames4:active .spiner p h4,
-#menu-page3 .menu-page2__main--mainNames1:active .spiner p h4, #menu-page3 .menu-page2__main--mainNames2:active .spiner p h4, #menu-page3 .menu-page2__main--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page2__desserts--mainNames1:active .spiner p h4, #menu-page3 .menu-page2__desserts--mainNames2:active .spiner p h4, #menu-page3 .menu-page2__desserts--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page3__starters--mainNames1:active .spiner p h4, #menu-page3 .menu-page3__starters--mainNames2:active .spiner p h4, #menu-page3 .menu-page3__starters--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page3__main--mainNames1:active .spiner p h4, #menu-page3 .menu-page3__main--mainNames2:active .spiner p h4, #menu-page3 .menu-page3__main--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page3__desserts--mainNames1:active .spiner p h4, #menu-page3 .menu-page3__desserts--mainNames2:active .spiner p h4, #menu-page3 .menu-page3__desserts--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page4__starters--mainNames1:active .spiner p h4, #menu-page3 .menu-page4__starters--mainNames2:active .spiner p h4, #menu-page3 .menu-page4__starters--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page4__main--mainNames1:active .spiner p h4, #menu-page3 .menu-page4__main--mainNames2:active .spiner p h4, #menu-page3 .menu-page4__main--mainNames3:active .spiner p h4,
-#menu-page3 .menu-page4__desserts--mainNames1:active .spiner p h4, #menu-page3 .menu-page4__desserts--mainNames2:active .spiner p h4, #menu-page3 .menu-page4__desserts--mainNames3:active .spiner p h4, #menu-page4 .menu-page1__starters--mainNames1:active .spiner p h4, #menu-page4 .menu-page1__starters--mainNames2:active .spiner p h4, #menu-page4 .menu-page1__starters--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page1__main--mainNames1:active .spiner p h4, #menu-page4 .menu-page1__main--mainNames2:active .spiner p h4, #menu-page4 .menu-page1__main--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page1__desserts--mainNames1:active .spiner p h4, #menu-page4 .menu-page1__desserts--mainNames2:active .spiner p h4, #menu-page4 .menu-page1__desserts--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page2__starters--mainNames1:active .spiner p h4, #menu-page4 .menu-page2__starters--mainNames2:active .spiner p h4, #menu-page4 .menu-page2__starters--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page2__starters--mainNames4:active .spiner p h4,
-#menu-page4 .menu-page2__main--mainNames1:active .spiner p h4, #menu-page4 .menu-page2__main--mainNames2:active .spiner p h4, #menu-page4 .menu-page2__main--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page2__desserts--mainNames1:active .spiner p h4, #menu-page4 .menu-page2__desserts--mainNames2:active .spiner p h4, #menu-page4 .menu-page2__desserts--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page3__starters--mainNames1:active .spiner p h4, #menu-page4 .menu-page3__starters--mainNames2:active .spiner p h4, #menu-page4 .menu-page3__starters--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page3__main--mainNames1:active .spiner p h4, #menu-page4 .menu-page3__main--mainNames2:active .spiner p h4, #menu-page4 .menu-page3__main--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page3__desserts--mainNames1:active .spiner p h4, #menu-page4 .menu-page3__desserts--mainNames2:active .spiner p h4, #menu-page4 .menu-page3__desserts--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page4__starters--mainNames1:active .spiner p h4, #menu-page4 .menu-page4__starters--mainNames2:active .spiner p h4, #menu-page4 .menu-page4__starters--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page4__main--mainNames1:active .spiner p h4, #menu-page4 .menu-page4__main--mainNames2:active .spiner p h4, #menu-page4 .menu-page4__main--mainNames3:active .spiner p h4,
-#menu-page4 .menu-page4__desserts--mainNames1:active .spiner p h4, #menu-page4 .menu-page4__desserts--mainNames2:active .spiner p h4, #menu-page4 .menu-page4__desserts--mainNames3:active .spiner p h4 {
+.menu-page1__starters--mainNames1:hover p h4, .menu-page1__starters--mainNames2:hover p h4, .menu-page1__starters--mainNames3:hover p h4,
+.menu-page1__main--mainNames1:hover p h4, .menu-page1__main--mainNames2:hover p h4, .menu-page1__main--mainNames3:hover p h4,
+.menu-page1__desserts--mainNames1:hover p h4, .menu-page1__desserts--mainNames2:hover p h4, .menu-page1__desserts--mainNames3:hover p h4,
+.menu-page2__starters--mainNames1:hover p h4, .menu-page2__starters--mainNames2:hover p h4, .menu-page2__starters--mainNames3:hover p h4,
+.menu-page2__starters--mainNames4:hover p h4,
+.menu-page2__main--mainNames1:hover p h4, .menu-page2__main--mainNames2:hover p h4, .menu-page2__main--mainNames3:hover p h4,
+.menu-page2__desserts--mainNames1:hover p h4, .menu-page2__desserts--mainNames2:hover p h4, .menu-page2__desserts--mainNames3:hover p h4,
+.menu-page3__starters--mainNames1:hover p h4, .menu-page3__starters--mainNames2:hover p h4, .menu-page3__starters--mainNames3:hover p h4,
+.menu-page3__main--mainNames1:hover p h4, .menu-page3__main--mainNames2:hover p h4, .menu-page3__main--mainNames3:hover p h4,
+.menu-page3__desserts--mainNames1:hover p h4, .menu-page3__desserts--mainNames2:hover p h4, .menu-page3__desserts--mainNames3:hover p h4,
+.menu-page4__starters--mainNames1:hover p h4, .menu-page4__starters--mainNames2:hover p h4, .menu-page4__starters--mainNames3:hover p h4,
+.menu-page4__main--mainNames1:hover p h4, .menu-page4__main--mainNames2:hover p h4, .menu-page4__main--mainNames3:hover p h4,
+.menu-page4__desserts--mainNames1:hover p h4, .menu-page4__desserts--mainNames2:hover p h4, .menu-page4__desserts--mainNames3:hover p h4 {
   width: auto;
 }
-#menu-page1 .menu-page1__starters--mainNames1:active .spiner h3, #menu-page1 .menu-page1__starters--mainNames2:active .spiner h3, #menu-page1 .menu-page1__starters--mainNames3:active .spiner h3,
-#menu-page1 .menu-page1__main--mainNames1:active .spiner h3, #menu-page1 .menu-page1__main--mainNames2:active .spiner h3, #menu-page1 .menu-page1__main--mainNames3:active .spiner h3,
-#menu-page1 .menu-page1__desserts--mainNames1:active .spiner h3, #menu-page1 .menu-page1__desserts--mainNames2:active .spiner h3, #menu-page1 .menu-page1__desserts--mainNames3:active .spiner h3,
-#menu-page1 .menu-page2__starters--mainNames1:active .spiner h3, #menu-page1 .menu-page2__starters--mainNames2:active .spiner h3, #menu-page1 .menu-page2__starters--mainNames3:active .spiner h3,
-#menu-page1 .menu-page2__starters--mainNames4:active .spiner h3,
-#menu-page1 .menu-page2__main--mainNames1:active .spiner h3, #menu-page1 .menu-page2__main--mainNames2:active .spiner h3, #menu-page1 .menu-page2__main--mainNames3:active .spiner h3,
-#menu-page1 .menu-page2__desserts--mainNames1:active .spiner h3, #menu-page1 .menu-page2__desserts--mainNames2:active .spiner h3, #menu-page1 .menu-page2__desserts--mainNames3:active .spiner h3,
-#menu-page1 .menu-page3__starters--mainNames1:active .spiner h3, #menu-page1 .menu-page3__starters--mainNames2:active .spiner h3, #menu-page1 .menu-page3__starters--mainNames3:active .spiner h3,
-#menu-page1 .menu-page3__main--mainNames1:active .spiner h3, #menu-page1 .menu-page3__main--mainNames2:active .spiner h3, #menu-page1 .menu-page3__main--mainNames3:active .spiner h3,
-#menu-page1 .menu-page3__desserts--mainNames1:active .spiner h3, #menu-page1 .menu-page3__desserts--mainNames2:active .spiner h3, #menu-page1 .menu-page3__desserts--mainNames3:active .spiner h3,
-#menu-page1 .menu-page4__starters--mainNames1:active .spiner h3, #menu-page1 .menu-page4__starters--mainNames2:active .spiner h3, #menu-page1 .menu-page4__starters--mainNames3:active .spiner h3,
-#menu-page1 .menu-page4__main--mainNames1:active .spiner h3, #menu-page1 .menu-page4__main--mainNames2:active .spiner h3, #menu-page1 .menu-page4__main--mainNames3:active .spiner h3,
-#menu-page1 .menu-page4__desserts--mainNames1:active .spiner h3, #menu-page1 .menu-page4__desserts--mainNames2:active .spiner h3, #menu-page1 .menu-page4__desserts--mainNames3:active .spiner h3, #menu-page2 .menu-page1__starters--mainNames1:active .spiner h3, #menu-page2 .menu-page1__starters--mainNames2:active .spiner h3, #menu-page2 .menu-page1__starters--mainNames3:active .spiner h3,
-#menu-page2 .menu-page1__main--mainNames1:active .spiner h3, #menu-page2 .menu-page1__main--mainNames2:active .spiner h3, #menu-page2 .menu-page1__main--mainNames3:active .spiner h3,
-#menu-page2 .menu-page1__desserts--mainNames1:active .spiner h3, #menu-page2 .menu-page1__desserts--mainNames2:active .spiner h3, #menu-page2 .menu-page1__desserts--mainNames3:active .spiner h3,
-#menu-page2 .menu-page2__starters--mainNames1:active .spiner h3, #menu-page2 .menu-page2__starters--mainNames2:active .spiner h3, #menu-page2 .menu-page2__starters--mainNames3:active .spiner h3,
-#menu-page2 .menu-page2__starters--mainNames4:active .spiner h3,
-#menu-page2 .menu-page2__main--mainNames1:active .spiner h3, #menu-page2 .menu-page2__main--mainNames2:active .spiner h3, #menu-page2 .menu-page2__main--mainNames3:active .spiner h3,
-#menu-page2 .menu-page2__desserts--mainNames1:active .spiner h3, #menu-page2 .menu-page2__desserts--mainNames2:active .spiner h3, #menu-page2 .menu-page2__desserts--mainNames3:active .spiner h3,
-#menu-page2 .menu-page3__starters--mainNames1:active .spiner h3, #menu-page2 .menu-page3__starters--mainNames2:active .spiner h3, #menu-page2 .menu-page3__starters--mainNames3:active .spiner h3,
-#menu-page2 .menu-page3__main--mainNames1:active .spiner h3, #menu-page2 .menu-page3__main--mainNames2:active .spiner h3, #menu-page2 .menu-page3__main--mainNames3:active .spiner h3,
-#menu-page2 .menu-page3__desserts--mainNames1:active .spiner h3, #menu-page2 .menu-page3__desserts--mainNames2:active .spiner h3, #menu-page2 .menu-page3__desserts--mainNames3:active .spiner h3,
-#menu-page2 .menu-page4__starters--mainNames1:active .spiner h3, #menu-page2 .menu-page4__starters--mainNames2:active .spiner h3, #menu-page2 .menu-page4__starters--mainNames3:active .spiner h3,
-#menu-page2 .menu-page4__main--mainNames1:active .spiner h3, #menu-page2 .menu-page4__main--mainNames2:active .spiner h3, #menu-page2 .menu-page4__main--mainNames3:active .spiner h3,
-#menu-page2 .menu-page4__desserts--mainNames1:active .spiner h3, #menu-page2 .menu-page4__desserts--mainNames2:active .spiner h3, #menu-page2 .menu-page4__desserts--mainNames3:active .spiner h3, #menu-page3 .menu-page1__starters--mainNames1:active .spiner h3, #menu-page3 .menu-page1__starters--mainNames2:active .spiner h3, #menu-page3 .menu-page1__starters--mainNames3:active .spiner h3,
-#menu-page3 .menu-page1__main--mainNames1:active .spiner h3, #menu-page3 .menu-page1__main--mainNames2:active .spiner h3, #menu-page3 .menu-page1__main--mainNames3:active .spiner h3,
-#menu-page3 .menu-page1__desserts--mainNames1:active .spiner h3, #menu-page3 .menu-page1__desserts--mainNames2:active .spiner h3, #menu-page3 .menu-page1__desserts--mainNames3:active .spiner h3,
-#menu-page3 .menu-page2__starters--mainNames1:active .spiner h3, #menu-page3 .menu-page2__starters--mainNames2:active .spiner h3, #menu-page3 .menu-page2__starters--mainNames3:active .spiner h3,
-#menu-page3 .menu-page2__starters--mainNames4:active .spiner h3,
-#menu-page3 .menu-page2__main--mainNames1:active .spiner h3, #menu-page3 .menu-page2__main--mainNames2:active .spiner h3, #menu-page3 .menu-page2__main--mainNames3:active .spiner h3,
-#menu-page3 .menu-page2__desserts--mainNames1:active .spiner h3, #menu-page3 .menu-page2__desserts--mainNames2:active .spiner h3, #menu-page3 .menu-page2__desserts--mainNames3:active .spiner h3,
-#menu-page3 .menu-page3__starters--mainNames1:active .spiner h3, #menu-page3 .menu-page3__starters--mainNames2:active .spiner h3, #menu-page3 .menu-page3__starters--mainNames3:active .spiner h3,
-#menu-page3 .menu-page3__main--mainNames1:active .spiner h3, #menu-page3 .menu-page3__main--mainNames2:active .spiner h3, #menu-page3 .menu-page3__main--mainNames3:active .spiner h3,
-#menu-page3 .menu-page3__desserts--mainNames1:active .spiner h3, #menu-page3 .menu-page3__desserts--mainNames2:active .spiner h3, #menu-page3 .menu-page3__desserts--mainNames3:active .spiner h3,
-#menu-page3 .menu-page4__starters--mainNames1:active .spiner h3, #menu-page3 .menu-page4__starters--mainNames2:active .spiner h3, #menu-page3 .menu-page4__starters--mainNames3:active .spiner h3,
-#menu-page3 .menu-page4__main--mainNames1:active .spiner h3, #menu-page3 .menu-page4__main--mainNames2:active .spiner h3, #menu-page3 .menu-page4__main--mainNames3:active .spiner h3,
-#menu-page3 .menu-page4__desserts--mainNames1:active .spiner h3, #menu-page3 .menu-page4__desserts--mainNames2:active .spiner h3, #menu-page3 .menu-page4__desserts--mainNames3:active .spiner h3, #menu-page4 .menu-page1__starters--mainNames1:active .spiner h3, #menu-page4 .menu-page1__starters--mainNames2:active .spiner h3, #menu-page4 .menu-page1__starters--mainNames3:active .spiner h3,
-#menu-page4 .menu-page1__main--mainNames1:active .spiner h3, #menu-page4 .menu-page1__main--mainNames2:active .spiner h3, #menu-page4 .menu-page1__main--mainNames3:active .spiner h3,
-#menu-page4 .menu-page1__desserts--mainNames1:active .spiner h3, #menu-page4 .menu-page1__desserts--mainNames2:active .spiner h3, #menu-page4 .menu-page1__desserts--mainNames3:active .spiner h3,
-#menu-page4 .menu-page2__starters--mainNames1:active .spiner h3, #menu-page4 .menu-page2__starters--mainNames2:active .spiner h3, #menu-page4 .menu-page2__starters--mainNames3:active .spiner h3,
-#menu-page4 .menu-page2__starters--mainNames4:active .spiner h3,
-#menu-page4 .menu-page2__main--mainNames1:active .spiner h3, #menu-page4 .menu-page2__main--mainNames2:active .spiner h3, #menu-page4 .menu-page2__main--mainNames3:active .spiner h3,
-#menu-page4 .menu-page2__desserts--mainNames1:active .spiner h3, #menu-page4 .menu-page2__desserts--mainNames2:active .spiner h3, #menu-page4 .menu-page2__desserts--mainNames3:active .spiner h3,
-#menu-page4 .menu-page3__starters--mainNames1:active .spiner h3, #menu-page4 .menu-page3__starters--mainNames2:active .spiner h3, #menu-page4 .menu-page3__starters--mainNames3:active .spiner h3,
-#menu-page4 .menu-page3__main--mainNames1:active .spiner h3, #menu-page4 .menu-page3__main--mainNames2:active .spiner h3, #menu-page4 .menu-page3__main--mainNames3:active .spiner h3,
-#menu-page4 .menu-page3__desserts--mainNames1:active .spiner h3, #menu-page4 .menu-page3__desserts--mainNames2:active .spiner h3, #menu-page4 .menu-page3__desserts--mainNames3:active .spiner h3,
-#menu-page4 .menu-page4__starters--mainNames1:active .spiner h3, #menu-page4 .menu-page4__starters--mainNames2:active .spiner h3, #menu-page4 .menu-page4__starters--mainNames3:active .spiner h3,
-#menu-page4 .menu-page4__main--mainNames1:active .spiner h3, #menu-page4 .menu-page4__main--mainNames2:active .spiner h3, #menu-page4 .menu-page4__main--mainNames3:active .spiner h3,
-#menu-page4 .menu-page4__desserts--mainNames1:active .spiner h3, #menu-page4 .menu-page4__desserts--mainNames2:active .spiner h3, #menu-page4 .menu-page4__desserts--mainNames3:active .spiner h3 {
+.menu-page1__starters--mainNames1:hover h3, .menu-page1__starters--mainNames2:hover h3, .menu-page1__starters--mainNames3:hover h3,
+.menu-page1__main--mainNames1:hover h3, .menu-page1__main--mainNames2:hover h3, .menu-page1__main--mainNames3:hover h3,
+.menu-page1__desserts--mainNames1:hover h3, .menu-page1__desserts--mainNames2:hover h3, .menu-page1__desserts--mainNames3:hover h3,
+.menu-page2__starters--mainNames1:hover h3, .menu-page2__starters--mainNames2:hover h3, .menu-page2__starters--mainNames3:hover h3,
+.menu-page2__starters--mainNames4:hover h3,
+.menu-page2__main--mainNames1:hover h3, .menu-page2__main--mainNames2:hover h3, .menu-page2__main--mainNames3:hover h3,
+.menu-page2__desserts--mainNames1:hover h3, .menu-page2__desserts--mainNames2:hover h3, .menu-page2__desserts--mainNames3:hover h3,
+.menu-page3__starters--mainNames1:hover h3, .menu-page3__starters--mainNames2:hover h3, .menu-page3__starters--mainNames3:hover h3,
+.menu-page3__main--mainNames1:hover h3, .menu-page3__main--mainNames2:hover h3, .menu-page3__main--mainNames3:hover h3,
+.menu-page3__desserts--mainNames1:hover h3, .menu-page3__desserts--mainNames2:hover h3, .menu-page3__desserts--mainNames3:hover h3,
+.menu-page4__starters--mainNames1:hover h3, .menu-page4__starters--mainNames2:hover h3, .menu-page4__starters--mainNames3:hover h3,
+.menu-page4__main--mainNames1:hover h3, .menu-page4__main--mainNames2:hover h3, .menu-page4__main--mainNames3:hover h3,
+.menu-page4__desserts--mainNames1:hover h3, .menu-page4__desserts--mainNames2:hover h3, .menu-page4__desserts--mainNames3:hover h3 {
   margin-right: 120px;
 }
-@keyframes progress {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-#menu-page1 .menu-page2__starters, #menu-page1 .menu-page2__main, #menu-page1 .menu-page2__desserts, #menu-page2 .menu-page2__starters, #menu-page2 .menu-page2__main, #menu-page2 .menu-page2__desserts, #menu-page3 .menu-page2__starters, #menu-page3 .menu-page2__main, #menu-page3 .menu-page2__desserts, #menu-page4 .menu-page2__starters, #menu-page4 .menu-page2__main, #menu-page4 .menu-page2__desserts {
-  transform-origin: top;
-}
-#menu-page1 .menu-page1__starters--mainNames1, #menu-page1 .menu-page2__starters--mainNames1, #menu-page1 .menu-page3__starters--mainNames1, #menu-page1 .menu-page4__starters--mainNames1, #menu-page2 .menu-page1__starters--mainNames1, #menu-page2 .menu-page2__starters--mainNames1, #menu-page2 .menu-page3__starters--mainNames1, #menu-page2 .menu-page4__starters--mainNames1, #menu-page3 .menu-page1__starters--mainNames1, #menu-page3 .menu-page2__starters--mainNames1, #menu-page3 .menu-page3__starters--mainNames1, #menu-page3 .menu-page4__starters--mainNames1, #menu-page4 .menu-page1__starters--mainNames1, #menu-page4 .menu-page2__starters--mainNames1, #menu-page4 .menu-page3__starters--mainNames1, #menu-page4 .menu-page4__starters--mainNames1 {
-  animation: progress 500ms;
-}
-#menu-page1 .menu-page1__starters--mainNames2, #menu-page1 .menu-page2__starters--mainNames2, #menu-page1 .menu-page3__starters--mainNames2, #menu-page1 .menu-page4__starters--mainNames2, #menu-page2 .menu-page1__starters--mainNames2, #menu-page2 .menu-page2__starters--mainNames2, #menu-page2 .menu-page3__starters--mainNames2, #menu-page2 .menu-page4__starters--mainNames2, #menu-page3 .menu-page1__starters--mainNames2, #menu-page3 .menu-page2__starters--mainNames2, #menu-page3 .menu-page3__starters--mainNames2, #menu-page3 .menu-page4__starters--mainNames2, #menu-page4 .menu-page1__starters--mainNames2, #menu-page4 .menu-page2__starters--mainNames2, #menu-page4 .menu-page3__starters--mainNames2, #menu-page4 .menu-page4__starters--mainNames2 {
-  animation: progress 1000ms;
-}
-#menu-page1 .menu-page1__starters--mainNames3, #menu-page1 .menu-page2__starters--mainNames3, #menu-page1 .menu-page3__starters--mainNames3, #menu-page1 .menu-page4__starters--mainNames3, #menu-page2 .menu-page1__starters--mainNames3, #menu-page2 .menu-page2__starters--mainNames3, #menu-page2 .menu-page3__starters--mainNames3, #menu-page2 .menu-page4__starters--mainNames3, #menu-page3 .menu-page1__starters--mainNames3, #menu-page3 .menu-page2__starters--mainNames3, #menu-page3 .menu-page3__starters--mainNames3, #menu-page3 .menu-page4__starters--mainNames3, #menu-page4 .menu-page1__starters--mainNames3, #menu-page4 .menu-page2__starters--mainNames3, #menu-page4 .menu-page3__starters--mainNames3, #menu-page4 .menu-page4__starters--mainNames3 {
-  animation: progress 1500ms;
-}
-#menu-page1 .menu-page2__starters--mainNames4, #menu-page2 .menu-page2__starters--mainNames4, #menu-page3 .menu-page2__starters--mainNames4, #menu-page4 .menu-page2__starters--mainNames4 {
-  animation: progress 2000ms;
-}
-#menu-page1 .menu-page1__main--mainNames1, #menu-page1 .menu-page2__main--mainNames1, #menu-page1 .menu-page3__main--mainNames1, #menu-page1 .menu-page4__main--mainNames1, #menu-page2 .menu-page1__main--mainNames1, #menu-page2 .menu-page2__main--mainNames1, #menu-page2 .menu-page3__main--mainNames1, #menu-page2 .menu-page4__main--mainNames1, #menu-page3 .menu-page1__main--mainNames1, #menu-page3 .menu-page2__main--mainNames1, #menu-page3 .menu-page3__main--mainNames1, #menu-page3 .menu-page4__main--mainNames1, #menu-page4 .menu-page1__main--mainNames1, #menu-page4 .menu-page2__main--mainNames1, #menu-page4 .menu-page3__main--mainNames1, #menu-page4 .menu-page4__main--mainNames1 {
-  animation: progress 2500ms;
-}
-#menu-page1 .menu-page1__main--mainNames2, #menu-page1 .menu-page2__main--mainNames2, #menu-page1 .menu-page3__main--mainNames2, #menu-page1 .menu-page4__main--mainNames2, #menu-page2 .menu-page1__main--mainNames2, #menu-page2 .menu-page2__main--mainNames2, #menu-page2 .menu-page3__main--mainNames2, #menu-page2 .menu-page4__main--mainNames2, #menu-page3 .menu-page1__main--mainNames2, #menu-page3 .menu-page2__main--mainNames2, #menu-page3 .menu-page3__main--mainNames2, #menu-page3 .menu-page4__main--mainNames2, #menu-page4 .menu-page1__main--mainNames2, #menu-page4 .menu-page2__main--mainNames2, #menu-page4 .menu-page3__main--mainNames2, #menu-page4 .menu-page4__main--mainNames2 {
-  animation: progress 3000ms;
-}
-#menu-page1 .menu-page1__main--mainNames3, #menu-page1 .menu-page2__main--mainNames3, #menu-page1 .menu-page3__main--mainNames3, #menu-page1 .menu-page4__main--mainNames3, #menu-page2 .menu-page1__main--mainNames3, #menu-page2 .menu-page2__main--mainNames3, #menu-page2 .menu-page3__main--mainNames3, #menu-page2 .menu-page4__main--mainNames3, #menu-page3 .menu-page1__main--mainNames3, #menu-page3 .menu-page2__main--mainNames3, #menu-page3 .menu-page3__main--mainNames3, #menu-page3 .menu-page4__main--mainNames3, #menu-page4 .menu-page1__main--mainNames3, #menu-page4 .menu-page2__main--mainNames3, #menu-page4 .menu-page3__main--mainNames3, #menu-page4 .menu-page4__main--mainNames3 {
-  animation: progress 3500ms;
-}
-#menu-page1 .menu-page1__desserts--mainNames1, #menu-page1 .menu-page2__desserts--mainNames1, #menu-page1 .menu-page3__desserts--mainNames1, #menu-page1 .menu-page4__desserts--mainNames1, #menu-page2 .menu-page1__desserts--mainNames1, #menu-page2 .menu-page2__desserts--mainNames1, #menu-page2 .menu-page3__desserts--mainNames1, #menu-page2 .menu-page4__desserts--mainNames1, #menu-page3 .menu-page1__desserts--mainNames1, #menu-page3 .menu-page2__desserts--mainNames1, #menu-page3 .menu-page3__desserts--mainNames1, #menu-page3 .menu-page4__desserts--mainNames1, #menu-page4 .menu-page1__desserts--mainNames1, #menu-page4 .menu-page2__desserts--mainNames1, #menu-page4 .menu-page3__desserts--mainNames1, #menu-page4 .menu-page4__desserts--mainNames1 {
-  animation: progress 4000ms;
-}
-#menu-page1 .menu-page1__desserts--mainNames2, #menu-page1 .menu-page2__desserts--mainNames2, #menu-page1 .menu-page3__desserts--mainNames2, #menu-page1 .menu-page4__desserts--mainNames2, #menu-page2 .menu-page1__desserts--mainNames2, #menu-page2 .menu-page2__desserts--mainNames2, #menu-page2 .menu-page3__desserts--mainNames2, #menu-page2 .menu-page4__desserts--mainNames2, #menu-page3 .menu-page1__desserts--mainNames2, #menu-page3 .menu-page2__desserts--mainNames2, #menu-page3 .menu-page3__desserts--mainNames2, #menu-page3 .menu-page4__desserts--mainNames2, #menu-page4 .menu-page1__desserts--mainNames2, #menu-page4 .menu-page2__desserts--mainNames2, #menu-page4 .menu-page3__desserts--mainNames2, #menu-page4 .menu-page4__desserts--mainNames2 {
-  animation: progress 4500ms;
-}
-#menu-page1 .menu-page1__desserts--mainNames3, #menu-page1 .menu-page2__desserts--mainNames3, #menu-page1 .menu-page3__desserts--mainNames3, #menu-page1 .menu-page4__desserts--mainNames3, #menu-page2 .menu-page1__desserts--mainNames3, #menu-page2 .menu-page2__desserts--mainNames3, #menu-page2 .menu-page3__desserts--mainNames3, #menu-page2 .menu-page4__desserts--mainNames3, #menu-page3 .menu-page1__desserts--mainNames3, #menu-page3 .menu-page2__desserts--mainNames3, #menu-page3 .menu-page3__desserts--mainNames3, #menu-page3 .menu-page4__desserts--mainNames3, #menu-page4 .menu-page1__desserts--mainNames3, #menu-page4 .menu-page2__desserts--mainNames3, #menu-page4 .menu-page3__desserts--mainNames3, #menu-page4 .menu-page4__desserts--mainNames3 {
-  animation: progress 5000ms;
-}
 
+/*Apparition progressive des menus*/
 .footer-logo {
   height: 50px;
   width: 200px;

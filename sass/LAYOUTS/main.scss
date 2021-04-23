@@ -141,6 +141,15 @@ main h6 {
     }
 }
 
+/*Effet Zoom sur les photos*/
+.main-home-menu1,.main-home-menu2,.main-home-menu3,.main-home-menu4 {
+    transform: scale(1);
+    transition: transform 500ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+}
+
 // -----------------------PAGE1 PAGE2 PAGE3 PAGE4------------------------
 
 /*Généralités sur tout le main et mise en position relative du header pour que le main chevauche l'image*/
@@ -192,9 +201,9 @@ header {
     border-radius: 1rem;
     box-shadow: 6px 6px 4px rgb(223, 222, 222);
     background-color: white;
-    // margin: 20px auto;
-    // width: 90vw;
     margin: 20px 15px;
+    cursor: pointer;
+    height: 60px;
 }
 
 /*Installation des points de suspensions en cas de rétrécissement du bloc*/
@@ -229,23 +238,31 @@ header {
 }
 
 
-
 /*Installation du spiner coulissant*/
 
 .price {
+    // border: 1px red solid;
     border-radius: 1rem;
     display: flex;
     justify-content: space-between;
+    line-height: 0.7rem;
 }
 
 #menu-page1,#menu-page2,#menu-page3,#menu-page4 {
-h4 {
+
+h3 {
+    // border: 1px blueviolet solid;
+    width: auto;
+}
+
+h4  {
+    // border: 1px green solid;
     width: 100%;
 }
 
-
 p {
-    margin-top: -15px;
+    // border: 1px yellow solid;
+    margin-top: -10px;
     margin-left: 10px;
     margin-right: 10px;
     width: auto;
@@ -254,11 +271,12 @@ p {
         margin-right: 50px;
         
     }
+ }
 }
 
 .spiner {
-  
-    width: 0;
+     width: 0;
+     height: 63px;
     font-size: 0vh;
     padding: 0px;
     color: white;
@@ -268,41 +286,41 @@ p {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-color:$Color-Tertiary;
-    margin-top: -48px;
+    margin-top: -50px;
     transition: width 800ms;
 }
 
-.menu-page1__starters--mainNames1:active,.menu-page1__starters--mainNames2:active,.menu-page1__starters--mainNames3:active,
-.menu-page1__main--mainNames1:active,.menu-page1__main--mainNames2:active,.menu-page1__main--mainNames3:active,
-.menu-page1__desserts--mainNames1:active,.menu-page1__desserts--mainNames2:active,.menu-page1__desserts--mainNames3:active,
+.menu-page1__starters--mainNames1:hover,.menu-page1__starters--mainNames2:hover,.menu-page1__starters--mainNames3:hover,
+.menu-page1__main--mainNames1:hover,.menu-page1__main--mainNames2:hover,.menu-page1__main--mainNames3:hover,
+.menu-page1__desserts--mainNames1:hover,.menu-page1__desserts--mainNames2:hover,.menu-page1__desserts--mainNames3:hover,
 
-.menu-page2__starters--mainNames1:active,.menu-page2__starters--mainNames2:active,.menu-page2__starters--mainNames3:active,
-.menu-page2__starters--mainNames4:active,
+.menu-page2__starters--mainNames1:hover,.menu-page2__starters--mainNames2:hover,.menu-page2__starters--mainNames3:hover,
+.menu-page2__starters--mainNames4:hover,
 
-.menu-page2__main--mainNames1:active,.menu-page2__main--mainNames2:active,.menu-page2__main--mainNames3:active,
-.menu-page2__desserts--mainNames1:active,.menu-page2__desserts--mainNames2:active,.menu-page2__desserts--mainNames3:active,
+.menu-page2__main--mainNames1:hover,.menu-page2__main--mainNames2:hover,.menu-page2__main--mainNames3:hover,
+.menu-page2__desserts--mainNames1:hover,.menu-page2__desserts--mainNames2:hover,.menu-page2__desserts--mainNames3:hover,
 
-.menu-page3__starters--mainNames1:active,.menu-page3__starters--mainNames2:active,.menu-page3__starters--mainNames3:active,
-.menu-page3__main--mainNames1:active,.menu-page3__main--mainNames2:active,.menu-page3__main--mainNames3:active,
-.menu-page3__desserts--mainNames1:active,.menu-page3__desserts--mainNames2:active,.menu-page3__desserts--mainNames3:active,
+.menu-page3__starters--mainNames1:hover,.menu-page3__starters--mainNames2:hover,.menu-page3__starters--mainNames3:hover,
+.menu-page3__main--mainNames1:hover,.menu-page3__main--mainNames2:hover,.menu-page3__main--mainNames3:hover,
+.menu-page3__desserts--mainNames1:hover,.menu-page3__desserts--mainNames2:hover,.menu-page3__desserts--mainNames3:hover,
 
-.menu-page4__starters--mainNames1:active,.menu-page4__starters--mainNames2:active,.menu-page4__starters--mainNames3:active,
-.menu-page4__main--mainNames1:active,.menu-page4__main--mainNames2:active,.menu-page4__main--mainNames3:active,
-.menu-page4__desserts--mainNames1:active,.menu-page4__desserts--mainNames2:active,.menu-page4__desserts--mainNames3:active{
+.menu-page4__starters--mainNames1:hover,.menu-page4__starters--mainNames2:hover,.menu-page4__starters--mainNames3:hover,
+.menu-page4__main--mainNames1:hover,.menu-page4__main--mainNames2:hover,.menu-page4__main--mainNames3:hover,
+.menu-page4__desserts--mainNames1:hover,.menu-page4__desserts--mainNames2:hover,.menu-page4__desserts--mainNames3:hover{
 
     .spiner {    
        
-    width: 40% ;
-    max-width: 200px;
-    height: 43.5px;
-    font-size: 3.2vh;
-    padding-top: 16px;
-    margin-right: -2px; 
-    border: 1px rgb(243, 242, 242) solid;
+        width: 40% ;
+        max-width: 200px;
+        font-size: 1rem;
+        padding-top: 25px;
+        height: 36px;
+        border: 1px rgb(243, 242, 242) solid;
 
     @media screen and (min-width:415px) {
         padding-top: 10px 0 5px 0;
     }
+  }
     
     p h4 {
         width: auto;
@@ -312,84 +330,64 @@ p {
         margin-right: 120px;
     }
   }
-}
+
 
 /*Apparition progressive des menus*/
-@keyframes progress {
-    0% {
-        transform: scaleY(0);
-    }
+// @keyframes progress {
+//     0% {
+//         transform: scaleY(0);
+//     }
 
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-.menu-page2__starters,.menu-page2__main,.menu-page2__desserts {
-    transform-origin: top;
-    // -moz-animation: progress 2s; /* Firefox */
-    // -webkit-animation: progress 2s; /* Safari et Chrome */
-    // -o-animation: progress 2s; /* Opera */ 
-}
-
-.menu-page1__starters--mainNames1,.menu-page2__starters--mainNames1,.menu-page3__starters--mainNames1,.menu-page4__starters--mainNames1 {
-   animation: progress 500ms;
-}
-.menu-page1__starters--mainNames2,.menu-page2__starters--mainNames2,.menu-page3__starters--mainNames2,.menu-page4__starters--mainNames2 {
-    animation: progress 1000ms;
-}
-.menu-page1__starters--mainNames3,.menu-page2__starters--mainNames3,.menu-page3__starters--mainNames3,.menu-page4__starters--mainNames3 {
-    animation: progress 1500ms;
-}
-.menu-page2__starters--mainNames4  {
-    animation: progress 2000ms;
-}
-
-
-
-.menu-page1__main--mainNames1,.menu-page2__main--mainNames1,.menu-page3__main--mainNames1,.menu-page4__main--mainNames1 {
-    animation: progress 2500ms;
-}
-.menu-page1__main--mainNames2,.menu-page2__main--mainNames2,.menu-page3__main--mainNames2,.menu-page4__main--mainNames2 {
-    animation: progress 3000ms;
-}
-.menu-page1__main--mainNames3,.menu-page2__main--mainNames3,.menu-page3__main--mainNames3,.menu-page4__main--mainNames3 {
-    animation: progress 3500ms;
-}
-
-
-
-.menu-page1__desserts--mainNames1,.menu-page2__desserts--mainNames1,.menu-page3__desserts--mainNames1,.menu-page4__desserts--mainNames1 {
-    animation: progress 4000ms;
-}
-.menu-page1__desserts--mainNames2,.menu-page2__desserts--mainNames2,.menu-page3__desserts--mainNames2,.menu-page4__desserts--mainNames2 {
-    animation: progress 4500ms;
-}
-.menu-page1__desserts--mainNames3,.menu-page2__desserts--mainNames3,.menu-page3__desserts--mainNames3,.menu-page4__desserts--mainNames3 {
-    animation: progress 5000ms;
-}
-}
-
-
-
-// @media screen and (min-width:1024px){
-
-
-// .menu-page1__starters--mainNames1,.menu-page1__starters--mainNames2,.menu-page1__starters--mainNames3,.menu-page1__main--mainNames1,
-// .menu-page1__main--mainNames2,.menu-page1__main--mainNames3,.menu-page1__desserts--mainNames1,.menu-page1__desserts--mainNames2,.menu-page1__desserts--mainNames3,
-
-// .menu-page2__starters--mainNames1,.menu-page2__starters--mainNames2,.menu-page2__starters--mainNames3,.menu-page2__starters--mainNames4,.menu-page2__main--mainNames1,
-// .menu-page2__main--mainNames2,.menu-page2__main--mainNames3,.menu-page2__desserts--mainNames1,.menu-page2__desserts--mainNames2,.menu-page2__desserts--mainNames3,
-
-// .menu-page3__starters--mainNames1,.menu-page3__starters--mainNames2,.menu-page3__starters--mainNames3,.menu-page3__main--mainNames1,
-// .menu-page3__main--mainNames2,.menu-page3__main--mainNames3,.menu-page3__desserts--mainNames1,.menu-page3__desserts--mainNames2,.menu-page3__desserts--mainNames3,
-
-// .menu-page4__starters--mainNames1,.menu-page4__starters--mainNames2,.menu-page4__starters--mainNames3,.menu-page4__main--mainNames1,
-// .menu-page4__main--mainNames2,.menu-page4__main--mainNames3,.menu-page4__desserts--mainNames1,.menu-page4__desserts--mainNames2,.menu-page4__desserts--mainNames3{
-//     width: 70%;
-//   }
-
+//     100% {
+//         transform: scaleY(1);
+//     }
 // }
+
+// .menu-page2__starters,.menu-page2__main,.menu-page2__desserts {
+//     transform-origin: top;
+//     // -moz-animation: progress 2s; /* Firefox */
+//     // -webkit-animation: progress 2s; /* Safari et Chrome */
+//     // -o-animation: progress 2s; /* Opera */ 
+// }
+
+// .menu-page1__starters--mainNames1,.menu-page2__starters--mainNames1,.menu-page3__starters--mainNames1,.menu-page4__starters--mainNames1 {
+//    animation: progress 500ms;
+// }
+// .menu-page1__starters--mainNames2,.menu-page2__starters--mainNames2,.menu-page3__starters--mainNames2,.menu-page4__starters--mainNames2 {
+//     animation: progress 1000ms;
+// }
+// .menu-page1__starters--mainNames3,.menu-page2__starters--mainNames3,.menu-page3__starters--mainNames3,.menu-page4__starters--mainNames3 {
+//     animation: progress 1500ms;
+// }
+// .menu-page2__starters--mainNames4  {
+//     animation: progress 2000ms;
+// }
+
+
+
+// .menu-page1__main--mainNames1,.menu-page2__main--mainNames1,.menu-page3__main--mainNames1,.menu-page4__main--mainNames1 {
+//     animation: progress 2500ms;
+// }
+// .menu-page1__main--mainNames2,.menu-page2__main--mainNames2,.menu-page3__main--mainNames2,.menu-page4__main--mainNames2 {
+//     animation: progress 3000ms;
+// }
+// .menu-page1__main--mainNames3,.menu-page2__main--mainNames3,.menu-page3__main--mainNames3,.menu-page4__main--mainNames3 {
+//     animation: progress 3500ms;
+// }
+
+
+
+// .menu-page1__desserts--mainNames1,.menu-page2__desserts--mainNames1,.menu-page3__desserts--mainNames1,.menu-page4__desserts--mainNames1 {
+//     animation: progress 4000ms;
+// }
+// .menu-page1__desserts--mainNames2,.menu-page2__desserts--mainNames2,.menu-page3__desserts--mainNames2,.menu-page4__desserts--mainNames2 {
+//     animation: progress 4500ms;
+// }
+// .menu-page1__desserts--mainNames3,.menu-page2__desserts--mainNames3,.menu-page3__desserts--mainNames3,.menu-page4__desserts--mainNames3 {
+//     animation: progress 5000ms;
+// }
+// }
+
 
 
 

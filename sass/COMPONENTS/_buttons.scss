@@ -1,17 +1,10 @@
 
 /*Bouton de 'Explorer nos restaurants'*/
 .heading-home-description__btn {
-    border: 0px $Color-Secondary solid;
     border-radius: 5rem;
     background: linear-gradient($Color-Secondary,$Color-Primary);
     box-shadow: 3px 3px 3px $Color-Primary;
     font-size: .9rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.5rem;
-        padding-top: 12px;
-        height: 30px;
-    }
-        
     font-weight:bold;
     text-align: center;
     width: 43vw;
@@ -20,21 +13,47 @@
     margin: 30px auto;
     cursor: pointer;
     transition: transform 400ms;
+   
+
+        & a {
+            color: white;
+       }
     
         & :visited{
             color: white;
         }
+
         &:active {
             opacity: .9;
             transform: scale(1.15);
             box-shadow: 8px 8px 8px $Color-Primary;
         }
+        
+        &:hover{
+            opacity: .9;
+            transform: scale(1.15);
+            box-shadow: 8px 8px 8px $Color-Primary;  
+            & a {
+                color: white;
+              }   
+            }
+
+         
+        
+
         /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
         @media screen and (min-width:1024px){
+            font-size: 1.5rem;
+            padding-top: 12px;
+            height: 30px;
+
             &:hover{
-                opacity: .9;
+            opacity: .9;
             transform: scale(1.15);
-            box-shadow: 8px 8px 8px $Color-Primary;
+            box-shadow: 8px 8px 8px $Color-Primary;  
+            & a {
+                color: white;
+              }   
             }
         }
     }
@@ -51,10 +70,13 @@
     margin: 50px auto 0px auto;
     padding: 10px;
     text-align: center;
-    color: white;
     width: 37vw;
     max-width: 300px;
     transition: transform 400ms;
+
+    & a:link {
+        color: white;
+    }
 
     & :visited{
         color: white;
@@ -64,7 +86,17 @@
         opacity: .9;
         transform: scale(1.15);
         box-shadow: 8px 8px 8px $Color-Primary;
-    }
+            }
+
+        &:hover{
+            opacity: .9;
+            transform: scale(1.15);
+            box-shadow: 8px 8px 8px $Color-Primary;  
+            & a {
+                color: white;
+              }   
+            }
+    
     /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
     @media screen and (min-width:1024px){
 
@@ -73,7 +105,9 @@
             opacity: .9;
         transform: scale(1.15);
         box-shadow: 8px 8px 8px $Color-Primary;
-        
+        & a {
+            color: white;
+          }  
         }
     }
 }
@@ -95,11 +129,13 @@
     right: 35px;
     top:6px;
     font-size: $Fontsize-Heart;
+
     @media screen and (min-width:1024px){
         font-size: 5rem;
         right: 100px;
         top:0px;
     }
+
     cursor: pointer; 
     }
 
@@ -114,12 +150,12 @@
         color:transparent;
 
         position: absolute;
-        right: 35px;
-        top:6px;
-        font-size: $Fontsize-Heart;
+        right: 34px;
+        top:4px;
+        font-size: 1.6rem;
         @media screen and (min-width:1024px){
             font-size: 5.5rem;
-            right: 97px;
+            right: 96px;
             top:-4px;
         }
         opacity: 0;       
