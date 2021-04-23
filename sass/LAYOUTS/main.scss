@@ -260,13 +260,14 @@ h4  {
     width: 100%;
 }
 
-p {
+h5 {
     // border: 1px yellow solid;
     margin-top: -10px;
     margin-left: 10px;
     margin-right: 10px;
     width: auto;
     text-align: end;
+
     @media screen and (min-width:1024px) {
         margin-right: 50px;
         
@@ -275,20 +276,31 @@ p {
 }
 
 .spiner {
-     width: 0;
-     height: 63px;
-    font-size: 0vh;
-    padding: 0px;
-    color: white;
+    opacity: 0;
+    color: $Color-Tertiary;
+    background-color: white;
+    border-radius: 50% ;
+    font-size: 1.5rem;
+    transition: transform 800ms;
+    transform: rotate(-1turn);
+    display: inline-block;
+    margin-top:-5px;
+    
+}
+
+.price p {
+    width: 0;
     text-align: center;
-    border: 0px rgb(243, 242, 242) solid;
     box-shadow: 6px 6px 4px rgb(223, 222, 222);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-color:$Color-Tertiary;
-    margin-top: -50px;
+    margin-top: -49px;
+    padding-top: 25px;
     transition: width 800ms;
+    
 }
+
 
 .menu-page1__starters--mainNames1:hover,.menu-page1__starters--mainNames2:hover,.menu-page1__starters--mainNames3:hover,
 .menu-page1__main--mainNames1:hover,.menu-page1__main--mainNames2:hover,.menu-page1__main--mainNames3:hover,
@@ -308,29 +320,35 @@ p {
 .menu-page4__main--mainNames1:hover,.menu-page4__main--mainNames2:hover,.menu-page4__main--mainNames3:hover,
 .menu-page4__desserts--mainNames1:hover,.menu-page4__desserts--mainNames2:hover,.menu-page4__desserts--mainNames3:hover{
 
-    .spiner {    
-       
-        width: 40% ;
-        max-width: 200px;
-        font-size: 1rem;
-        padding-top: 25px;
-        height: 36px;
-        border: 1px rgb(243, 242, 242) solid;
 
-    @media screen and (min-width:415px) {
-        padding-top: 10px 0 5px 0;
+    .spiner {
+        transform: rotate(0turn);
+        opacity: 1;
     }
-  }
-    
-    p h4 {
-        width: auto;
+
+
+    .price p {
+        width: 40%;
+        height: 35px;
+        text-align: center;
+        border: 1px rgb(243, 242, 242) solid;
+        box-shadow: 6px 6px 4px rgb(223, 222, 222);
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-color:$Color-Tertiary;
+        margin-top: -49px;
+        padding-top: 25px;
+        
     }
 
     h3 {
-        margin-right: 120px;
+        margin-right: 70px;
     }
-  }
-
+     h4 h5 {
+        width: auto;
+    }
+    
+}
 
 /*Apparition progressive des menus*/
 // @keyframes progress {

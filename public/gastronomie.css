@@ -781,7 +781,7 @@ header {
 #menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
   width: 100%;
 }
-#menu-page1 p, #menu-page2 p, #menu-page3 p, #menu-page4 p {
+#menu-page1 h5, #menu-page2 h5, #menu-page3 h5, #menu-page4 h5 {
   margin-top: -10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -789,24 +789,32 @@ header {
   text-align: end;
 }
 @media screen and (min-width: 1024px) {
-  #menu-page1 p, #menu-page2 p, #menu-page3 p, #menu-page4 p {
+  #menu-page1 h5, #menu-page2 h5, #menu-page3 h5, #menu-page4 h5 {
     margin-right: 50px;
   }
 }
 
 .spiner {
+  opacity: 0;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: transform 800ms;
+  transform: rotate(-1turn);
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.price p {
   width: 0;
-  height: 63px;
-  font-size: 0vh;
-  padding: 0px;
-  color: white;
   text-align: center;
-  border: 0px #f3f2f2 solid;
   box-shadow: 6px 6px 4px #dfdede;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: #99E2D0;
-  margin-top: -50px;
+  margin-top: -49px;
+  padding-top: 25px;
   transition: width 800ms;
 }
 
@@ -823,44 +831,32 @@ header {
 .menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
 .menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
 .menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
+  transform: rotate(0turn);
+  opacity: 1;
+}
+.menu-page1__starters--mainNames1:hover .price p, .menu-page1__starters--mainNames2:hover .price p, .menu-page1__starters--mainNames3:hover .price p,
+.menu-page1__main--mainNames1:hover .price p, .menu-page1__main--mainNames2:hover .price p, .menu-page1__main--mainNames3:hover .price p,
+.menu-page1__desserts--mainNames1:hover .price p, .menu-page1__desserts--mainNames2:hover .price p, .menu-page1__desserts--mainNames3:hover .price p,
+.menu-page2__starters--mainNames1:hover .price p, .menu-page2__starters--mainNames2:hover .price p, .menu-page2__starters--mainNames3:hover .price p,
+.menu-page2__starters--mainNames4:hover .price p,
+.menu-page2__main--mainNames1:hover .price p, .menu-page2__main--mainNames2:hover .price p, .menu-page2__main--mainNames3:hover .price p,
+.menu-page2__desserts--mainNames1:hover .price p, .menu-page2__desserts--mainNames2:hover .price p, .menu-page2__desserts--mainNames3:hover .price p,
+.menu-page3__starters--mainNames1:hover .price p, .menu-page3__starters--mainNames2:hover .price p, .menu-page3__starters--mainNames3:hover .price p,
+.menu-page3__main--mainNames1:hover .price p, .menu-page3__main--mainNames2:hover .price p, .menu-page3__main--mainNames3:hover .price p,
+.menu-page3__desserts--mainNames1:hover .price p, .menu-page3__desserts--mainNames2:hover .price p, .menu-page3__desserts--mainNames3:hover .price p,
+.menu-page4__starters--mainNames1:hover .price p, .menu-page4__starters--mainNames2:hover .price p, .menu-page4__starters--mainNames3:hover .price p,
+.menu-page4__main--mainNames1:hover .price p, .menu-page4__main--mainNames2:hover .price p, .menu-page4__main--mainNames3:hover .price p,
+.menu-page4__desserts--mainNames1:hover .price p, .menu-page4__desserts--mainNames2:hover .price p, .menu-page4__desserts--mainNames3:hover .price p {
   width: 40%;
-  max-width: 200px;
-  font-size: 1rem;
-  padding-top: 25px;
-  height: 36px;
+  height: 35px;
+  text-align: center;
   border: 1px #f3f2f2 solid;
-}
-@media screen and (min-width: 415px) {
-  .menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
-.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
-.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames4:hover .spiner,
-.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
-.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
-.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
-.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
-.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
-.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
-.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
-.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
-    padding-top: 10px 0 5px 0;
-  }
-}
-.menu-page1__starters--mainNames1:hover p h4, .menu-page1__starters--mainNames2:hover p h4, .menu-page1__starters--mainNames3:hover p h4,
-.menu-page1__main--mainNames1:hover p h4, .menu-page1__main--mainNames2:hover p h4, .menu-page1__main--mainNames3:hover p h4,
-.menu-page1__desserts--mainNames1:hover p h4, .menu-page1__desserts--mainNames2:hover p h4, .menu-page1__desserts--mainNames3:hover p h4,
-.menu-page2__starters--mainNames1:hover p h4, .menu-page2__starters--mainNames2:hover p h4, .menu-page2__starters--mainNames3:hover p h4,
-.menu-page2__starters--mainNames4:hover p h4,
-.menu-page2__main--mainNames1:hover p h4, .menu-page2__main--mainNames2:hover p h4, .menu-page2__main--mainNames3:hover p h4,
-.menu-page2__desserts--mainNames1:hover p h4, .menu-page2__desserts--mainNames2:hover p h4, .menu-page2__desserts--mainNames3:hover p h4,
-.menu-page3__starters--mainNames1:hover p h4, .menu-page3__starters--mainNames2:hover p h4, .menu-page3__starters--mainNames3:hover p h4,
-.menu-page3__main--mainNames1:hover p h4, .menu-page3__main--mainNames2:hover p h4, .menu-page3__main--mainNames3:hover p h4,
-.menu-page3__desserts--mainNames1:hover p h4, .menu-page3__desserts--mainNames2:hover p h4, .menu-page3__desserts--mainNames3:hover p h4,
-.menu-page4__starters--mainNames1:hover p h4, .menu-page4__starters--mainNames2:hover p h4, .menu-page4__starters--mainNames3:hover p h4,
-.menu-page4__main--mainNames1:hover p h4, .menu-page4__main--mainNames2:hover p h4, .menu-page4__main--mainNames3:hover p h4,
-.menu-page4__desserts--mainNames1:hover p h4, .menu-page4__desserts--mainNames2:hover p h4, .menu-page4__desserts--mainNames3:hover p h4 {
-  width: auto;
+  box-shadow: 6px 6px 4px #dfdede;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #99E2D0;
+  margin-top: -49px;
+  padding-top: 25px;
 }
 .menu-page1__starters--mainNames1:hover h3, .menu-page1__starters--mainNames2:hover h3, .menu-page1__starters--mainNames3:hover h3,
 .menu-page1__main--mainNames1:hover h3, .menu-page1__main--mainNames2:hover h3, .menu-page1__main--mainNames3:hover h3,
@@ -875,7 +871,22 @@ header {
 .menu-page4__starters--mainNames1:hover h3, .menu-page4__starters--mainNames2:hover h3, .menu-page4__starters--mainNames3:hover h3,
 .menu-page4__main--mainNames1:hover h3, .menu-page4__main--mainNames2:hover h3, .menu-page4__main--mainNames3:hover h3,
 .menu-page4__desserts--mainNames1:hover h3, .menu-page4__desserts--mainNames2:hover h3, .menu-page4__desserts--mainNames3:hover h3 {
-  margin-right: 120px;
+  margin-right: 70px;
+}
+.menu-page1__starters--mainNames1:hover h4 h5, .menu-page1__starters--mainNames2:hover h4 h5, .menu-page1__starters--mainNames3:hover h4 h5,
+.menu-page1__main--mainNames1:hover h4 h5, .menu-page1__main--mainNames2:hover h4 h5, .menu-page1__main--mainNames3:hover h4 h5,
+.menu-page1__desserts--mainNames1:hover h4 h5, .menu-page1__desserts--mainNames2:hover h4 h5, .menu-page1__desserts--mainNames3:hover h4 h5,
+.menu-page2__starters--mainNames1:hover h4 h5, .menu-page2__starters--mainNames2:hover h4 h5, .menu-page2__starters--mainNames3:hover h4 h5,
+.menu-page2__starters--mainNames4:hover h4 h5,
+.menu-page2__main--mainNames1:hover h4 h5, .menu-page2__main--mainNames2:hover h4 h5, .menu-page2__main--mainNames3:hover h4 h5,
+.menu-page2__desserts--mainNames1:hover h4 h5, .menu-page2__desserts--mainNames2:hover h4 h5, .menu-page2__desserts--mainNames3:hover h4 h5,
+.menu-page3__starters--mainNames1:hover h4 h5, .menu-page3__starters--mainNames2:hover h4 h5, .menu-page3__starters--mainNames3:hover h4 h5,
+.menu-page3__main--mainNames1:hover h4 h5, .menu-page3__main--mainNames2:hover h4 h5, .menu-page3__main--mainNames3:hover h4 h5,
+.menu-page3__desserts--mainNames1:hover h4 h5, .menu-page3__desserts--mainNames2:hover h4 h5, .menu-page3__desserts--mainNames3:hover h4 h5,
+.menu-page4__starters--mainNames1:hover h4 h5, .menu-page4__starters--mainNames2:hover h4 h5, .menu-page4__starters--mainNames3:hover h4 h5,
+.menu-page4__main--mainNames1:hover h4 h5, .menu-page4__main--mainNames2:hover h4 h5, .menu-page4__main--mainNames3:hover h4 h5,
+.menu-page4__desserts--mainNames1:hover h4 h5, .menu-page4__desserts--mainNames2:hover h4 h5, .menu-page4__desserts--mainNames3:hover h4 h5 {
+  width: auto;
 }
 
 /*Apparition progressive des menus*/
