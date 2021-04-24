@@ -59,7 +59,7 @@ body {
 #menu-page4 h2 {
   font-size: 1.1rem;
   font-weight: normal;
-  margin: 40px 0 0 5vw;
+  margin: 40px 0 0px 5vw;
 }
 
 #menu-page1 h3,
@@ -319,18 +319,77 @@ body {
   cursor: pointer;
   transition: opacity 600ms;
 }
-.menu-home__heartfullhome:active {
+.menu-home__heartfullhome:active, .menu-home__heartfullhome:hover {
   opacity: 1;
+  font-size: 1.55rem;
+  top: 2.1px;
+  right: 19px;
 }
 @media screen and (min-width: 1024px) {
   .menu-home__heartfullhome {
     font-size: 2.7rem;
     right: 28px;
     top: 14px;
-    transition: opacity 1000ms;
+    transition: opacity 600ms;
   }
-  .menu-home__heartfullhome:hover {
+  .menu-home__heartfullhome:active, .menu-home__heartfullhome:hover {
     opacity: 1;
+    font-size: 2.67rem;
+    right: 28.6px;
+    top: 14px;
+  }
+}
+
+/*Mise en place du loading spinner qui simule le chargement de la page*/
+/*Retardement affichage page accueil*/
+@keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container0 header,
+.container0 main,
+.container0 footer {
+  animation: wait 3000ms cubic-bezier(1, -1.71, 1, 0.55);
+}
+
+/*Effet rotatif et disparition du loader spiner*/
+@keyframes loadspin {
+  0% {
+    transform: rotate(-1turn);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0turn);
+    opacity: 0;
+  }
+}
+.loading {
+  animation: loadspin 3000ms linear;
+  width: 0%;
+  opacity: 0;
+  position: absolute;
+  font-size: 15vh;
+  top: 25vh;
+  left: 50vw;
+}
+
+.container0 {
+  position: relative;
+}
+
+.loading-spinner {
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@media screen and (min-width: 1024px) {
+  .loading-spinner {
+    font-size: 30rem;
   }
 }
 
@@ -471,7 +530,6 @@ nav ul {
   cursor: pointer;
   display: flex;
   height: 2.5rem;
-  border: 1px #f1efef solid;
   background-color: #f1efef;
   border-radius: 1.5rem;
   box-shadow: 6px 6px 4px #dfdede;
@@ -480,8 +538,10 @@ nav ul {
   transform: scale(1);
   transition: transform 400ms;
 }
-nav ul:hover {
+nav ul:hover, nav ul:active {
   transform: scale(1.2);
+  background-color: #f8f8f8;
+  box-shadow: 8px 8px 6px #dfdede;
 }
 nav ul li {
   margin: 0 20px 0 -7px;
@@ -492,7 +552,6 @@ nav ul li {
 .nav-home-choose__number1,
 .nav-home-compose__number2,
 .nav-home-taste__number3 {
-  border: 1px #9356DC solid;
   border-radius: 50%;
   padding: 1px 4px 2px 4px;
   height: 1rem;
@@ -736,6 +795,23 @@ header {
   cursor: pointer;
   height: 60px;
 }
+@media screen and (min-width: 1024px) {
+  .menu-page1__starters--mainNames1, .menu-page1__starters--mainNames2, .menu-page1__starters--mainNames3,
+.menu-page1__main--mainNames1, .menu-page1__main--mainNames2, .menu-page1__main--mainNames3,
+.menu-page1__desserts--mainNames1, .menu-page1__desserts--mainNames2, .menu-page1__desserts--mainNames3,
+.menu-page2__starters--mainNames1, .menu-page2__starters--mainNames2, .menu-page2__starters--mainNames3,
+.menu-page2__starters--mainNames4,
+.menu-page2__main--mainNames1, .menu-page2__main--mainNames2, .menu-page2__main--mainNames3,
+.menu-page2__desserts--mainNames1, .menu-page2__desserts--mainNames2, .menu-page2__desserts--mainNames3,
+.menu-page3__starters--mainNames1, .menu-page3__starters--mainNames2, .menu-page3__starters--mainNames3,
+.menu-page3__main--mainNames1, .menu-page3__main--mainNames2, .menu-page3__main--mainNames3,
+.menu-page3__desserts--mainNames1, .menu-page3__desserts--mainNames2, .menu-page3__desserts--mainNames3,
+.menu-page4__starters--mainNames1, .menu-page4__starters--mainNames2, .menu-page4__starters--mainNames3,
+.menu-page4__main--mainNames1, .menu-page4__main--mainNames2, .menu-page4__main--mainNames3,
+.menu-page4__desserts--mainNames1, .menu-page4__desserts--mainNames2, .menu-page4__desserts--mainNames3 {
+    height: 150px;
+  }
+}
 
 /*Installation des points de suspensions en cas de rétrécissement du bloc*/
 /*Entrées*/
@@ -781,6 +857,11 @@ header {
 #menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  #menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
+    padding-top: 10px;
+  }
+}
 #menu-page1 h5, #menu-page2 h5, #menu-page3 h5, #menu-page4 h5 {
   margin-top: -10px;
   margin-left: 10px;
@@ -796,14 +877,15 @@ header {
 
 .spiner {
   opacity: 0;
+  font-size: 0;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
-  font-size: 1.5rem;
   transition: transform 800ms;
   transform: rotate(-1turn);
   display: inline-block;
   margin-top: -5px;
+  border: 0;
 }
 
 .price p {
@@ -816,6 +898,13 @@ header {
   margin-top: -49px;
   padding-top: 25px;
   transition: width 800ms;
+}
+@media screen and (min-width: 1024px) {
+  .price p {
+    height: 95px;
+    margin-top: -114px;
+    padding-top: 55px;
+  }
 }
 
 .menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
@@ -833,6 +922,24 @@ header {
 .menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
   transform: rotate(0turn);
   opacity: 1;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
+.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
+.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
+.menu-page2__starters--mainNames4:hover .spiner,
+.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
+.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
+.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
+.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
+.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
+.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
+.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
+.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
+    font-size: 4rem;
+  }
 }
 .menu-page1__starters--mainNames1:hover .price p, .menu-page1__starters--mainNames2:hover .price p, .menu-page1__starters--mainNames3:hover .price p,
 .menu-page1__main--mainNames1:hover .price p, .menu-page1__main--mainNames2:hover .price p, .menu-page1__main--mainNames3:hover .price p,
@@ -857,6 +964,25 @@ header {
   background-color: #99E2D0;
   margin-top: -49px;
   padding-top: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .menu-page1__starters--mainNames1:hover .price p, .menu-page1__starters--mainNames2:hover .price p, .menu-page1__starters--mainNames3:hover .price p,
+.menu-page1__main--mainNames1:hover .price p, .menu-page1__main--mainNames2:hover .price p, .menu-page1__main--mainNames3:hover .price p,
+.menu-page1__desserts--mainNames1:hover .price p, .menu-page1__desserts--mainNames2:hover .price p, .menu-page1__desserts--mainNames3:hover .price p,
+.menu-page2__starters--mainNames1:hover .price p, .menu-page2__starters--mainNames2:hover .price p, .menu-page2__starters--mainNames3:hover .price p,
+.menu-page2__starters--mainNames4:hover .price p,
+.menu-page2__main--mainNames1:hover .price p, .menu-page2__main--mainNames2:hover .price p, .menu-page2__main--mainNames3:hover .price p,
+.menu-page2__desserts--mainNames1:hover .price p, .menu-page2__desserts--mainNames2:hover .price p, .menu-page2__desserts--mainNames3:hover .price p,
+.menu-page3__starters--mainNames1:hover .price p, .menu-page3__starters--mainNames2:hover .price p, .menu-page3__starters--mainNames3:hover .price p,
+.menu-page3__main--mainNames1:hover .price p, .menu-page3__main--mainNames2:hover .price p, .menu-page3__main--mainNames3:hover .price p,
+.menu-page3__desserts--mainNames1:hover .price p, .menu-page3__desserts--mainNames2:hover .price p, .menu-page3__desserts--mainNames3:hover .price p,
+.menu-page4__starters--mainNames1:hover .price p, .menu-page4__starters--mainNames2:hover .price p, .menu-page4__starters--mainNames3:hover .price p,
+.menu-page4__main--mainNames1:hover .price p, .menu-page4__main--mainNames2:hover .price p, .menu-page4__main--mainNames3:hover .price p,
+.menu-page4__desserts--mainNames1:hover .price p, .menu-page4__desserts--mainNames2:hover .price p, .menu-page4__desserts--mainNames3:hover .price p {
+    height: 95px;
+    margin-top: -114px;
+    padding-top: 55px;
+  }
 }
 .menu-page1__starters--mainNames1:hover h3, .menu-page1__starters--mainNames2:hover h3, .menu-page1__starters--mainNames3:hover h3,
 .menu-page1__main--mainNames1:hover h3, .menu-page1__main--mainNames2:hover h3, .menu-page1__main--mainNames3:hover h3,
@@ -890,66 +1016,78 @@ header {
 }
 
 /*Apparition progressive des menus*/
-.footer-logo {
-  height: 50px;
-  width: 200px;
-  filter: invert(1);
-  margin: 85px 0 0 40px;
-}
-@media screen and (max-width: 414px) {
-  .footer-logo {
-    height: 20px;
-    width: 110px;
-    margin-top: 95px;
+@keyframes progress {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
-
-@media screen and (max-width: 414px) {
-  .container2 .footer-logo {
-    margin-top: 85px;
-  }
-
-  .container0 .footer-logo {
-    margin-top: 30px;
-  }
-}
-.container0 .footer-logo {
-  margin: 25px 0 0 40px;
+.menu-page2__starters, .menu-page2__main, .menu-page2__desserts {
+  transform-origin: top;
 }
 
-.container0 footer,
-.container1 footer,
-.container2 footer,
-.container3 footer,
-.container4 footer {
+.menu-page1__starters--mainNames1, .menu-page2__starters--mainNames1, .menu-page3__starters--mainNames1, .menu-page4__starters--mainNames1 {
+  animation: progress 500ms;
+}
+
+.menu-page1__starters--mainNames2, .menu-page2__starters--mainNames2, .menu-page3__starters--mainNames2, .menu-page4__starters--mainNames2 {
+  animation: progress 1000ms;
+}
+
+.menu-page1__starters--mainNames3, .menu-page2__starters--mainNames3, .menu-page3__starters--mainNames3, .menu-page4__starters--mainNames3 {
+  animation: progress 1500ms;
+}
+
+.menu-page2__starters--mainNames4 {
+  animation: progress 2000ms;
+}
+
+.menu-page1__main--mainNames1, .menu-page2__main--mainNames1, .menu-page3__main--mainNames1, .menu-page4__main--mainNames1 {
+  animation: progress 2500ms;
+}
+
+.menu-page1__main--mainNames2, .menu-page2__main--mainNames2, .menu-page3__main--mainNames2, .menu-page4__main--mainNames2 {
+  animation: progress 3000ms;
+}
+
+.menu-page1__main--mainNames3, .menu-page2__main--mainNames3, .menu-page3__main--mainNames3, .menu-page4__main--mainNames3 {
+  animation: progress 3500ms;
+}
+
+.menu-page1__desserts--mainNames1, .menu-page2__desserts--mainNames1, .menu-page3__desserts--mainNames1, .menu-page4__desserts--mainNames1 {
+  animation: progress 4000ms;
+}
+
+.menu-page1__desserts--mainNames2, .menu-page2__desserts--mainNames2, .menu-page3__desserts--mainNames2, .menu-page4__desserts--mainNames2 {
+  animation: progress 4500ms;
+}
+
+.menu-page1__desserts--mainNames3, .menu-page2__desserts--mainNames3, .menu-page3__desserts--mainNames3, .menu-page4__desserts--mainNames3 {
+  animation: progress 5000ms;
+}
+
+footer {
   color: white;
   background-color: #333232;
   width: 100%;
+  margin-bottom: -20px;
 }
-.container0 footer p,
-.container1 footer p,
-.container2 footer p,
-.container3 footer p,
-.container4 footer p {
+footer p {
   margin-left: 40px;
 }
-.container0 footer ul,
-.container1 footer ul,
-.container2 footer ul,
-.container3 footer ul,
-.container4 footer ul {
+footer ul {
   list-style-type: none;
   display: flex;
 }
 
-.container1 footer,
-.container3 footer,
-.container4 footer {
-  margin-top: 1100px;
-}
-
-.container2 footer {
-  margin-top: 1090px;
+.footer-logo {
+  height: 50px;
+  width: 200px;
+  filter: invert(1);
+  margin-left: 40px;
+  margin-top: 30px;
 }
 
 .footer-menu__propose--ustensils {
@@ -962,52 +1100,71 @@ header {
 .footer-menu__contact a:link, :visited {
   color: white;
 }
-.footer-menu__contact a:link:hover, :visited:hover {
+.footer-menu__contact a:link:hover, .footer-menu__contact a:link:active, :visited:hover, :visited:active {
   color: #FF79DA;
   border-bottom: 3px #FF79DA solid;
   padding-bottom: 5px;
+  font-weight: bold;
 }
 
 .footer-menu__contact {
   padding-bottom: 40px;
 }
 
+.container1 footer,
+.container3 footer,
+.container4 footer {
+  margin-top: 1100px;
+}
+
+.container2 footer {
+  margin-top: 1080px;
+}
+
 @media screen and (min-width: 1024px) {
   .container0 footer {
-    padding-top: 10px;
+    padding: 0;
   }
 
   .container1 footer,
 .container3 footer,
 .container4 footer {
-    margin-top: 1040px;
+    margin-top: 440px;
   }
 
   .container2 footer {
-    padding-top: 1870px;
+    padding-top: 1210px;
   }
 
   footer {
     padding-top: 1780px;
+    margin-bottom: -50px;
   }
   footer .footer-logo {
     margin-top: 60px;
+    width: 300px;
   }
   footer .footer-menu__propose, footer .footer-menu__partner, footer p {
     font-size: 3rem;
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 2100px) {
   footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+  }
+  footer ul, footer p {
+    margin-top: 70px;
+  }
+
+  .footer-logo {
+    height: 80px;
+    width: 250px;
   }
 
   .footer-menu__contact {
-    margin-top: 90px;
+    margin-right: 100px;
   }
 }
 

@@ -21,7 +21,6 @@ nav {
         cursor: pointer;
         display: flex;
         height: 2.5rem;
-        border: 1px $Color-Bkg solid;
         background-color: $Color-Bkg;
         border-radius: 1.5rem;
         box-shadow: 6px 6px 4px rgb(223, 222, 222);
@@ -31,8 +30,10 @@ nav {
         transform: scale(1);
         transition: transform 400ms;
 
-             &:hover{
+             &:hover, &:active {
                 transform: scale(1.2);
+                background-color: lighten($color: rgb(223, 222, 222), $amount: 10);
+                box-shadow: 8px 8px 6px rgb(223, 222, 222);
              }    
    
         li {
@@ -46,13 +47,13 @@ nav {
 .nav-home-choose__number1,
 .nav-home-compose__number2,
 .nav-home-taste__number3 {
-    border: 1px $Color-Primary solid ;
     border-radius: 50%;
     padding: 1px 4px 2px 4px;
     height: 1rem;
     background-color: $Color-Primary;
     color: white;
     font-size: .9rem;
+
     @media screen and (min-width:1024px){
         padding: 3px 12px 15px 12px;
     }

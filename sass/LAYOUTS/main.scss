@@ -204,6 +204,10 @@ header {
     margin: 20px 15px;
     cursor: pointer;
     height: 60px;
+
+    @media screen and (min-width:1024px){
+        height: 150px;
+    }
 }
 
 /*Installation des points de suspensions en cas de rétrécissement du bloc*/
@@ -251,17 +255,18 @@ header {
 #menu-page1,#menu-page2,#menu-page3,#menu-page4 {
 
 h3 {
-    // border: 1px blueviolet solid;
     width: auto;
 }
 
 h4  {
-    // border: 1px green solid;
     width: 100%;
+    
+    @media screen and (min-width:1024px) {
+        padding-top: 10px;
+    }
 }
 
 h5 {
-    // border: 1px yellow solid;
     margin-top: -10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -270,22 +275,21 @@ h5 {
 
     @media screen and (min-width:1024px) {
         margin-right: 50px;
-        
     }
- }
+  }
 }
 
 .spiner {
     opacity: 0;
+    font-size: 0;
     color: $Color-Tertiary;
     background-color: white;
     border-radius: 50% ;
-    font-size: 1.5rem;
     transition: transform 800ms;
     transform: rotate(-1turn);
     display: inline-block;
     margin-top:-5px;
-    
+    border: 0;
 }
 
 .price p {
@@ -298,6 +302,12 @@ h5 {
     margin-top: -49px;
     padding-top: 25px;
     transition: width 800ms;
+
+    @media screen and (min-width:1024px) {
+        height: 95px;
+        margin-top: -114px;
+        padding-top: 55px;
+    }
     
 }
 
@@ -324,6 +334,11 @@ h5 {
     .spiner {
         transform: rotate(0turn);
         opacity: 1;
+        font-size: 1.5rem;
+
+        @media screen and (min-width:1024px) {
+            font-size: 4rem;
+        }
     }
 
 
@@ -337,13 +352,19 @@ h5 {
         border-bottom-right-radius: 1rem;
         background-color:$Color-Tertiary;
         margin-top: -49px;
-        padding-top: 25px;
-        
+        padding-top: 25px;   
+
+        @media screen and (min-width:1024px) {
+            height: 95px;
+            margin-top: -114px;
+            padding-top: 55px;
+        }
     }
 
     h3 {
         margin-right: 70px;
     }
+
      h4 h5 {
         width: auto;
     }
@@ -351,60 +372,60 @@ h5 {
 }
 
 /*Apparition progressive des menus*/
-// @keyframes progress {
-//     0% {
-//         transform: scaleY(0);
-//     }
+@keyframes progress {
+    0% {
+        transform: scaleY(0);
+    }
 
-//     100% {
-//         transform: scaleY(1);
-//     }
-// }
+    100% {
+        transform: scaleY(1);
+    }
+}
 
-// .menu-page2__starters,.menu-page2__main,.menu-page2__desserts {
-//     transform-origin: top;
-//     // -moz-animation: progress 2s; /* Firefox */
-//     // -webkit-animation: progress 2s; /* Safari et Chrome */
-//     // -o-animation: progress 2s; /* Opera */ 
-// }
+.menu-page2__starters,.menu-page2__main,.menu-page2__desserts {
+    transform-origin: top;
+    // -moz-animation: progress 2s; /* Firefox */
+    // -webkit-animation: progress 2s; /* Safari et Chrome */
+    // -o-animation: progress 2s; /* Opera */ 
+}
 
-// .menu-page1__starters--mainNames1,.menu-page2__starters--mainNames1,.menu-page3__starters--mainNames1,.menu-page4__starters--mainNames1 {
-//    animation: progress 500ms;
-// }
-// .menu-page1__starters--mainNames2,.menu-page2__starters--mainNames2,.menu-page3__starters--mainNames2,.menu-page4__starters--mainNames2 {
-//     animation: progress 1000ms;
-// }
-// .menu-page1__starters--mainNames3,.menu-page2__starters--mainNames3,.menu-page3__starters--mainNames3,.menu-page4__starters--mainNames3 {
-//     animation: progress 1500ms;
-// }
-// .menu-page2__starters--mainNames4  {
-//     animation: progress 2000ms;
-// }
-
-
-
-// .menu-page1__main--mainNames1,.menu-page2__main--mainNames1,.menu-page3__main--mainNames1,.menu-page4__main--mainNames1 {
-//     animation: progress 2500ms;
-// }
-// .menu-page1__main--mainNames2,.menu-page2__main--mainNames2,.menu-page3__main--mainNames2,.menu-page4__main--mainNames2 {
-//     animation: progress 3000ms;
-// }
-// .menu-page1__main--mainNames3,.menu-page2__main--mainNames3,.menu-page3__main--mainNames3,.menu-page4__main--mainNames3 {
-//     animation: progress 3500ms;
-// }
+.menu-page1__starters--mainNames1,.menu-page2__starters--mainNames1,.menu-page3__starters--mainNames1,.menu-page4__starters--mainNames1 {
+   animation: progress 500ms;
+}
+.menu-page1__starters--mainNames2,.menu-page2__starters--mainNames2,.menu-page3__starters--mainNames2,.menu-page4__starters--mainNames2 {
+    animation: progress 1000ms;
+}
+.menu-page1__starters--mainNames3,.menu-page2__starters--mainNames3,.menu-page3__starters--mainNames3,.menu-page4__starters--mainNames3 {
+    animation: progress 1500ms;
+}
+.menu-page2__starters--mainNames4  {
+    animation: progress 2000ms;
+}
 
 
 
-// .menu-page1__desserts--mainNames1,.menu-page2__desserts--mainNames1,.menu-page3__desserts--mainNames1,.menu-page4__desserts--mainNames1 {
-//     animation: progress 4000ms;
-// }
-// .menu-page1__desserts--mainNames2,.menu-page2__desserts--mainNames2,.menu-page3__desserts--mainNames2,.menu-page4__desserts--mainNames2 {
-//     animation: progress 4500ms;
-// }
-// .menu-page1__desserts--mainNames3,.menu-page2__desserts--mainNames3,.menu-page3__desserts--mainNames3,.menu-page4__desserts--mainNames3 {
-//     animation: progress 5000ms;
-// }
-// }
+.menu-page1__main--mainNames1,.menu-page2__main--mainNames1,.menu-page3__main--mainNames1,.menu-page4__main--mainNames1 {
+    animation: progress 2500ms;
+}
+.menu-page1__main--mainNames2,.menu-page2__main--mainNames2,.menu-page3__main--mainNames2,.menu-page4__main--mainNames2 {
+    animation: progress 3000ms;
+}
+.menu-page1__main--mainNames3,.menu-page2__main--mainNames3,.menu-page3__main--mainNames3,.menu-page4__main--mainNames3 {
+    animation: progress 3500ms;
+}
+
+
+
+.menu-page1__desserts--mainNames1,.menu-page2__desserts--mainNames1,.menu-page3__desserts--mainNames1,.menu-page4__desserts--mainNames1 {
+    animation: progress 4000ms;
+}
+.menu-page1__desserts--mainNames2,.menu-page2__desserts--mainNames2,.menu-page3__desserts--mainNames2,.menu-page4__desserts--mainNames2 {
+    animation: progress 4500ms;
+}
+.menu-page1__desserts--mainNames3,.menu-page2__desserts--mainNames3,.menu-page3__desserts--mainNames3,.menu-page4__desserts--mainNames3 {
+    animation: progress 5000ms;
+}
+
 
 
 

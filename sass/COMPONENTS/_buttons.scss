@@ -129,14 +129,15 @@
     right: 35px;
     top:6px;
     font-size: $Fontsize-Heart;
-
-    @media screen and (min-width:1024px){
-        font-size: 5rem;
-        right: 100px;
-        top:0px;
-    }
-
     cursor: pointer; 
+
+
+        @media screen and (min-width:1024px){
+            font-size: 5rem;
+            right: 100px;
+            top:0px;
+        }
+
     }
 
     .menu-page1__heartfull,
@@ -153,17 +154,19 @@
         right: 34px;
         top:4px;
         font-size: 1.6rem;
+
         @media screen and (min-width:1024px){
             font-size: 5.5rem;
             right: 96px;
             top:-4px;
         }
+
         opacity: 0;       
         cursor: pointer;    
         transition: opacity 1200ms;
         
         &:hover {
-            opacity: 1;
+            opacity: 1; 
         }
     }
 
@@ -185,19 +188,26 @@
         cursor: pointer;    
         transition: opacity 600ms;
 
-        &:active {                  
+        &:active,&:hover  {                  
             opacity: 1;
+            font-size: 1.55rem;
+            top:2.1px;
+            right: 19px;
         } 
+
       
         @media screen and (min-width:1024px){
         font-size: 2.7rem;
         right: 28px;
         top:14px;  
-        transition: opacity 1000ms;
+        transition: opacity 600ms;
 
-           &:hover {
-               opacity: 1;
-           }
+        &:active,&:hover  {                  
+            opacity: 1;
+            font-size: 2.67rem;
+            right: 28.6px;
+            top: 14px;
+          } 
         }    
     }
 

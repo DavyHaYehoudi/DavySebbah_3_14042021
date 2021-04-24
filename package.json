@@ -4,8 +4,10 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css"
+    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css",
+    "prefix": "postcss ./public/gastronomie.css --use autoprefixer -d./public/prefixed/"
   },
   "author": "Davy",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist":"last 4 versions"
 }
