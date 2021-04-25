@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css",
-    "prefix": "postcss ./public/gastronomie.css --use autoprefixer -d./public/prefixed/"
+    "prefix": "postcss-cli ./public/gastronomie.css --use autoprefixer -d./public/prefixed/"
   },
   "author": "Davy",
   "license": "ISC",
-  "browserslist":"last 4 versions"
+  "browserslist": "last 4 versions",
+  "devDependencies": {
+    "postcss": "^8.2.12",
+    "postcss-cli": "^8.3.1"
+  }
 }

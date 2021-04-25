@@ -18,7 +18,8 @@ footer {
 
     height: 50px;
     width: 200px;
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
     margin-left: 40px;
     margin-top: 30px;
   }

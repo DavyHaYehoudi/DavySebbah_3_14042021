@@ -30,7 +30,8 @@
     height: 30vh;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    object-fit: cover; 
+    -o-object-fit: cover;
+       object-fit: cover; 
 }
 
 /* dimensions du cadre descriptif contenant les deux titres sans le mot Nouveau*/
@@ -372,6 +373,15 @@ h5 {
 }
 
 /*Apparition progressive des menus*/
+@-webkit-keyframes progress {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
 @keyframes progress {
     0% {
         transform: scaleY(0);
@@ -390,40 +400,50 @@ h5 {
 }
 
 .menu-page1__starters--mainNames1,.menu-page2__starters--mainNames1,.menu-page3__starters--mainNames1,.menu-page4__starters--mainNames1 {
-   animation: progress 500ms;
+   -webkit-animation: progress 500ms;
+           animation: progress 500ms;
 }
 .menu-page1__starters--mainNames2,.menu-page2__starters--mainNames2,.menu-page3__starters--mainNames2,.menu-page4__starters--mainNames2 {
-    animation: progress 1000ms;
+    -webkit-animation: progress 1000ms;
+            animation: progress 1000ms;
 }
 .menu-page1__starters--mainNames3,.menu-page2__starters--mainNames3,.menu-page3__starters--mainNames3,.menu-page4__starters--mainNames3 {
-    animation: progress 1500ms;
+    -webkit-animation: progress 1500ms;
+            animation: progress 1500ms;
 }
 .menu-page2__starters--mainNames4  {
-    animation: progress 2000ms;
+    -webkit-animation: progress 2000ms;
+            animation: progress 2000ms;
 }
 
 
 
 .menu-page1__main--mainNames1,.menu-page2__main--mainNames1,.menu-page3__main--mainNames1,.menu-page4__main--mainNames1 {
-    animation: progress 2500ms;
+    -webkit-animation: progress 2500ms;
+            animation: progress 2500ms;
 }
 .menu-page1__main--mainNames2,.menu-page2__main--mainNames2,.menu-page3__main--mainNames2,.menu-page4__main--mainNames2 {
-    animation: progress 3000ms;
+    -webkit-animation: progress 3000ms;
+            animation: progress 3000ms;
 }
 .menu-page1__main--mainNames3,.menu-page2__main--mainNames3,.menu-page3__main--mainNames3,.menu-page4__main--mainNames3 {
-    animation: progress 3500ms;
+    -webkit-animation: progress 3500ms;
+            animation: progress 3500ms;
 }
 
 
 
 .menu-page1__desserts--mainNames1,.menu-page2__desserts--mainNames1,.menu-page3__desserts--mainNames1,.menu-page4__desserts--mainNames1 {
-    animation: progress 4000ms;
+    -webkit-animation: progress 4000ms;
+            animation: progress 4000ms;
 }
 .menu-page1__desserts--mainNames2,.menu-page2__desserts--mainNames2,.menu-page3__desserts--mainNames2,.menu-page4__desserts--mainNames2 {
-    animation: progress 4500ms;
+    -webkit-animation: progress 4500ms;
+            animation: progress 4500ms;
 }
 .menu-page1__desserts--mainNames3,.menu-page2__desserts--mainNames3,.menu-page3__desserts--mainNames3,.menu-page4__desserts--mainNames3 {
-    animation: progress 5000ms;
+    -webkit-animation: progress 5000ms;
+            animation: progress 5000ms;
 }
 
 

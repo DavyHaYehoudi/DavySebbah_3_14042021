@@ -8,6 +8,7 @@ body {
   margin: 0;
 }
 
+/*rgb(153, 226, 208)*/
 .container {
   font-family: "Roboto";
 }
@@ -342,57 +343,105 @@ body {
 
 /*Mise en place du loading spinner qui simule le chargement de la page*/
 /*Retardement affichage page accueil*/
-@keyframes wait {
+@-webkit-keyframes wait {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .container0 header,
 .container0 main,
 .container0 footer {
+  -webkit-animation: wait 3000ms cubic-bezier(1, -1.71, 1, 0.55);
   animation: wait 3000ms cubic-bezier(1, -1.71, 1, 0.55);
-}
-
-/*Effet rotatif et disparition du loader spiner*/
-@keyframes loadspin {
-  0% {
-    transform: rotate(-1turn);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(0turn);
-    opacity: 0;
-  }
-}
-.loading {
-  animation: loadspin 3000ms linear;
-  width: 0%;
-  opacity: 0;
-  position: absolute;
-  font-size: 15vh;
-  top: 25vh;
-  left: 50vw;
 }
 
 .container0 {
   position: relative;
 }
 
-.loading-spinner {
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.loader-page {
+  position: fixed;
+  animation: out 4s;
+  top: 25%;
+  left: 0%;
+  opacity: 0;
+}
+@media screen and (max-width: 320px) {
+  .loader-page {
+    top: 25%;
+    left: 10%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .loader-page {
+    top: 30%;
+    left: 20%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .loader-page {
+    top: 35%;
+    left: 25%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .loader-page {
+    top: 40%;
+    left: 35%;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .loading-spinner {
-    font-size: 30rem;
+  .loader-page {
+    top: 45%;
+    left: 40%;
   }
 }
 
+.loader {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+}
+
+.loader-quart {
+  border-radius: 200px;
+  border: 12px solid rgba(147, 86, 220, 0.4);
+}
+
+.loader-quart::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  bottom: -12px;
+  right: -12px;
+  border: 12px solid transparent;
+  border-top-color: #FF79DA;
+  border-radius: 200px;
+  -webkit-animation: loading 1.5s linear infinite;
+  animation: loading 1.5s linear infinite;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .heading-home-logo {
   text-align: center;
   height: 3vh;
@@ -428,6 +477,50 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .heading-home-field {
+    font-size: 1.7rem;
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+  font-size: 1rem;
+  background-color: #e2dfdf;
+}
+@media screen and (min-width: 1024px) {
+  input::-webkit-input-placeholder {
+    font-size: 1.7rem;
+  }
+}
+
+input::-moz-placeholder {
+  color: black;
+  font-size: 1rem;
+  background-color: #e2dfdf;
+}
+@media screen and (min-width: 1024px) {
+  input::-moz-placeholder {
+    font-size: 1.7rem;
+  }
+}
+
+input:-ms-input-placeholder {
+  color: black;
+  font-size: 1rem;
+  background-color: #e2dfdf;
+}
+@media screen and (min-width: 1024px) {
+  input:-ms-input-placeholder {
+    font-size: 1.7rem;
+  }
+}
+
+input::-ms-input-placeholder {
+  color: black;
+  font-size: 1rem;
+  background-color: #e2dfdf;
+}
+@media screen and (min-width: 1024px) {
+  input::-ms-input-placeholder {
     font-size: 1.7rem;
   }
 }
@@ -499,12 +592,14 @@ header {
 .heading-page4__img {
   width: 100vw;
   max-height: 500px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .heading-page2__img2 {
   width: 100vw;
   max-height: 600px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -620,6 +715,7 @@ nav ul li {
   height: 30vh;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -1016,6 +1112,14 @@ header {
 }
 
 /*Apparition progressive des menus*/
+@-webkit-keyframes progress {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @keyframes progress {
   0% {
     transform: scaleY(0);
@@ -1029,42 +1133,52 @@ header {
 }
 
 .menu-page1__starters--mainNames1, .menu-page2__starters--mainNames1, .menu-page3__starters--mainNames1, .menu-page4__starters--mainNames1 {
+  -webkit-animation: progress 500ms;
   animation: progress 500ms;
 }
 
 .menu-page1__starters--mainNames2, .menu-page2__starters--mainNames2, .menu-page3__starters--mainNames2, .menu-page4__starters--mainNames2 {
+  -webkit-animation: progress 1000ms;
   animation: progress 1000ms;
 }
 
 .menu-page1__starters--mainNames3, .menu-page2__starters--mainNames3, .menu-page3__starters--mainNames3, .menu-page4__starters--mainNames3 {
+  -webkit-animation: progress 1500ms;
   animation: progress 1500ms;
 }
 
 .menu-page2__starters--mainNames4 {
+  -webkit-animation: progress 2000ms;
   animation: progress 2000ms;
 }
 
 .menu-page1__main--mainNames1, .menu-page2__main--mainNames1, .menu-page3__main--mainNames1, .menu-page4__main--mainNames1 {
+  -webkit-animation: progress 2500ms;
   animation: progress 2500ms;
 }
 
 .menu-page1__main--mainNames2, .menu-page2__main--mainNames2, .menu-page3__main--mainNames2, .menu-page4__main--mainNames2 {
+  -webkit-animation: progress 3000ms;
   animation: progress 3000ms;
 }
 
 .menu-page1__main--mainNames3, .menu-page2__main--mainNames3, .menu-page3__main--mainNames3, .menu-page4__main--mainNames3 {
+  -webkit-animation: progress 3500ms;
   animation: progress 3500ms;
 }
 
 .menu-page1__desserts--mainNames1, .menu-page2__desserts--mainNames1, .menu-page3__desserts--mainNames1, .menu-page4__desserts--mainNames1 {
+  -webkit-animation: progress 4000ms;
   animation: progress 4000ms;
 }
 
 .menu-page1__desserts--mainNames2, .menu-page2__desserts--mainNames2, .menu-page3__desserts--mainNames2, .menu-page4__desserts--mainNames2 {
+  -webkit-animation: progress 4500ms;
   animation: progress 4500ms;
 }
 
 .menu-page1__desserts--mainNames3, .menu-page2__desserts--mainNames3, .menu-page3__desserts--mainNames3, .menu-page4__desserts--mainNames3 {
+  -webkit-animation: progress 5000ms;
   animation: progress 5000ms;
 }
 
@@ -1085,6 +1199,7 @@ footer ul {
 .footer-logo {
   height: 50px;
   width: 200px;
+  -webkit-filter: invert(1);
   filter: invert(1);
   margin-left: 40px;
   margin-top: 30px;
