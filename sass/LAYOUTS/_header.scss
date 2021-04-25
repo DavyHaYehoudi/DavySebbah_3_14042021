@@ -6,12 +6,23 @@
 /*Mise en place du loading spinner qui simule le chargement de la page*/
 
 /*Retardement affichage page accueil*/
+
+
 @-webkit-keyframes wait {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -23,6 +34,7 @@
         opacity: 0;
     }
 }
+
 
 .container0 header,
 .container0 main,
@@ -39,7 +51,8 @@
 .loader-page {
   
     position: fixed;
-    animation: out 4s;
+    -webkit-animation: out 4s;
+            animation: out 4s;
     top: 25%;
         left: 0%;
     opacity: 0;
@@ -99,6 +112,7 @@
             
 }
 
+
 @-webkit-keyframes loading {
     0% {
         transform: rotate(0deg);
@@ -107,15 +121,6 @@
         transform: rotate(360deg);
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 .heading-home-logo {

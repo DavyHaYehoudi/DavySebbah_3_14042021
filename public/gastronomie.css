@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 .container a, a:link, a:visited {
   text-decoration: none;
   color: black;
@@ -351,6 +351,14 @@ body {
     opacity: 1;
   }
 }
+@-webkit-keyframes out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes out {
   0% {
     opacity: 1;
@@ -372,6 +380,7 @@ body {
 
 .loader-page {
   position: fixed;
+  -webkit-animation: out 4s;
   animation: out 4s;
   top: 25%;
   left: 0%;

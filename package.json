@@ -4,14 +4,9 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css",
-    "prefix": "postcss-cli ./public/gastronomie.css --use autoprefixer -d./public/prefixed/"
+    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css"
   },
   "author": "Davy",
-  "license": "ISC",
-  "browserslist": "last 4 versions",
-  "devDependencies": {
-    "postcss": "^8.2.12",
-    "postcss-cli": "^8.3.1"
+  "license": "ISC"
   }
-}
+
