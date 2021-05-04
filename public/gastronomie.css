@@ -1,4 +1,4 @@
-/* @charset "UTF-8"; */
+@charset "UTF-8";
 .container a, a:link, a:visited {
   text-decoration: none;
   color: black;
@@ -9,7 +9,7 @@ body {
 }
 
 /*rgb(153, 226, 208)*/
-.container {
+body {
   font-family: "Roboto";
 }
 
