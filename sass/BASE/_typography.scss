@@ -1,138 +1,93 @@
-
-// @font-face {
-//     font-family: '$Police-Texte', sans-serif;
-// }
-
-// @font-face {
-//     font-family: '$Police-Logo-Titres', cursive;
-// }
-
-
 body {
-    font-family: 'Roboto';
+  font-family: $Police-Texte, sans-serif;
 }
 
 /*Agencement des titres de la page d'accueil*/
 .heading-home-description__title1,
 .heading-home-description__title2 {
-    text-align: center;
+  text-align: center;
 }
 
 .heading-home-description__title1 {
-    padding-top: 30px;
-    font-weight: bolder;
-    margin: 0 60px;
-    font-size: 1.5rem;
-    @media  screen and (min-width: 1024px){
-        font-size: 3.5rem;
-    }
-        
+  padding-top: 30px;
+  font-weight: bolder;
+  margin: 0 60px;
+  font-size: 1.5rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
+  }
 }
 
 .heading-home-description__title2 {
-    font-size: 1.1rem;
-    @media  screen and (min-width: 1024px){
-        font-size: 2rem;
-    }
-    font-weight: normal;
-    margin: 20px 15px;
+  font-size: 1.1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 2rem;
+  }
+  font-weight: normal;
+  margin: 20px 15px;
 }
 
 /*Gros titre de la carte de chaque menu*/
-#menu-page1 h1,
-#menu-page2 h1,
-#menu-page3 h1,
-#menu-page4 h1 {
-    font-family: 'Shrikhand';  
-    font-size: $Fontsize-TitleMenu;
-    margin-left: 5vw;
-    font-size: 1.4rem;
+#menu-page h1 {
+  font-family: "Shrikhand";
+  font-size: 1.7;
+  margin-left: 5vw;
 }
 
 /*Entrées, Plat et Desserts de la carte de chaque menu*/
-#menu-page1 h2,
-#menu-page2 h2,
-#menu-page3 h2,
-#menu-page4 h2 {
-    font-size: 1.1rem;
-    font-weight: normal;
-    margin: 40px 0 0px 5vw;
+#menu-page h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 40px 0 0px 5vw;
 }
 
-#menu-page1 h3,
-#menu-page2 h3,
-#menu-page3 h3,
-#menu-page4 h3 {
-    margin-left: 15px;
-    margin-top: 10px;
-    font-size: 1.1rem ;
+#menu-page h3 {
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-#menu-page1 h4,
-#menu-page2 h4,
-#menu-page3 h4,
-#menu-page4 h4 {
-    font-size: 0.9rem;
-    font-weight: normal;
-    margin: -10px 0 0 15px;
+#menu-page h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: -10px 0 0 15px;
 }
 
-@media screen and (min-width:1024px){     
+@media screen and (min-width: 1024px) {
+  #menu-page h1 {
+    font-size: $Fontsize-TitleMenu;
+  }
 
- #menu-page1 h1,
- #menu-page2 h1,
- #menu-page3 h1,
- #menu-page4 h1 {
-     font-size: 3.5rem;
- }
-
- #menu-page1 h2,
- #menu-page2 h2,
- #menu-page3 h2,
- #menu-page4 h2 {
-    font-size: 3rem;
+  #menu-page h2 {
+    font-size: $Fontsize-TitleService;
     margin-bottom: 50px;
     margin-top: 50px;
-    }
+  }
 
-#menu-page1 h3,
-#menu-page2 h3,
-#menu-page3 h3,
-#menu-page4 h3 {
-        font-size: 3rem;
-        margin-left: 50px;
-    }
- #menu-page1 h4,
-#menu-page2 h4,
-#menu-page3 h4,
-#menu-page4 h4 {
-    font-size: 2.5rem;
+  #menu-page h3{
+    font-size: $Fontsize-NamePlate;
+    margin-left: 50px;
+  }
+  #menu-page h4 {
+    font-size: $Fontsize-NameAccp;
     margin-left: 50px;
   }
 }
 /* Soulignement partiel des titres Entrées Plats Desserts*/
-#menu-page1 h2,
-#menu-page2 h2,
-#menu-page3 h2,
-#menu-page4 h2 {
-    position: relative;
+#menu-page h2 {
+  position: relative;
 }
 
-#menu-page1 h2::before,
-#menu-page2 h2::before,
-#menu-page3 h2::before,
-#menu-page4 h2::before {
-  content : "";
+#menu-page h2::before {
+  content: "";
   position: absolute;
-  left    : 0;
-  bottom  : 0; 
+  left: 0;
+  bottom: 0;
   width: 45px;
-  border-bottom:3px solid $Color-Tertiary;
+  border-bottom: 3px solid $Color-Tertiary;
   margin-bottom: -8px;
 
-  @media  screen and (min-width: 1024px) {
-      width: 70px;
+  @media screen and (min-width: 1024px) {
+    width: 70px;
   }
 }
-
-

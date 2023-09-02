@@ -10,7 +10,7 @@ body {
 
 /*rgb(153, 226, 208)*/
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 /*Agencement des titres de la page d'accueil*/
@@ -43,89 +43,58 @@ body {
 }
 
 /*Gros titre de la carte de chaque menu*/
-#menu-page1 h1,
-#menu-page2 h1,
-#menu-page3 h1,
-#menu-page4 h1 {
+#menu-page h1 {
   font-family: "Shrikhand";
-  font-size: 1.7rem;
+  font-size: 1.7;
   margin-left: 5vw;
-  font-size: 1.4rem;
 }
 
 /*Entrées, Plat et Desserts de la carte de chaque menu*/
-#menu-page1 h2,
-#menu-page2 h2,
-#menu-page3 h2,
-#menu-page4 h2 {
+#menu-page h2 {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 40px 0 0px 5vw;
 }
 
-#menu-page1 h3,
-#menu-page2 h3,
-#menu-page3 h3,
-#menu-page4 h3 {
+#menu-page h3 {
   margin-left: 15px;
   margin-top: 10px;
   font-size: 1.1rem;
 }
 
-#menu-page1 h4,
-#menu-page2 h4,
-#menu-page3 h4,
-#menu-page4 h4 {
+#menu-page h4 {
   font-size: 0.9rem;
   font-weight: normal;
   margin: -10px 0 0 15px;
 }
 
 @media screen and (min-width: 1024px) {
-  #menu-page1 h1,
-#menu-page2 h1,
-#menu-page3 h1,
-#menu-page4 h1 {
-    font-size: 3.5rem;
+  #menu-page h1 {
+    font-size: 2.5rem;
   }
 
-  #menu-page1 h2,
-#menu-page2 h2,
-#menu-page3 h2,
-#menu-page4 h2 {
-    font-size: 3rem;
+  #menu-page h2 {
+    font-size: 2rem;
     margin-bottom: 50px;
     margin-top: 50px;
   }
 
-  #menu-page1 h3,
-#menu-page2 h3,
-#menu-page3 h3,
-#menu-page4 h3 {
-    font-size: 3rem;
+  #menu-page h3 {
+    font-size: 1.5rem;
     margin-left: 50px;
   }
 
-  #menu-page1 h4,
-#menu-page2 h4,
-#menu-page3 h4,
-#menu-page4 h4 {
-    font-size: 2.5rem;
+  #menu-page h4 {
+    font-size: 1rem;
     margin-left: 50px;
   }
 }
 /* Soulignement partiel des titres Entrées Plats Desserts*/
-#menu-page1 h2,
-#menu-page2 h2,
-#menu-page3 h2,
-#menu-page4 h2 {
+#menu-page h2 {
   position: relative;
 }
 
-#menu-page1 h2::before,
-#menu-page2 h2::before,
-#menu-page3 h2::before,
-#menu-page4 h2::before {
+#menu-page h2::before {
   content: "";
   position: absolute;
   left: 0;
@@ -135,10 +104,7 @@ body {
   margin-bottom: -8px;
 }
 @media screen and (min-width: 1024px) {
-  #menu-page1 h2::before,
-#menu-page2 h2::before,
-#menu-page3 h2::before,
-#menu-page4 h2::before {
+  #menu-page h2::before {
     width: 70px;
   }
 }
@@ -244,18 +210,12 @@ body {
 }
 
 /*Placement du coeur vide près du gros titre de la carte*/
-.menu-page1__description,
-.menu-page2__description,
-.menu-page3__description,
-.menu-page4__description {
+.description {
   position: relative;
 }
 
 /*Remplissage du coeur sur les Pages1 Pages2 Pages 3 et Pages4*/
-.menu-page1__heart,
-.menu-page2__heart,
-.menu-page3__heart,
-.menu-page4__heart {
+.heart {
   position: absolute;
   right: 35px;
   top: 6px;
@@ -263,20 +223,14 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__heart,
-.menu-page2__heart,
-.menu-page3__heart,
-.menu-page4__heart {
-    font-size: 5rem;
+  .heart {
+    font-size: 4rem;
     right: 100px;
     top: 0px;
   }
 }
 
-.menu-page1__heartfull,
-.menu-page2__heartfull,
-.menu-page3__heartfull,
-.menu-page4__heartfull {
+.heartfull {
   background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -290,19 +244,13 @@ body {
   transition: opacity 1200ms;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__heartfull,
-.menu-page2__heartfull,
-.menu-page3__heartfull,
-.menu-page4__heartfull {
-    font-size: 5.5rem;
+  .heartfull {
+    font-size: 4.5rem;
     right: 96px;
     top: -4px;
   }
 }
-.menu-page1__heartfull:hover,
-.menu-page2__heartfull:hover,
-.menu-page3__heartfull:hover,
-.menu-page4__heartfull:hover {
+.heartfull:hover {
   opacity: 1;
 }
 
@@ -554,60 +502,36 @@ header {
   position: relative;
 }
 
-.heading-page1,
-.heading-page2,
-.heading-page3,
-.heading-page4 {
+.heading-page {
   text-align: center;
   padding: 15px 0 10px 0;
 }
-.heading-page1__return,
-.heading-page2__return,
-.heading-page3__return,
-.heading-page4__return {
+.heading-page__return {
   font-size: 1.4rem;
   position: absolute;
   left: 20px;
   top: 25px;
 }
 @media screen and (min-width: 1024px) {
-  .heading-page1__return,
-.heading-page2__return,
-.heading-page3__return,
-.heading-page4__return {
+  .heading-page__return {
     font-size: 3rem;
     top: 15px;
   }
 }
-.heading-page1__logo,
-.heading-page2__logo,
-.heading-page3__logo,
-.heading-page4__logo {
+.heading-page__logo {
   width: 200px;
   height: 40px;
 }
 @media screen and (min-width: 1024px) {
-  .heading-page1__logo,
-.heading-page2__logo,
-.heading-page3__logo,
-.heading-page4__logo {
+  .heading-page__logo {
     width: 300px;
     height: 60px;
   }
 }
 
-.heading-page1__img,
-.heading-page3__img,
-.heading-page4__img {
+.heading-page__img {
   width: 100vw;
   max-height: 500px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.heading-page2__img2 {
-  width: 100vw;
-  max-height: 600px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -824,7 +748,10 @@ main h6 {
     flex-wrap: wrap;
   }
 
-  .main-home-menu1, .main-home-menu2, .main-home-menu3, .main-home-menu4 {
+  .main-home-menu1,
+.main-home-menu2,
+.main-home-menu3,
+.main-home-menu4 {
     width: 40vw;
     margin: 100px auto;
   }
@@ -836,7 +763,10 @@ main h6 {
     border-top-right-radius: 3rem;
   }
 
-  .main-home-menu1__description, .main-home-menu2__description, .main-home-menu3__description, .main-home-menu4__description {
+  .main-home-menu1__description,
+.main-home-menu2__description,
+.main-home-menu3__description,
+.main-home-menu4__description {
     height: 100px;
     width: 40vw;
     border-bottom-left-radius: 3rem;
@@ -846,11 +776,17 @@ main h6 {
   }
 }
 /*Effet Zoom sur les photos*/
-.main-home-menu1, .main-home-menu2, .main-home-menu3, .main-home-menu4 {
+.main-home-menu1,
+.main-home-menu2,
+.main-home-menu3,
+.main-home-menu4 {
   transform: scale(1);
   transition: transform 500ms;
 }
-.main-home-menu1:hover, .main-home-menu2:hover, .main-home-menu3:hover, .main-home-menu4:hover {
+.main-home-menu1:hover,
+.main-home-menu2:hover,
+.main-home-menu3:hover,
+.main-home-menu4:hover {
   transform: scale(1.1);
 }
 
@@ -860,10 +796,7 @@ header {
   position: relative;
 }
 
-#menu-page1,
-#menu-page2,
-#menu-page3,
-#menu-page4 {
+#menu-page {
   background-color: #f1efef;
   margin-top: -55px;
   padding-bottom: 100px;
@@ -874,24 +807,10 @@ header {
   width: 100%;
 }
 
-#menu-page2 {
-  margin-top: -155px;
-}
-
 /* Agencement des légendes des plats */
-.menu-page1__starters--mainNames1, .menu-page1__starters--mainNames2, .menu-page1__starters--mainNames3,
-.menu-page1__main--mainNames1, .menu-page1__main--mainNames2, .menu-page1__main--mainNames3,
-.menu-page1__desserts--mainNames1, .menu-page1__desserts--mainNames2, .menu-page1__desserts--mainNames3,
-.menu-page2__starters--mainNames1, .menu-page2__starters--mainNames2, .menu-page2__starters--mainNames3,
-.menu-page2__starters--mainNames4,
-.menu-page2__main--mainNames1, .menu-page2__main--mainNames2, .menu-page2__main--mainNames3,
-.menu-page2__desserts--mainNames1, .menu-page2__desserts--mainNames2, .menu-page2__desserts--mainNames3,
-.menu-page3__starters--mainNames1, .menu-page3__starters--mainNames2, .menu-page3__starters--mainNames3,
-.menu-page3__main--mainNames1, .menu-page3__main--mainNames2, .menu-page3__main--mainNames3,
-.menu-page3__desserts--mainNames1, .menu-page3__desserts--mainNames2, .menu-page3__desserts--mainNames3,
-.menu-page4__starters--mainNames1, .menu-page4__starters--mainNames2, .menu-page4__starters--mainNames3,
-.menu-page4__main--mainNames1, .menu-page4__main--mainNames2, .menu-page4__main--mainNames3,
-.menu-page4__desserts--mainNames1, .menu-page4__desserts--mainNames2, .menu-page4__desserts--mainNames3 {
+.starters__mainNames,
+.main__mainNames,
+.desserts__mainNames {
   border: 1px #f3f2f2 solid;
   border-radius: 1rem;
   box-shadow: 6px 6px 4px #dfdede;
@@ -901,50 +820,35 @@ header {
   height: 60px;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__starters--mainNames1, .menu-page1__starters--mainNames2, .menu-page1__starters--mainNames3,
-.menu-page1__main--mainNames1, .menu-page1__main--mainNames2, .menu-page1__main--mainNames3,
-.menu-page1__desserts--mainNames1, .menu-page1__desserts--mainNames2, .menu-page1__desserts--mainNames3,
-.menu-page2__starters--mainNames1, .menu-page2__starters--mainNames2, .menu-page2__starters--mainNames3,
-.menu-page2__starters--mainNames4,
-.menu-page2__main--mainNames1, .menu-page2__main--mainNames2, .menu-page2__main--mainNames3,
-.menu-page2__desserts--mainNames1, .menu-page2__desserts--mainNames2, .menu-page2__desserts--mainNames3,
-.menu-page3__starters--mainNames1, .menu-page3__starters--mainNames2, .menu-page3__starters--mainNames3,
-.menu-page3__main--mainNames1, .menu-page3__main--mainNames2, .menu-page3__main--mainNames3,
-.menu-page3__desserts--mainNames1, .menu-page3__desserts--mainNames2, .menu-page3__desserts--mainNames3,
-.menu-page4__starters--mainNames1, .menu-page4__starters--mainNames2, .menu-page4__starters--mainNames3,
-.menu-page4__main--mainNames1, .menu-page4__main--mainNames2, .menu-page4__main--mainNames3,
-.menu-page4__desserts--mainNames1, .menu-page4__desserts--mainNames2, .menu-page4__desserts--mainNames3 {
-    height: 150px;
+  .starters__mainNames,
+.main__mainNames,
+.desserts__mainNames {
+    height: 90px;
   }
 }
 
 /*Installation des points de suspensions en cas de rétrécissement du bloc*/
-/*Entrées*/
-.menu-page1__starters--dishnames, .menu-page2__starters--dishnames, .menu-page3__starters--dishnames, .menu-page4__starters--dishnames,
-.menu-page1__starters--accompaniment, .menu-page2__starters--accompaniment, .menu-page3__starters--accompaniment, .menu-page4__starters--accompaniment,
-.menu-page1__main--dishnames, .menu-page2__main--dishnames, .menu-page3__main--dishnames, .menu-page4__main--dishnames,
-.menu-page1__main--accompaniment, .menu-page2__main--accompaniment, .menu-page3__main--accompaniment, .menu-page4__main--accompaniment,
-.menu-page1__desserts--dishnames, .menu-page2__desserts--dishnames, .menu-page3__desserts--dishnames, .menu-page4__desserts--dishnames,
-.menu-page1__desserts--accompaniment, .menu-page2__desserts--accompaniment, .menu-page3__desserts--accompaniment, .menu-page4__desserts--accompaniment {
+.starters__dishnames,
+.starters__accompaniment,
+.main__dishnames,
+.main__accompaniment .desserts__dishnames,
+.desserts__accompaniment {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 /*Affichage des prix*/
-.menu-page1__starters--price, .menu-page1__main--price, .menu-page1__desserts--price,
-.menu-page2__starters--price, .menu-page2__main--price, .menu-page2__desserts--price,
-.menu-page3__starters--price, .menu-page3__main--price, .menu-page3__desserts--price,
-.menu-page4__starters--price, .menu-page4__main--price, .menu-page4__desserts--price {
+.starters__price,
+.main__price,
+.desserts__price {
   font-weight: 600;
-  font-size: 1rem;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__starters--price, .menu-page1__main--price, .menu-page1__desserts--price,
-.menu-page2__starters--price, .menu-page2__main--price, .menu-page2__desserts--price,
-.menu-page3__starters--price, .menu-page3__main--price, .menu-page3__desserts--price,
-.menu-page4__starters--price, .menu-page4__main--price, .menu-page4__desserts--price {
-    font-size: 3.5rem;
+  .starters__price,
+.main__price,
+.desserts__price {
+    font-size: 1.5rem;
   }
 }
 
@@ -956,18 +860,18 @@ header {
   line-height: 0.7rem;
 }
 
-#menu-page1 h3, #menu-page2 h3, #menu-page3 h3, #menu-page4 h3 {
+#menu-page h3 {
   width: auto;
 }
-#menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
+#menu-page h4 {
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  #menu-page1 h4, #menu-page2 h4, #menu-page3 h4, #menu-page4 h4 {
+  #menu-page h4 {
     padding-top: 10px;
   }
 }
-#menu-page1 h5, #menu-page2 h5, #menu-page3 h5, #menu-page4 h5 {
+#menu-page h5 {
   margin-top: -10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -975,7 +879,7 @@ header {
   text-align: end;
 }
 @media screen and (min-width: 1024px) {
-  #menu-page1 h5, #menu-page2 h5, #menu-page3 h5, #menu-page4 h5 {
+  #menu-page h5 {
     margin-right: 50px;
   }
 }
@@ -1006,59 +910,29 @@ header {
 }
 @media screen and (min-width: 1024px) {
   .price p {
-    height: 95px;
-    margin-top: -114px;
-    padding-top: 55px;
+    height: 70px;
+    margin-top: -62px;
+    padding-top: 18px;
   }
 }
 
-.menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
-.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
-.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames4:hover .spiner,
-.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
-.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
-.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
-.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
-.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
-.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
-.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
-.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
+.starters__mainNames:hover .spiner,
+.main__mainNames:hover .spiner,
+.desserts__mainNames:hover .spiner {
   transform: rotate(0turn);
   opacity: 1;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__starters--mainNames1:hover .spiner, .menu-page1__starters--mainNames2:hover .spiner, .menu-page1__starters--mainNames3:hover .spiner,
-.menu-page1__main--mainNames1:hover .spiner, .menu-page1__main--mainNames2:hover .spiner, .menu-page1__main--mainNames3:hover .spiner,
-.menu-page1__desserts--mainNames1:hover .spiner, .menu-page1__desserts--mainNames2:hover .spiner, .menu-page1__desserts--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames1:hover .spiner, .menu-page2__starters--mainNames2:hover .spiner, .menu-page2__starters--mainNames3:hover .spiner,
-.menu-page2__starters--mainNames4:hover .spiner,
-.menu-page2__main--mainNames1:hover .spiner, .menu-page2__main--mainNames2:hover .spiner, .menu-page2__main--mainNames3:hover .spiner,
-.menu-page2__desserts--mainNames1:hover .spiner, .menu-page2__desserts--mainNames2:hover .spiner, .menu-page2__desserts--mainNames3:hover .spiner,
-.menu-page3__starters--mainNames1:hover .spiner, .menu-page3__starters--mainNames2:hover .spiner, .menu-page3__starters--mainNames3:hover .spiner,
-.menu-page3__main--mainNames1:hover .spiner, .menu-page3__main--mainNames2:hover .spiner, .menu-page3__main--mainNames3:hover .spiner,
-.menu-page3__desserts--mainNames1:hover .spiner, .menu-page3__desserts--mainNames2:hover .spiner, .menu-page3__desserts--mainNames3:hover .spiner,
-.menu-page4__starters--mainNames1:hover .spiner, .menu-page4__starters--mainNames2:hover .spiner, .menu-page4__starters--mainNames3:hover .spiner,
-.menu-page4__main--mainNames1:hover .spiner, .menu-page4__main--mainNames2:hover .spiner, .menu-page4__main--mainNames3:hover .spiner,
-.menu-page4__desserts--mainNames1:hover .spiner, .menu-page4__desserts--mainNames2:hover .spiner, .menu-page4__desserts--mainNames3:hover .spiner {
+  .starters__mainNames:hover .spiner,
+.main__mainNames:hover .spiner,
+.desserts__mainNames:hover .spiner {
     font-size: 4rem;
   }
 }
-.menu-page1__starters--mainNames1:hover .price p, .menu-page1__starters--mainNames2:hover .price p, .menu-page1__starters--mainNames3:hover .price p,
-.menu-page1__main--mainNames1:hover .price p, .menu-page1__main--mainNames2:hover .price p, .menu-page1__main--mainNames3:hover .price p,
-.menu-page1__desserts--mainNames1:hover .price p, .menu-page1__desserts--mainNames2:hover .price p, .menu-page1__desserts--mainNames3:hover .price p,
-.menu-page2__starters--mainNames1:hover .price p, .menu-page2__starters--mainNames2:hover .price p, .menu-page2__starters--mainNames3:hover .price p,
-.menu-page2__starters--mainNames4:hover .price p,
-.menu-page2__main--mainNames1:hover .price p, .menu-page2__main--mainNames2:hover .price p, .menu-page2__main--mainNames3:hover .price p,
-.menu-page2__desserts--mainNames1:hover .price p, .menu-page2__desserts--mainNames2:hover .price p, .menu-page2__desserts--mainNames3:hover .price p,
-.menu-page3__starters--mainNames1:hover .price p, .menu-page3__starters--mainNames2:hover .price p, .menu-page3__starters--mainNames3:hover .price p,
-.menu-page3__main--mainNames1:hover .price p, .menu-page3__main--mainNames2:hover .price p, .menu-page3__main--mainNames3:hover .price p,
-.menu-page3__desserts--mainNames1:hover .price p, .menu-page3__desserts--mainNames2:hover .price p, .menu-page3__desserts--mainNames3:hover .price p,
-.menu-page4__starters--mainNames1:hover .price p, .menu-page4__starters--mainNames2:hover .price p, .menu-page4__starters--mainNames3:hover .price p,
-.menu-page4__main--mainNames1:hover .price p, .menu-page4__main--mainNames2:hover .price p, .menu-page4__main--mainNames3:hover .price p,
-.menu-page4__desserts--mainNames1:hover .price p, .menu-page4__desserts--mainNames2:hover .price p, .menu-page4__desserts--mainNames3:hover .price p {
+.starters__mainNames:hover .price p,
+.main__mainNames:hover .price p,
+.desserts__mainNames:hover .price p {
   width: 40%;
   height: 35px;
   text-align: center;
@@ -1067,131 +941,51 @@ header {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   background-color: #99E2D0;
-  margin-top: -49px;
-  padding-top: 25px;
 }
 @media screen and (min-width: 1024px) {
-  .menu-page1__starters--mainNames1:hover .price p, .menu-page1__starters--mainNames2:hover .price p, .menu-page1__starters--mainNames3:hover .price p,
-.menu-page1__main--mainNames1:hover .price p, .menu-page1__main--mainNames2:hover .price p, .menu-page1__main--mainNames3:hover .price p,
-.menu-page1__desserts--mainNames1:hover .price p, .menu-page1__desserts--mainNames2:hover .price p, .menu-page1__desserts--mainNames3:hover .price p,
-.menu-page2__starters--mainNames1:hover .price p, .menu-page2__starters--mainNames2:hover .price p, .menu-page2__starters--mainNames3:hover .price p,
-.menu-page2__starters--mainNames4:hover .price p,
-.menu-page2__main--mainNames1:hover .price p, .menu-page2__main--mainNames2:hover .price p, .menu-page2__main--mainNames3:hover .price p,
-.menu-page2__desserts--mainNames1:hover .price p, .menu-page2__desserts--mainNames2:hover .price p, .menu-page2__desserts--mainNames3:hover .price p,
-.menu-page3__starters--mainNames1:hover .price p, .menu-page3__starters--mainNames2:hover .price p, .menu-page3__starters--mainNames3:hover .price p,
-.menu-page3__main--mainNames1:hover .price p, .menu-page3__main--mainNames2:hover .price p, .menu-page3__main--mainNames3:hover .price p,
-.menu-page3__desserts--mainNames1:hover .price p, .menu-page3__desserts--mainNames2:hover .price p, .menu-page3__desserts--mainNames3:hover .price p,
-.menu-page4__starters--mainNames1:hover .price p, .menu-page4__starters--mainNames2:hover .price p, .menu-page4__starters--mainNames3:hover .price p,
-.menu-page4__main--mainNames1:hover .price p, .menu-page4__main--mainNames2:hover .price p, .menu-page4__main--mainNames3:hover .price p,
-.menu-page4__desserts--mainNames1:hover .price p, .menu-page4__desserts--mainNames2:hover .price p, .menu-page4__desserts--mainNames3:hover .price p {
-    height: 95px;
-    margin-top: -114px;
-    padding-top: 55px;
+  .starters__mainNames:hover .price p,
+.main__mainNames:hover .price p,
+.desserts__mainNames:hover .price p {
+    height: 70px;
+    margin-top: -62px;
+    padding-top: 18px;
   }
 }
-.menu-page1__starters--mainNames1:hover h3, .menu-page1__starters--mainNames2:hover h3, .menu-page1__starters--mainNames3:hover h3,
-.menu-page1__main--mainNames1:hover h3, .menu-page1__main--mainNames2:hover h3, .menu-page1__main--mainNames3:hover h3,
-.menu-page1__desserts--mainNames1:hover h3, .menu-page1__desserts--mainNames2:hover h3, .menu-page1__desserts--mainNames3:hover h3,
-.menu-page2__starters--mainNames1:hover h3, .menu-page2__starters--mainNames2:hover h3, .menu-page2__starters--mainNames3:hover h3,
-.menu-page2__starters--mainNames4:hover h3,
-.menu-page2__main--mainNames1:hover h3, .menu-page2__main--mainNames2:hover h3, .menu-page2__main--mainNames3:hover h3,
-.menu-page2__desserts--mainNames1:hover h3, .menu-page2__desserts--mainNames2:hover h3, .menu-page2__desserts--mainNames3:hover h3,
-.menu-page3__starters--mainNames1:hover h3, .menu-page3__starters--mainNames2:hover h3, .menu-page3__starters--mainNames3:hover h3,
-.menu-page3__main--mainNames1:hover h3, .menu-page3__main--mainNames2:hover h3, .menu-page3__main--mainNames3:hover h3,
-.menu-page3__desserts--mainNames1:hover h3, .menu-page3__desserts--mainNames2:hover h3, .menu-page3__desserts--mainNames3:hover h3,
-.menu-page4__starters--mainNames1:hover h3, .menu-page4__starters--mainNames2:hover h3, .menu-page4__starters--mainNames3:hover h3,
-.menu-page4__main--mainNames1:hover h3, .menu-page4__main--mainNames2:hover h3, .menu-page4__main--mainNames3:hover h3,
-.menu-page4__desserts--mainNames1:hover h3, .menu-page4__desserts--mainNames2:hover h3, .menu-page4__desserts--mainNames3:hover h3 {
+.starters__mainNames:hover h3,
+.main__mainNames:hover h3,
+.desserts__mainNames:hover h3 {
   margin-right: 70px;
 }
-.menu-page1__starters--mainNames1:hover h4 h5, .menu-page1__starters--mainNames2:hover h4 h5, .menu-page1__starters--mainNames3:hover h4 h5,
-.menu-page1__main--mainNames1:hover h4 h5, .menu-page1__main--mainNames2:hover h4 h5, .menu-page1__main--mainNames3:hover h4 h5,
-.menu-page1__desserts--mainNames1:hover h4 h5, .menu-page1__desserts--mainNames2:hover h4 h5, .menu-page1__desserts--mainNames3:hover h4 h5,
-.menu-page2__starters--mainNames1:hover h4 h5, .menu-page2__starters--mainNames2:hover h4 h5, .menu-page2__starters--mainNames3:hover h4 h5,
-.menu-page2__starters--mainNames4:hover h4 h5,
-.menu-page2__main--mainNames1:hover h4 h5, .menu-page2__main--mainNames2:hover h4 h5, .menu-page2__main--mainNames3:hover h4 h5,
-.menu-page2__desserts--mainNames1:hover h4 h5, .menu-page2__desserts--mainNames2:hover h4 h5, .menu-page2__desserts--mainNames3:hover h4 h5,
-.menu-page3__starters--mainNames1:hover h4 h5, .menu-page3__starters--mainNames2:hover h4 h5, .menu-page3__starters--mainNames3:hover h4 h5,
-.menu-page3__main--mainNames1:hover h4 h5, .menu-page3__main--mainNames2:hover h4 h5, .menu-page3__main--mainNames3:hover h4 h5,
-.menu-page3__desserts--mainNames1:hover h4 h5, .menu-page3__desserts--mainNames2:hover h4 h5, .menu-page3__desserts--mainNames3:hover h4 h5,
-.menu-page4__starters--mainNames1:hover h4 h5, .menu-page4__starters--mainNames2:hover h4 h5, .menu-page4__starters--mainNames3:hover h4 h5,
-.menu-page4__main--mainNames1:hover h4 h5, .menu-page4__main--mainNames2:hover h4 h5, .menu-page4__main--mainNames3:hover h4 h5,
-.menu-page4__desserts--mainNames1:hover h4 h5, .menu-page4__desserts--mainNames2:hover h4 h5, .menu-page4__desserts--mainNames3:hover h4 h5 {
+.starters__mainNames:hover h4 h5,
+.main__mainNames:hover h4 h5,
+.desserts__mainNames:hover h4 h5 {
   width: auto;
 }
 
 /*Apparition progressive des menus*/
-@-webkit-keyframes progress {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes progress {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.menu-page2__starters, .menu-page2__main, .menu-page2__desserts {
+.starters,
+.main,
+.desserts {
   transform-origin: top;
 }
 
-.menu-page1__starters--mainNames1, .menu-page2__starters--mainNames1, .menu-page3__starters--mainNames1, .menu-page4__starters--mainNames1 {
+.starters__mainNames {
   -webkit-animation: progress 500ms;
   animation: progress 500ms;
 }
 
-.menu-page1__starters--mainNames2, .menu-page2__starters--mainNames2, .menu-page3__starters--mainNames2, .menu-page4__starters--mainNames2 {
-  -webkit-animation: progress 1000ms;
-  animation: progress 1000ms;
-}
-
-.menu-page1__starters--mainNames3, .menu-page2__starters--mainNames3, .menu-page3__starters--mainNames3, .menu-page4__starters--mainNames3 {
-  -webkit-animation: progress 1500ms;
-  animation: progress 1500ms;
-}
-
-.menu-page2__starters--mainNames4 {
-  -webkit-animation: progress 2000ms;
-  animation: progress 2000ms;
-}
-
-.menu-page1__main--mainNames1, .menu-page2__main--mainNames1, .menu-page3__main--mainNames1, .menu-page4__main--mainNames1 {
+.main__mainNames {
   -webkit-animation: progress 2500ms;
   animation: progress 2500ms;
 }
 
-.menu-page1__main--mainNames2, .menu-page2__main--mainNames2, .menu-page3__main--mainNames2, .menu-page4__main--mainNames2 {
-  -webkit-animation: progress 3000ms;
-  animation: progress 3000ms;
-}
-
-.menu-page1__main--mainNames3, .menu-page2__main--mainNames3, .menu-page3__main--mainNames3, .menu-page4__main--mainNames3 {
-  -webkit-animation: progress 3500ms;
-  animation: progress 3500ms;
-}
-
-.menu-page1__desserts--mainNames1, .menu-page2__desserts--mainNames1, .menu-page3__desserts--mainNames1, .menu-page4__desserts--mainNames1 {
+.desserts__mainNames {
   -webkit-animation: progress 4000ms;
   animation: progress 4000ms;
 }
 
-.menu-page1__desserts--mainNames2, .menu-page2__desserts--mainNames2, .menu-page3__desserts--mainNames2, .menu-page4__desserts--mainNames2 {
-  -webkit-animation: progress 4500ms;
-  animation: progress 4500ms;
-}
-
-.menu-page1__desserts--mainNames3, .menu-page2__desserts--mainNames3, .menu-page3__desserts--mainNames3, .menu-page4__desserts--mainNames3 {
-  -webkit-animation: progress 5000ms;
-  animation: progress 5000ms;
-}
-
 footer {
+  position: relative;
   color: white;
   background-color: #333232;
   width: 100%;
@@ -1210,8 +1004,7 @@ footer ul {
   width: 200px;
   -webkit-filter: invert(1);
   filter: invert(1);
-  margin-left: 40px;
-  margin-top: 30px;
+  margin: 30px 0 0 40px;
 }
 
 .footer-menu__propose--ustensils {
@@ -1221,10 +1014,13 @@ footer ul {
   margin: 0 7px 0 0px;
 }
 
-.footer-menu__contact a:link, :visited {
+.footer-menu__contact a:link,
+:visited {
   color: white;
 }
-.footer-menu__contact a:link:hover, .footer-menu__contact a:link:active, :visited:hover, :visited:active {
+.footer-menu__contact a:link:hover, .footer-menu__contact a:link:active,
+:visited:hover,
+:visited:active {
   color: #FF79DA;
   border-bottom: 3px #FF79DA solid;
   padding-bottom: 5px;
@@ -1235,14 +1031,8 @@ footer ul {
   padding-bottom: 40px;
 }
 
-.container1 footer,
-.container3 footer,
-.container4 footer {
-  margin-top: 1100px;
-}
-
-.container2 footer {
-  margin-top: 1080px;
+.container footer {
+  margin-top: 1130px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1250,18 +1040,12 @@ footer ul {
     padding: 0;
   }
 
-  .container1 footer,
-.container3 footer,
-.container4 footer {
+  .container footer {
     margin-top: 440px;
   }
 
-  .container2 footer {
-    padding-top: 1210px;
-  }
-
   footer {
-    padding-top: 1780px;
+    padding-top: 1400px;
     margin-bottom: -50px;
   }
   footer .footer-logo {
@@ -1269,7 +1053,7 @@ footer ul {
     width: 300px;
   }
   footer .footer-menu__propose, footer .footer-menu__partner, footer p {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-right: 20px;
   }
 }

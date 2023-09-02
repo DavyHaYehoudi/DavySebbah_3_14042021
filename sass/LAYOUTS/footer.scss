@@ -1,117 +1,100 @@
-
 footer {
-    color: white;
-    background-color: rgb(51, 50, 50);
-    width: 100%; 
-    margin-bottom: -20px;
+  position: relative;
+  color: white;
+  background-color: rgb(51, 50, 50);
+  width: 100%;
+  margin-bottom: -20px;
 
-    & p {
-        margin-left: 40px;
-    }
-    & ul {
-        list-style-type: none;
-        display: flex;
-    }
+  & p {
+    margin-left: 40px;
+  }
+  & ul {
+    list-style-type: none;
+    display: flex;
+  }
 }
 
- .footer-logo {
+.footer-logo {
+  height: 50px;
+  width: 200px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  margin: 30px 0 0 40px;
+}
 
-    height: 50px;
-    width: 200px;
-    -webkit-filter: invert(1);
-            filter: invert(1);
-    margin-left: 40px;
-    margin-top: 30px;
+.footer-menu {
+  &__propose--ustensils {
+    margin: 0 15px 0 0px;
+  }
+  &__partner--hands {
+    margin: 0 7px 0 0px;
+  }
+}
+
+.footer-menu__contact a:link,
+:visited {
+  color: white;
+
+  &:hover,
+  &:active {
+    color: $Color-Secondary;
+    border-bottom: 3px $Color-Secondary solid;
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+}
+
+.footer-menu__contact {
+  padding-bottom: 40px;
+}
+
+.container footer {
+  margin-top: 1130px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container0 footer {
+    padding: 0;
   }
 
-  .footer-menu {
-    &__propose--ustensils {
-        margin: 0 15px 0 0px;
-    }
-    &__partner--hands {
-        margin: 0 7px 0 0px;
-    }
- }
-
- .footer-menu__contact a:link, :visited{
-   color: white;
-
-            &:hover, &:active {
-                    color:$Color-Secondary ;
-                    border-bottom: 3px $Color-Secondary solid;
-                    padding-bottom: 5px;
-                    font-weight: bold;
-                    }       
-    }
-
- .footer-menu__contact{
-   padding-bottom: 40px;
+  .container footer {
+    margin-top: 440px;
   }
-  
-
-    .container1 footer,
-    .container3 footer,
-    .container4 footer {
-    margin-top: 1100px;
-   }
-
-    .container2 footer {
-      margin-top: 1080px;
-   }
-
-
-
- @media screen and (min-width:1024px){
-
-    .container0 footer {
-        padding: 0;
-    }
-
-    .container1 footer,
-    .container3 footer,
-    .container4 footer {
-    margin-top:440px;
- }
-
-    .container2 footer {
-        padding-top:1210px ;
-    }
-
-    footer {
-        padding-top: 1780px;
-        margin-bottom: -50px;
-        
-    .footer-logo{
-        margin-top:60px;
-        width: 300px;
-    }
-
-       & .footer-menu__propose,
-       & .footer-menu__partner,
-       & p {
-    font-size: 3rem;
-    margin-right: 20px;
-    }
-  }
- }
-
- @media screen and (min-width:2100px) {
-    footer {
-        display: flex;
-        justify-content: space-around;
-         
-          & ul , & p {
-              margin-top: 70px;
-          }      
-    } 
+  footer {
+    padding-top: 1400px;
+    margin-bottom: -50px;
 
     .footer-logo {
-        height: 80px;
-        width: 250px;
+      margin-top: 60px;
+      width: 300px;
     }
 
-    .footer-menu__contact{
-        margin-right: 100px;
-       }
+    & .footer-menu__propose,
+    & .footer-menu__partner,
+    & p {
+      font-size: 2rem;
+      margin-right: 20px;
+    }
+  }
+}
 
- }
+@media screen and (min-width: 2100px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+
+    & ul,
+    & p {
+      margin-top: 70px;
+    }
+  }
+
+  .footer-logo {
+    height: 80px;
+    width: 250px;
+  }
+
+  .footer-menu__contact {
+    margin-right: 100px;
+  }
+}
