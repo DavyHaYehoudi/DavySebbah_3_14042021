@@ -61,7 +61,7 @@ footer {
     margin-top: 440px;
   }
   footer {
-    padding-top: 1400px;
+    padding-top: 1150px;
     margin-bottom: -50px;
 
     .footer-logo {
@@ -72,7 +72,7 @@ footer {
     & .footer-menu__propose,
     & .footer-menu__partner,
     & p {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-right: 20px;
     }
   }
@@ -82,6 +82,7 @@ footer {
   footer {
     display: flex;
     justify-content: space-around;
+    padding-top: 1200px;
 
     & ul,
     & p {
@@ -92,6 +93,7 @@ footer {
   .footer-logo {
     height: 80px;
     width: 250px;
+    margin-bottom: 100px;
   }
 
   .footer-menu__contact {
