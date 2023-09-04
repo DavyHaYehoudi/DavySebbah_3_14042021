@@ -117,14 +117,15 @@ main h6 {
   #images {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main-home-menu1,
   .main-home-menu2,
   .main-home-menu3,
   .main-home-menu4 {
-    width: 40vw;
-    margin: 100px auto;
+    width: 30vw;
+    margin: 100px;
   }
   #menu-home-page img {
     width: 100%;
@@ -137,7 +138,7 @@ main h6 {
   .main-home-menu3__description,
   .main-home-menu4__description {
     height: 100px;
-    width: 40vw;
+    max-width: 1023px;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
     background-color: white;
@@ -305,16 +306,11 @@ header {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     background-color: $Color-Tertiary;
-    // margin-top: -49px;
-    // padding-top: 25px;
 
     @media screen and (min-width: 1024px) {
       height: 70px;
       margin-top: -62px;
       padding-top: 18px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     }
   }
 
@@ -327,41 +323,51 @@ header {
   }
 }
 
-/*Apparition progressive des menus*/
-// @-webkit-keyframes progress {
-//   0% {
-//     transform: scaleY(0);
-//   }
-
-//   100% {
-//     transform: scaleY(1);
-//   }
-// }
-// @keyframes progress {
-//   0% {
-//     transform: scaleY(0);
-//   }
-
-//   100% {
-//     transform: scaleY(1);
-//   }
-// }
-
-.starters,
-.main,
-.desserts {
-  transform-origin: top;
+.appear-animation {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appear 0.5s ease-in-out forwards;
 }
 
-.starters__mainNames {
-  -webkit-animation: progress 500ms;
-  animation: progress 500ms;
+/* Animation pour faire apparaître progressivement les plats */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.main__mainNames{
-  -webkit-animation: progress 2500ms;
-  animation: progress 2500ms;
+
+.starters .starters__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.2s forwards;
 }
-.desserts__mainNames{
-  -webkit-animation: progress 4000ms;
-  animation: progress 4000ms;
+.starters .starters__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.3s forwards;
 }
+.starters .starters__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 0.4s forwards;
+}
+.main .main__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.5s forwards;
+}
+.main .main__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.6s forwards;
+} 
+.main .main__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 0.7s forwards;
+}
+.desserts .desserts__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.8s forwards;
+}
+.desserts .desserts__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.9s forwards;
+}
+.desserts .desserts__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 1s forwards;
+}
+
+
+

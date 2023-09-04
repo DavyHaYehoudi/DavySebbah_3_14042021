@@ -1,208 +1,154 @@
-
 /*Bouton de 'Explorer nos restaurants'*/
 .heading-home-description__btn {
-    border-radius: 5rem;
-    background: linear-gradient($Color-Secondary,$Color-Primary);
-    box-shadow: 3px 3px 3px $Color-Primary;
-    font-size: .9rem;
-    font-weight:bold;
-    text-align: center;
-    width: 43vw;
-    max-width: 300px;
-    padding: 9px;
-    margin: 30px auto;
-    cursor: pointer;
-    transition: transform 400ms;
-   
+  border-radius: 5rem;
+  background: linear-gradient($Color-Secondary, $Color-Primary);
+  box-shadow: 3px 3px 3px $Color-Primary;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  width: 43vw;
+  max-width: 300px;
+  padding: 9px;
+  margin: 30px auto;
+  cursor: pointer;
+  transition: transform 400ms;
 
-        & a {
-            color: white;
-       }
-    
-        & :visited{
-            color: white;
-        }
+  & a {
+    color: white;
+  }
 
-        &:active {
-            opacity: .9;
-            transform: scale(1.15);
-            box-shadow: 8px 8px 8px $Color-Primary;
-        }
-        
-        &:hover{
-            opacity: .9;
-            transform: scale(1.15);
-            box-shadow: 8px 8px 8px $Color-Primary;  
-            & a {
-                color: white;
-              }   
-            }
+  & :visited {
+    color: white;
+  }
 
-         
-        
+  &:active {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px $Color-Primary;
+  }
 
-        /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
-        @media screen and (min-width:1024px){
-            font-size: 1.5rem;
-            padding-top: 12px;
-            height: 30px;
-
-            &:hover{
-            opacity: .9;
-            transform: scale(1.15);
-            box-shadow: 8px 8px 8px $Color-Primary;  
-            & a {
-                color: white;
-              }   
-            }
-        }
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px $Color-Primary;
+    & a {
+      color: white;
     }
+  }
+
+  /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
+  @media screen and (min-width: 1024px) {
+    font-size: 1.5rem;
+    padding-top: 12px;
+    height: 30px;
+
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.15);
+      box-shadow: 8px 8px 8px $Color-Primary;
+      & a {
+        color: white;
+      }
+    }
+  }
+}
 
 /*Bouton 'Commander' en fin de présentation du menu*/
 .btn-order {
+  border: 0px $Color-Secondary solid;
+  border-radius: 2rem;
+  background: linear-gradient($Color-Secondary, $Color-Primary);
+  box-shadow: 3px 3px 3px $Color-Primary;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin: 50px auto 0px auto;
+  padding: 10px;
+  text-align: center;
+  width: 37vw;
+  max-width: 300px;
+  transition: transform 400ms;
 
-    border: 0px $Color-Secondary solid;
-    border-radius: 2rem;
-    background: linear-gradient($Color-Secondary,$Color-Primary);
-    box-shadow: 3px 3px 3px $Color-Primary;
-    cursor: pointer;
-    font-size: 1.4rem;
-    margin: 50px auto 0px auto;
-    padding: 10px;
-    text-align: center;
-    width: 37vw;
-    max-width: 300px;
-    transition: transform 400ms;
+  & a:link {
+    color: white;
+  }
 
-    & a:link {
+  & :visited {
+    color: white;
+  }
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px $Color-Primary;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.15);
+    box-shadow: 8px 8px 8px $Color-Primary;
+    & a {
+      color: white;
+    }
+  }
+
+  /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
+  @media screen and (min-width: 1024px) {
+    font-size: 2.5rem;
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.15);
+      box-shadow: 8px 8px 8px $Color-Primary;
+      & a {
         color: white;
+      }
     }
-
-    & :visited{
-        color: white;
-    }
-
-    &:active {
-        opacity: .9;
-        transform: scale(1.15);
-        box-shadow: 8px 8px 8px $Color-Primary;
-            }
-
-        &:hover{
-            opacity: .9;
-            transform: scale(1.15);
-            box-shadow: 8px 8px 8px $Color-Primary;  
-            & a {
-                color: white;
-              }   
-            }
-    
-    /*A mettre dans le format ordinateur car c'est seulement au survol que c'est demandé de s'éclaircir*/
-    @media screen and (min-width:1024px){
-
-        font-size: 2.5rem;
-        &:hover{
-            opacity: .9;
-        transform: scale(1.15);
-        box-shadow: 8px 8px 8px $Color-Primary;
-        & a {
-            color: white;
-          }  
-        }
-    }
+  }
 }
 
-/*Placement du coeur vide près du gros titre de la carte*/
-.description{
-    position: relative;
-    
+/* Positionnement relatif du coeur vide sur toutes les pages */
+.description,
+.main-home-menu1__description--legend,
+.main-home-menu2__description--legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
 }
-/*Remplissage du coeur sur les Pages1 Pages2 Pages 3 et Pages4*/
-.heart{
-    position: absolute;
-    right: 35px;
-    top:6px;
-    font-size: $Fontsize-Heart;
-    cursor: pointer; 
 
-
-        @media screen and (min-width:1024px){
-            font-size: 4rem;
-            right: 100px;
-            top:0px;
-        }
-
-    }
-
-    .heartfull {
-        // Dégradé de la couleur du coeur rempli
-        background:-webkit-linear-gradient(top, $Color-Primary 30%, $Color-Secondary 70%);
-        background-clip:text;
-        -webkit-background-clip:text;
-        color:transparent;
-
-        position: absolute;
-        right: 34px;
-        top:4px;
-        font-size: 1.6rem;
-
-        @media screen and (min-width:1024px){
-            font-size: 4.5rem;
-            right: 96px;
-            top:-4px;
-        }
-
-        opacity: 0;       
-        cursor: pointer;    
-        transition: opacity 1200ms;
-        
-        &:hover {
-            opacity: 1; 
-        }
-    }
-
-/*Remplissage du coeur uniquement sur la page d'accueil*/
-
-    .menu-home__heartfullhome {
-        // Dégradé de la couleur du coeur rempli
-        background:-webkit-linear-gradient(top, $Color-Primary 30%, $Color-Secondary 70%);
-        background-clip:text;
-        -webkit-background-clip:text;
-        color:transparent;
-
-        position: absolute;
-        right: 20px;
-        top: 4px;
-        font-size: $Fontsize-Heart;
-        opacity: 0;  
-
-        cursor: pointer;    
-        transition: opacity 600ms;
-
-        &:active,&:hover  {                  
-            opacity: 1;
-            font-size: 1.55rem;
-            top:2.1px;
-            right: 19px;
-        } 
-
-      
-        @media screen and (min-width:1024px){
-        font-size: 2.7rem;
-        right: 28px;
-        top:14px;  
-        transition: opacity 600ms;
-
-        &:active,&:hover  {                  
-            opacity: 1;
-            font-size: 2.67rem;
-            right: 28.6px;
-            top: 14px;
-          } 
-        }    
-    }
-
-
-   
-
-    
+/*Remplissage du coeur */
+.heart-container {
+  position: relative;
+  cursor: pointer;
+}
+.heart-outline {
+  color: black;
+}
+.heart-outline,
+.heart-fill {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  font-size: $Fontsize-Heart;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+.heart-fill {
+  color: transparent;
+  background: linear-gradient(to bottom, $Color-Primary, $Color-Secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transform: scaleY(0);
+}
+.heart-container:hover .heart-fill {
+  opacity: 1;
+  transform: scaleY(1);
+}

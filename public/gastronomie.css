@@ -85,7 +85,7 @@ body {
   }
 
   #menu-page h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-left: 50px;
   }
 }
@@ -209,84 +209,65 @@ body {
   }
 }
 
-/*Placement du coeur vide près du gros titre de la carte*/
-.description {
+/* Positionnement relatif du coeur vide sur toutes les pages */
+.description,
+.main-home-menu1__description--legend,
+.main-home-menu2__description--legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+/*Remplissage du coeur */
+.heart-container {
   position: relative;
+  cursor: pointer;
 }
 
-/*Remplissage du coeur sur les Pages1 Pages2 Pages 3 et Pages4*/
-.heart {
+.heart-outline {
+  color: black;
+}
+
+.heart-outline,
+.heart-fill {
   position: absolute;
-  right: 35px;
-  top: 6px;
+  top: -15px;
+  left: -15px;
   font-size: 1.4rem;
-  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 @media screen and (min-width: 1024px) {
-  .heart {
-    font-size: 4rem;
-    right: 100px;
-    top: 0px;
+  .heart-outline,
+.heart-fill {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heart-outline,
+.heart-fill {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heart-outline,
+.heart-fill {
+    font-size: 1.5rem;
   }
 }
 
-.heartfull {
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
+.heart-fill {
   color: transparent;
-  position: absolute;
-  right: 34px;
-  top: 4px;
-  font-size: 1.6rem;
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
   opacity: 0;
-  cursor: pointer;
-  transition: opacity 1200ms;
-}
-@media screen and (min-width: 1024px) {
-  .heartfull {
-    font-size: 4.5rem;
-    right: 96px;
-    top: -4px;
-  }
-}
-.heartfull:hover {
-  opacity: 1;
+  transform: scaleY(0);
 }
 
-/*Remplissage du coeur uniquement sur la page d'accueil*/
-.menu-home__heartfullhome {
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  position: absolute;
-  right: 20px;
-  top: 4px;
-  font-size: 1.4rem;
-  opacity: 0;
-  cursor: pointer;
-  transition: opacity 600ms;
-}
-.menu-home__heartfullhome:active, .menu-home__heartfullhome:hover {
+.heart-container:hover .heart-fill {
   opacity: 1;
-  font-size: 1.55rem;
-  top: 2.1px;
-  right: 19px;
-}
-@media screen and (min-width: 1024px) {
-  .menu-home__heartfullhome {
-    font-size: 2.7rem;
-    right: 28px;
-    top: 14px;
-    transition: opacity 600ms;
-  }
-  .menu-home__heartfullhome:active, .menu-home__heartfullhome:hover {
-    opacity: 1;
-    font-size: 2.67rem;
-    right: 28.6px;
-    top: 14px;
-  }
+  transform: scaleY(1);
 }
 
 /* *************************** Début du loading **************************** */
@@ -723,14 +704,15 @@ main h6 {
   #images {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main-home-menu1,
 .main-home-menu2,
 .main-home-menu3,
 .main-home-menu4 {
-    width: 40vw;
-    margin: 100px auto;
+    width: 30vw;
+    margin: 100px;
   }
 
   #menu-home-page img {
@@ -745,7 +727,7 @@ main h6 {
 .main-home-menu3__description,
 .main-home-menu4__description {
     height: 100px;
-    width: 40vw;
+    max-width: 1023px;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
     background-color: white;
@@ -940,26 +922,57 @@ header {
   width: auto;
 }
 
-/*Apparition progressive des menus*/
-.starters,
-.main,
-.desserts {
-  transform-origin: top;
+.appear-animation {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appear 0.5s ease-in-out forwards;
 }
 
-.starters__mainNames {
-  -webkit-animation: progress 500ms;
-  animation: progress 500ms;
+/* Animation pour faire apparaître progressivement les plats */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.starters .starters__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.2s forwards;
 }
 
-.main__mainNames {
-  -webkit-animation: progress 2500ms;
-  animation: progress 2500ms;
+.starters .starters__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.3s forwards;
 }
 
-.desserts__mainNames {
-  -webkit-animation: progress 4000ms;
-  animation: progress 4000ms;
+.starters .starters__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 0.4s forwards;
+}
+
+.main .main__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.5s forwards;
+}
+
+.main .main__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.6s forwards;
+}
+
+.main .main__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 0.7s forwards;
+}
+
+.desserts .desserts__mainNames.appear-animation:nth-child(2) {
+  animation: appear 0.5s ease-in-out 0.8s forwards;
+}
+
+.desserts .desserts__mainNames.appear-animation:nth-child(3) {
+  animation: appear 0.5s ease-in-out 0.9s forwards;
+}
+
+.desserts .desserts__mainNames.appear-animation:nth-child(4) {
+  animation: appear 0.5s ease-in-out 1s forwards;
 }
 
 footer {
@@ -1010,7 +1023,7 @@ footer ul {
 }
 
 .container footer {
-  margin-top: 1130px;
+  margin-top: 1150px;
 }
 
 @media screen and (min-width: 1024px) {
