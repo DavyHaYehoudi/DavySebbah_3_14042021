@@ -1,263 +1,229 @@
-
-
 // PAGE D'ACCUEIL
 
-
-/*Mise en place du loading spinner qui simule le chargement de la page*/
+/* *************************** Début du loading **************************** */
 
 /*Retardement affichage page accueil*/
 
-
 @-webkit-keyframes wait {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 
 .container0 header,
 .container0 main,
 .container0 footer {
-    -webkit-animation: wait 3000ms cubic-bezier(1,-1.71,1,.55);
-            animation: wait 3000ms cubic-bezier(1,-1.71,1,.55);
-}
-
-.container0 {
-    position: relative;
-    
+  -webkit-animation: wait 1000ms cubic-bezier(1, -1.71, 1, 0.55);
+  animation: wait 1000ms cubic-bezier(1, -1.71, 1, 0.55);
 }
 
 .loader-page {
-  
-    position: fixed;
-    -webkit-animation: out 4s;
-            animation: out 4s;
-    top: 25%;
-        left: 0%;
-    opacity: 0;
-
-    @media screen and (max-width:320px)
-    {
-        top: 25%;
-        left: 10%;
-    }
-
-    @media screen and (max-width:375px){
-        top: 30%;
-        left: 20%;
-    }
-
-    @media screen and (max-width:414px){
-        top: 35%;
-        left: 25%;
-    }
-
-    @media screen and (min-width:768px){
-        top: 40%;
-        left: 35%;
-    }
-
-    @media screen and (min-width:1024px){
-        top: 45%;
-        left: 40%;
-    }
+  position: fixed;
+  -webkit-animation: out 1s;
+  animation: out 1s;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .loader {
-    width: 200px;
-    height: 200px;
-    display: inline-block;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  @media screen and (max-width: 1024px) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .loader-quart {
-    border-radius: 200px;
-    border: 12px solid rgba(147, 86, 220,0.4);
-   
+  border-radius: 200px;
+  border: 12px solid rgba(147, 86, 220, 0.4);
 }
 
 .loader-quart::before {
-    content:"";
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    bottom: -12px;
-    right: -12px;
-    border: 12px solid transparent;
-    border-top-color: $Color-Secondary;
-    border-radius: 200px;
-    -webkit-animation: loading 1.5s linear infinite;
-            animation: loading 1.5s linear infinite;
-            
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  bottom: -12px;
+  right: -12px;
+  border: 12px solid transparent;
+  border-top-color: $Color-Secondary;
+  border-radius: 200px;
+  -webkit-animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
 }
-
 
 @-webkit-keyframes loading {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
+/* *************************** Fin du loading **************************** */
 
 .heading-home-logo {
-    text-align: center;
-    height: 3vh;
-    padding: 15px 0 3.7vh 0;
-    border-bottom: 3px rgb(214, 212, 212) solid; 
+  text-align: center;
+  height: 3vh;
+  padding: 15px 0 3.7vh 0;
+  border-bottom: 3px rgb(214, 212, 212) solid;
 
-        &__img {
-            height: 6vh;
-            width: 200px;
-        }
+  &__img {
+    height: 6vh;
+    width: 200px;
+  }
 }
 
 .heading-home-search {
-    text-align: center;
-    padding-left: 65px;
-    height: 45px;
-    padding-top: 15px; 
-    background-color: rgb(226, 223, 223);
+  text-align: center;
+  padding-left: 65px;
+  height: 45px;
+  padding-top: 15px;
+  background-color: rgb(226, 223, 223);
 
-        &__map {
-            margin-right: 10px;
-            @media screen and (min-width:1024px){
-            font-size: 1.7rem;
-            }
-        }
+  &__map {
+    margin-right: 10px;
+    @media screen and (min-width: 1024px) {
+      font-size: 1.7rem;
     }
+  }
+}
 
 .heading-home-field {
-    outline: none;
-    border: hidden;
-    background-color: rgb(226, 223, 223);
-    font-size: 1.1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
+  outline: none;
+  border: hidden;
+  background-color: rgb(226, 223, 223);
+  font-size: 1.1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
 }
 
 input::-webkit-input-placeholder {
-    color: black;
-    font-size: 1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
-    background-color: rgb(226, 223, 223);
+  color: black;
+  font-size: 1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  background-color: rgb(226, 223, 223);
 }
 
 input::-moz-placeholder {
-    color: black;
-    font-size: 1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
-    background-color: rgb(226, 223, 223);
+  color: black;
+  font-size: 1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  background-color: rgb(226, 223, 223);
 }
 
 input:-ms-input-placeholder {
-    color: black;
-    font-size: 1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
-    background-color: rgb(226, 223, 223);
+  color: black;
+  font-size: 1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  background-color: rgb(226, 223, 223);
 }
 
 input::-ms-input-placeholder {
-    color: black;
-    font-size: 1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
-    background-color: rgb(226, 223, 223);
+  color: black;
+  font-size: 1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  background-color: rgb(226, 223, 223);
 }
 
 input::placeholder {
-    color: black;
-    font-size: 1rem;
-    @media screen and (min-width:1024px){
-        font-size: 1.7rem;
-    }
-    background-color: rgb(226, 223, 223);
+  color: black;
+  font-size: 1rem;
+  @media screen and (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  background-color: rgb(226, 223, 223);
 }
 
 .heading-home-description {
-    background-color: $Color-Bkg;
-    height: 270px;
+  background-color: $Color-Bkg;
+  height: 270px;
 }
 
 //------------------ PAGE1 PAGE2 PAGE3 PAGE4--------------------------
 
 header {
-    position: relative;
+  position: relative;
 }
 // HEADER 'LOGO + RETURN' DE TOUTES LES PAGES
-.heading-page1,
-.heading-page2,
-.heading-page3,
-.heading-page4 {
-    text-align: center;
-    padding: 15px 0 10px 0;
-    &__return {
-        font-size: 1.4rem;
-        position: absolute;
-        left: 20px;
-        top: 25px;
+.heading-page {
+  text-align: center;
+  padding: 15px 0 10px 0;
+  &__return {
+    font-size: 1.4rem;
+    position: absolute;
+    left: 20px;
+    top: 25px;
 
-        @media screen and (min-width:1024px) {
-            font-size: 3rem;
-            top: 15px;
-        }
+    @media screen and (min-width: 1024px) {
+      font-size: 3rem;
+      top: 15px;
     }
-    &__logo {
-        width: 200px;
-        height: 40px;
+  }
+  &__logo {
+    width: 200px;
+    height: 40px;
 
-        @media screen and (min-width:1024px) {
-            width: 300px;
-            height: 60px;
-        }
+    @media screen and (min-width: 1024px) {
+      width: 300px;
+      height: 60px;
     }
+  }
 }
 
-.heading-page1__img,
-.heading-page3__img,
-.heading-page4__img {
-    width: 100vw;
-    max-height: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
+.photo-palette {
+  background: url("../../images/restaurants/palette.jpg") center/cover no-repeat;
 }
-
-.heading-page2__img2 {
-    width: 100vw;
-    max-height: 600px;
-    -o-object-fit: cover;
-       object-fit: cover;
+.photo-note {
+  background: url("../../images/restaurants/note.jpg") center/cover no-repeat;
 }
-
-
+.photo-francaise {
+  background: url("../../images/restaurants/francaise.jpg") center/cover
+    no-repeat;
+}
+.photo-delice {
+  background: url("../../images/restaurants/delice.jpg") center/cover no-repeat;
+}
+.heading-page__photo {
+  height: 300px;
+  @media screen and (min-width: 1024px) {
+    height: 500px;
+  }
+  @media screen and (min-width: 1900px) {
+    height: 700px;
+  }
+}
