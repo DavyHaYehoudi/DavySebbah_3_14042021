@@ -4,7 +4,7 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css",
+    "sass": "sass --watch dist/sass/gastronomie.scss:dist/public/gastronomie.css",
     "build": "npm run sass && echo 'Build completed.'"
 
     },
