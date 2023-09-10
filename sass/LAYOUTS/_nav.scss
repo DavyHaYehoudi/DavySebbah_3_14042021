@@ -1,83 +1,87 @@
 .nav-home-title {
-    text-align: center; 
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 
-        @media screen and (min-width:1024px){
-            font-size: 3rem;
-            margin-bottom: 50px;
-        }
+  @media screen and (min-width: 1024px) {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
 }
-
 
 .btn-fonctionnement {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 nav {
-    
-    ul {
-        list-style-type: none;
-        cursor: pointer;
-        display: flex;
-        height: 2.5rem;
-        background-color: $Color-Bkg;
-        border-radius: 1.5rem;
-        box-shadow: 6px 6px 4px rgb(223, 222, 222);
-        margin: 0 auto 20px auto;
-        padding: 25px 0 0 0px;   
+  ul {
+    list-style-type: none;
+    cursor: pointer;
+    display: flex;
+    height: 2.5rem;
+    background-color: $Color-Bkg;
+    border-radius: 1.5rem;
+    box-shadow: 6px 6px 4px rgb(223, 222, 222);
+    margin: 0 auto 20px auto;
+    padding: 25px 0 0 0px;
 
-        transform: scale(1);
-        transition: transform 400ms;
+    transform: scale(1);
+    transition: transform 400ms;
 
-             &:hover, &:active {
-                transform: scale(1.2);
-                background-color: lighten($color: rgb(223, 222, 222), $amount: 10);
-                box-shadow: 8px 8px 6px rgb(223, 222, 222);
-             }    
-   
-        li {
-            margin: 0 20px 0 -7px;
-            padding-left: 10px;
-        } 
+    &:hover,
+    &:active {
+      transform: scale(1.05);
+      background-color: lighten($color: rgb(223, 222, 222), $amount: 10);
+      box-shadow: 8px 8px 6px rgb(223, 222, 222);
     }
+
+    li {
+      margin: 0 20px 0 -7px;
+      padding-left: 10px;
+    }
+  }
 }
 
 /*Configuration des chiffres encerclés*/
 .nav-home-choose__number1,
 .nav-home-compose__number2,
 .nav-home-taste__number3 {
-    border-radius: 50%;
-    padding: 1px 4px 2px 4px;
-    height: 1rem;
-    background-color: $Color-Primary;
-    color: white;
-    font-size: .9rem;
+  border-radius: 50%;
+  padding: 1px 4px 2px 4px;
+  height: 1rem;
+  background-color: $Color-Primary;
+  color: white;
+  font-size: 0.9rem;
 
-    @media screen and (min-width:1024px){
-        padding: 3px 12px 15px 12px;
-    }
+  @media screen and (min-width: 1024px) {
+    padding: 3px 12px 15px 12px;
+  }
 }
 /*Adoucissement de la teinte noire du stand*/
 .nav-home-taste__store {
-    color: rgb(59, 54, 54);
+  color: rgb(59, 54, 54);
 }
 
 /*Police du nav fonctionnement*/
 .nav-home-choose__phrasing,
 .nav-home-compose__phrasing,
 .nav-home-taste__phrasing {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
-
-@media screen and (min-width:1024px){
-.nav-home-choose__number1,.nav-home-compose__number2,.nav-home-taste__number3,
-.nav-home-choose__phrasing,.nav-home-compose__phrasing,.nav-home-taste__phrasing,
-.nav-home-choose__mobile,.nav-home-compose__menu,.nav-home-taste__store {
-        font-size: 1.5rem; 
-    }
-        nav ul {
-            padding: 25px 20px 20px 0px;
-        }
-    }
+@media screen and (min-width: 1024px) {
+  .nav-home-choose__number1,
+  .nav-home-compose__number2,
+  .nav-home-taste__number3,
+  .nav-home-choose__phrasing,
+  .nav-home-compose__phrasing,
+  .nav-home-taste__phrasing,
+  .nav-home-choose__mobile,
+  .nav-home-compose__menu,
+  .nav-home-taste__store {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    padding: 25px 20px 20px 0px;
+  }
+}
