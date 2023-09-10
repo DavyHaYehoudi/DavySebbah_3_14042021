@@ -4,9 +4,7 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch dist/sass/gastronomie.scss:dist/public/gastronomie.css",
-    "build": "npm run sass && echo 'Build completed.'"
-
+    "sass": "sass --watch dist/sass/gastronomie.scss:dist/public/gastronomie.css"
     },
   "author": "Davy",
   "license": "ISC",
