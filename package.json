@@ -4,9 +4,15 @@
   "description": "projet3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css"
-  },
-  "author": "Davy",
-  "license": "ISC"
-  }
+    "sass": "sass --watch ./sass/gastronomie.scss:./public/gastronomie.css",
+    "build": "npm run sass && echo 'Build completed.'"
 
+    },
+  "author": "Davy",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not dead"
+]
+}
