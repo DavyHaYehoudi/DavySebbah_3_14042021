@@ -38,10 +38,6 @@
   animation: wait 1000ms cubic-bezier(1, -1.71, 1, 0.55);
 }
 
-.container0 {
-  position: relative;
-}
-
 .loader-page {
   position: fixed;
   -webkit-animation: out 1s;
@@ -209,16 +205,25 @@ header {
   }
 }
 
-.heading-page__img {
-  width: 100vw;
-  max-height: 500px;
-  -o-object-fit: cover;
-  object-fit: cover;
+.photo-palette {
+  background: url("../../images/restaurants/palette.jpg") center/cover no-repeat;
 }
-
-// .heading-page2__img2 {
-//     width: 100vw;
-//     max-height: 600px;
-//     -o-object-fit: cover;
-//        object-fit: cover;
-// }
+.photo-note {
+  background: url("../../images/restaurants/note.jpg") center/cover no-repeat;
+}
+.photo-francaise {
+  background: url("../../images/restaurants/francaise.jpg") center/cover
+    no-repeat;
+}
+.photo-delice {
+  background: url("../../images/restaurants/delice.jpg") center/cover no-repeat;
+}
+.heading-page__photo {
+  height: 300px;
+  @media screen and (min-width: 1024px) {
+    height: 500px;
+  }
+  @media screen and (min-width: 1900px) {
+    height: 700px;
+  }
+}

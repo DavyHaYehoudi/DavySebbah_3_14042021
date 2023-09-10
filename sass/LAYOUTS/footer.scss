@@ -1,5 +1,4 @@
 footer {
-  position: relative;
   color: white;
   background-color: rgb(51, 50, 50);
   width: 100%;
@@ -48,22 +47,14 @@ footer {
   padding-bottom: 40px;
 }
 
-.container footer {
-  margin-top: 1150px;
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-bottom: -50px;
+  }
 }
 
-@media screen and (min-width: 1024px) {
-  .container0 footer {
-    padding: 0;
-  }
-
-  .container footer {
-    margin-top: 440px;
-  }
+@media screen and (min-width: 2100px) {
   footer {
-    padding-top: 1150px;
-    margin-bottom: -50px;
-
     .footer-logo {
       margin-top: 60px;
       width: 300px;
@@ -75,28 +66,5 @@ footer {
       font-size: 1.5rem;
       margin-right: 20px;
     }
-  }
-}
-
-@media screen and (min-width: 2100px) {
-  footer {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 1200px;
-
-    & ul,
-    & p {
-      margin-top: 70px;
-    }
-  }
-
-  .footer-logo {
-    height: 80px;
-    width: 250px;
-    margin-bottom: 100px;
-  }
-
-  .footer-menu__contact {
-    margin-right: 100px;
   }
 }
